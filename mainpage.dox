@@ -1,0 +1,10 @@
+/**
+ * @mainpage Bitcoin Kernel Library
+ * 
+ * The Bitcoin Kernel Library provides a C header API for interacting with Bitcoin Core's 
+ * validation engine and validation-related data structures.
+ * 
+ * See the @ref remarks "Remarks" for basic usage conventions.
+ * 
+ * The full documentation for all methods, data structures, and type definitions is available in @ref bitcoinkernel.h.
+ */

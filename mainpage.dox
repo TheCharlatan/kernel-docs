@@ -7,4 +7,7 @@
  * See the @ref remarks "Remarks" for basic usage conventions.
  * 
  * The full documentation for all methods, data structures, and type definitions is available in @ref bitcoinkernel.h.
+ *
+ * See the @ref examples "Examples" for how to use the library.
+ *
  */

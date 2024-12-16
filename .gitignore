@@ -1,1 +1,5 @@
 docs
+.bitcoin
+context_free_example
+validate_block_example
+data_retrieval_example

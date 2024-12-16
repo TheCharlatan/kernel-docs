@@ -31,7 +31,7 @@
  *
  * The following example validates a spend of a taproot output:
  *
- * @include context_free_example.c
+ * @include examples/context_free_example.c
  *
  * Note that a `Null` pointer may be passed to spent_outputs if the taproot bit
  * is not set in the flags bitfield and the amount may be zero if the segwit
@@ -62,7 +62,7 @@
  * The new_block variable is used to denote whether a block has been processed before or not.
  * If it is a duplicate new_block will be set to false.
  *
- * @include validate_block_example.c
+ * @include examples/validate_block_example.c
  *
  * @section retrieval Data retrieval
  *
@@ -75,5 +75,5 @@
  * user. It can be retained for later processing, serialized, or used to
  * more data.
  *
- * @include data_retrieval_example.c
+ * @include examples/data_retrieval_example.c
  */

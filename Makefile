@@ -1,5 +1,5 @@
 CFLAGS = -g
-LDFLAGS = -Wl,-rpath=/home/drgrid/bitcoin/install_dir/lib
+LDFLAGS = -Wl,-rpath=/usr/local/lib
 LIBS = -lbitcoinkernel
 
 EXAMPLES_DIR = examples

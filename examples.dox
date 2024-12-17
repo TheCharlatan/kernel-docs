@@ -51,9 +51,9 @@
  * optional, but recommended, and done here for demonstration purposes.
  * 
  * Then the context is used to create a chainstate manager together with the
- * required options for the chainstate manager. Note that the directories the
- * chainstate manager and block manager options are configured with already
- * have to exist.
+ * required options for the chainstate manager. Note that if the directories
+ * the chainstate manager and block manager options are configured with don't
+ * exist yet, will be created.
  *
  * Once created, the chainstate manager's chainstate is loaded. This is a
  * mandatory step before continuing with further chainstate manager operations.

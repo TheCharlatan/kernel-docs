@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void handle_error(void* _, const char* msg)
+void handle_error(void* _, const char* msg, size_t msg_size)
 {
     printf("%s\n", msg);
     exit(0);
@@ -39,19 +39,17 @@ int main() {
     kernel_context_options_destroy(context_options);
     if (context == NULL) return 1;
 
-    kernel_ChainstateManagerOptions* chainman_options = kernel_chainstate_manager_options_create(context, ".bitcoin");
+    const char data_dir[] = ".bitcoin";
+    kernel_ChainstateManagerOptions* chainman_options = kernel_chainstate_manager_options_create(context, data_dir, sizeof(data_dir) - 1);
     if (chainman_options == NULL) return 1;
-    kernel_BlockManagerOptions* blockman_options = kernel_block_manager_options_create(context, ".bitcoin/blocks");
+    const char blocks_dir[] = ".bitcoin/blocks";
+    kernel_BlockManagerOptions* blockman_options = kernel_block_manager_options_create(context, blocks_dir, sizeof(blocks_dir) - 1);
     if (blockman_options == NULL) return 1;
-    kernel_ChainstateManager* chainman = kernel_chainstate_manager_create(context, chainman_options, blockman_options);
+    kernel_ChainstateLoadOptions* chainstate_load_options = kernel_chainstate_load_options_create();
+    kernel_ChainstateManager* chainman = kernel_chainstate_manager_create(context, chainman_options, blockman_options, chainstate_load_options);
     if (chainman == NULL) return 1;
     kernel_chainstate_manager_options_destroy(chainman_options);
     kernel_block_manager_options_destroy(blockman_options);
-
-    kernel_ChainstateLoadOptions* chainstate_load_options = kernel_chainstate_load_options_create();
-    if (!kernel_chainstate_manager_load_chainstate(context, chainstate_load_options, chainman)) {
-        return 1;
-    }
     kernel_chainstate_load_options_destroy(chainstate_load_options);
 
     static const unsigned char block_data[] = {

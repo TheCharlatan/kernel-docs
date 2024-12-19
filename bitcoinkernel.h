@@ -769,10 +769,23 @@ kernel_ChainstateManagerOptions* BITCOINKERNEL_WARN_UNUSED_RESULT kernel_chainst
 ) BITCOINKERNEL_ARG_NONNULL(1, 2);
 
 /**
+ * @brief Set the number of available worker threads used during validation.
+ *
+ * @param[in] chainstate_manager_options Non-null, options to be set.
+ * @param[in] worker_threads The number of worker threads that should be spawned in the thread pool
+ *                           used for validation. When set to 0 no parallel verification is done.
+ *                           The value range is clamped internally between 0 and 15.
+ */
+void kernel_chainstate_manager_options_set_worker_threads_num(
+        kernel_ChainstateManagerOptions* chainstate_manager_options,
+        int worker_threads
+) BITCOINKERNEL_ARG_NONNULL(1);
+
+/**
  * Destroy the chainstate manager options.
  */
 void kernel_chainstate_manager_options_destroy(kernel_ChainstateManagerOptions* chainstate_manager_options);
-///
+
 ///@}
 
 /** @name BlockManagerOptions
@@ -796,19 +809,6 @@ kernel_BlockManagerOptions* BITCOINKERNEL_WARN_UNUSED_RESULT kernel_block_manage
     const char* blocks_directory,
     size_t blocks_directory_len
 ) BITCOINKERNEL_ARG_NONNULL(1, 2);
-
-/**
- * @brief Set the number of available worker threads used during validation.
- *
- * @param[in] chainstate_manager_options Non-null, options to be set.
- * @param[in] worker_threads The number of worker threads that should be spawned in the thread pool
- *                           used for validation. When set to 0 no parallel verification is done.
- *                           The value range is clamped internally between 0 and 15.
- */
-void kernel_chainstate_manager_options_set_worker_threads_num(
-        kernel_ChainstateManagerOptions* chainstate_manager_options,
-        int worker_threads
-) BITCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * Destroy the block manager options.
@@ -879,14 +879,15 @@ void kernel_chainstate_load_options_destroy(kernel_ChainstateLoadOptions* chains
 ///@}
 
 /** @name ChainstateManager
- * Functions for chain state management.
+ * Functions for chainstate management.
  */
 ///@{
 
 /**
  * @brief Create a chainstate manager. This is the main object for many
- * validation tasks as well as for retrieving data from the chain. It is only
- * valid for as long as the passed in context also remains in memory.
+ * validation tasks as well as for retrieving data from the chain and
+ * interacting with its chainstate and indexes. It is only valid for as long as
+ * the passed in context also remains in memory.
  *
  * @param[in] chainstate_manager_options Non-null, created by @ref kernel_chainstate_manager_options_create.
  * @param[in] block_manager_options      Non-null, created by @ref kernel_block_manager_options_create.
@@ -898,22 +899,8 @@ void kernel_chainstate_load_options_destroy(kernel_ChainstateLoadOptions* chains
 kernel_ChainstateManager* BITCOINKERNEL_WARN_UNUSED_RESULT kernel_chainstate_manager_create(
     const kernel_Context* context,
     const kernel_ChainstateManagerOptions* chainstate_manager_options,
-    const kernel_BlockManagerOptions* block_manager_options
-) BITCOINKERNEL_ARG_NONNULL(1, 2, 3);
-
-/**
- * @brief This function must be called to initialize the chainstate manager
- * before doing validation tasks or interacting with its indexes.
- *
- * @param[in] context                 Non-null.
- * @param[in] chainstate_load_options Non-null, created by @ref kernel_chainstate_load_options_create.
- * @param[in] chainstate_manager      Non-null, will load the chainstate(s) and initialize indexes.
- * @return                            True on success, false on error.
- */
-bool BITCOINKERNEL_WARN_UNUSED_RESULT kernel_chainstate_manager_load_chainstate(
-    const kernel_Context* context,
-    const kernel_ChainstateLoadOptions* chainstate_load_options,
-    kernel_ChainstateManager* chainstate_manager
+    const kernel_BlockManagerOptions* block_manager_options,
+    const kernel_ChainstateLoadOptions* chainstate_load_options
 ) BITCOINKERNEL_ARG_NONNULL(1, 2, 3);
 
 /**
@@ -1001,6 +988,16 @@ kernel_BlockHash* BITCOINKERNEL_WARN_UNUSED_RESULT kernel_block_get_hash(
     kernel_Block* block
 ) BITCOINKERNEL_ARG_NONNULL(1);
 
+/** @name ByteArray
+ * @brief Calculate and return the hash of a block.
+ *
+ * @param[in] block Non-null.
+ * @return    The block hash.
+ */
+kernel_BlockHash* BITCOINKERNEL_WARN_UNUSED_RESULT kernel_block_pointer_get_hash(
+    const kernel_BlockPointer* block
+) BITCOINKERNEL_ARG_NONNULL(1);
+
 /**
  * @brief Copies block data into the returned byte array.
  *
@@ -1018,16 +1015,6 @@ kernel_ByteArray* BITCOINKERNEL_WARN_UNUSED_RESULT kernel_copy_block_data(
  * @return           Allocated byte array holding the block data, or null on error.
  */
 kernel_ByteArray* BITCOINKERNEL_WARN_UNUSED_RESULT kernel_copy_block_pointer_data(
-    const kernel_BlockPointer* block
-) BITCOINKERNEL_ARG_NONNULL(1);
-
-/**
- * @brief Calculate and return the hash of a block.
- *
- * @param[in] block Non-null.
- * @return    The block hash.
- */
-kernel_BlockHash* BITCOINKERNEL_WARN_UNUSED_RESULT kernel_block_pointer_get_hash(
     const kernel_BlockPointer* block
 ) BITCOINKERNEL_ARG_NONNULL(1);
 
@@ -1072,7 +1059,7 @@ kernel_BlockValidationResult kernel_get_block_validation_result_from_block_valid
 ///@}
 
 /** @name BlockIndex
- * Functions for working with block indices.
+ * Functions for working with block indexes.
  */
 ///@{
 
@@ -1167,15 +1154,6 @@ int32_t BITCOINKERNEL_WARN_UNUSED_RESULT kernel_block_index_get_height(
     const kernel_BlockIndex* block_index
 ) BITCOINKERNEL_ARG_NONNULL(1);
 
-/**
- * @brief Return the block hash associated with a block index.
- *
- * @param[in] block_index Non-null.
- * @return    The block hash.
- */
-kernel_BlockHash* BITCOINKERNEL_WARN_UNUSED_RESULT kernel_block_index_get_block_hash(
-    const kernel_BlockIndex* block_index
-) BITCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Destroy the block index.
@@ -1255,6 +1233,16 @@ void kernel_block_undo_destroy(kernel_BlockUndo* block_undo);
  * Functions for working with block hashes.
  */
 ///@{
+
+/**
+ * @brief Return the block hash associated with a block index.
+ *
+ * @param[in] block_index Non-null.
+ * @return    The block hash.
+ */
+kernel_BlockHash* BITCOINKERNEL_WARN_UNUSED_RESULT kernel_block_index_get_block_hash(
+    const kernel_BlockIndex* block_index
+) BITCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * Destroy the block hash.

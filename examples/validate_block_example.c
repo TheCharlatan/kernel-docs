@@ -40,17 +40,12 @@ int main() {
     if (context == NULL) return 1;
 
     const char data_dir[] = ".bitcoin";
-    kernel_ChainstateManagerOptions* chainman_options = kernel_chainstate_manager_options_create(context, data_dir, sizeof(data_dir) - 1);
-    if (chainman_options == NULL) return 1;
     const char blocks_dir[] = ".bitcoin/blocks";
-    kernel_BlockManagerOptions* blockman_options = kernel_block_manager_options_create(context, blocks_dir, sizeof(blocks_dir) - 1);
-    if (blockman_options == NULL) return 1;
-    kernel_ChainstateLoadOptions* chainstate_load_options = kernel_chainstate_load_options_create();
-    kernel_ChainstateManager* chainman = kernel_chainstate_manager_create(context, chainman_options, blockman_options, chainstate_load_options);
+    kernel_ChainstateManagerOptions* chainman_options = kernel_chainstate_manager_options_create(context, data_dir, sizeof(data_dir) - 1, blocks_dir, sizeof(blocks_dir) - 1);
+    if (chainman_options == NULL) return 1;
+    kernel_ChainstateManager* chainman = kernel_chainstate_manager_create(context, chainman_options);
     if (chainman == NULL) return 1;
     kernel_chainstate_manager_options_destroy(chainman_options);
-    kernel_block_manager_options_destroy(blockman_options);
-    kernel_chainstate_load_options_destroy(chainstate_load_options);
 
     static const unsigned char block_data[] = {
         0x00, 0x00, 0x00, 0x20, 0x06, 0x22, 0x6e, 0x46, 0x11, 0x1a, 0x0b, 0x59, 0xca, 0xaf, 0x12, 0x60,

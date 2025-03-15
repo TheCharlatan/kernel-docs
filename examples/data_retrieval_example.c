@@ -22,7 +22,7 @@ int main() {
         .fatal_error = handle_error,
     };
     kernel_context_options_set_notifications(context_options, notifications);
-    const kernel_ChainParameters* chainparams = kernel_chain_parameters_create(kernel_CHAIN_TYPE_REGTEST);
+    kernel_ChainParameters* chainparams = kernel_chain_parameters_create(kernel_CHAIN_TYPE_REGTEST);
     kernel_context_options_set_chainparams(context_options, chainparams);
     kernel_chain_parameters_destroy(chainparams);
     kernel_Context* context = kernel_context_create(context_options);

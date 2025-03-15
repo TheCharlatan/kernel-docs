@@ -32,7 +32,7 @@ int main() {
         .block_checked = block_checked,
     };
     kernel_context_options_set_validation_interface(context_options, validation_interface);
-    const kernel_ChainParameters* chainparams = kernel_chain_parameters_create(kernel_CHAIN_TYPE_REGTEST);
+    kernel_ChainParameters* chainparams = kernel_chain_parameters_create(kernel_CHAIN_TYPE_REGTEST);
     kernel_context_options_set_chainparams(context_options, chainparams);
     kernel_chain_parameters_destroy(chainparams);
     kernel_Context* context = kernel_context_create(context_options);

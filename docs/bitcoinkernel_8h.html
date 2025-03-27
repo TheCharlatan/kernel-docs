@@ -320,15 +320,16 @@ Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Logging-related functions. </p>
 </div></td></tr>
 <tr class="memitem:a28bde526657e45abccb8a509fb91ada2" id="r_a28bde526657e45abccb8a509fb91ada2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a28bde526657e45abccb8a509fb91ada2">kernel_disable_logging</a> ()</td></tr>
-<tr class="memdesc:a28bde526657e45abccb8a509fb91ada2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This disables the global internal logger. No log messages will be buffered internally anymore once this is called and the buffer is cleared. This function should only be called once. Log messages will be buffered until this function is called, or a logging connection is created.  <br /></td></tr>
+<tr class="memdesc:a28bde526657e45abccb8a509fb91ada2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This disables the global internal logger. No log messages will be buffered internally anymore once this is called and the buffer is cleared. This function should only be called once and is not thread or re-entry safe. Log messages will be buffered until this function is called, or a logging connection is created.  <br /></td></tr>
 <tr class="separator:a28bde526657e45abccb8a509fb91ada2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0bfdf0592e2894de7d318558a1fce49" id="r_ac0bfdf0592e2894de7d318558a1fce49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#ac0bfdf0592e2894de7d318558a1fce49">kernel_add_log_level_category</a> (const <a class="el" href="bitcoinkernel_8h.html#aff35690dbbf32e8e59802fea7324d2dc">kernel_LogCategory</a> category, <a class="el" href="bitcoinkernel_8h.html#abef6efcb310317332f1528e1102b9a71">kernel_LogLevel</a> level)</td></tr>
-<tr class="memdesc:ac0bfdf0592e2894de7d318558a1fce49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the log level of the global internal logger. This does not enable the selected categories. Use <code>kernel_enable_log_category</code> to start logging from a specific, or all categories.  <br /></td></tr>
+<tr class="memdesc:ac0bfdf0592e2894de7d318558a1fce49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the log level of the global internal logger. This does not enable the selected categories. Use <code>kernel_enable_log_category</code> to start logging from a specific, or all categories. This function is not thread safe. Mutiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> instances.  <br /></td></tr>
 <tr class="separator:ac0bfdf0592e2894de7d318558a1fce49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a546dd71c5b2378c7b3c2357101a21e92" id="r_a546dd71c5b2378c7b3c2357101a21e92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a546dd71c5b2378c7b3c2357101a21e92">kernel_enable_log_category</a> (const <a class="el" href="bitcoinkernel_8h.html#aff35690dbbf32e8e59802fea7324d2dc">kernel_LogCategory</a> category)</td></tr>
-<tr class="memdesc:a546dd71c5b2378c7b3c2357101a21e92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable a specific log category for the global internal logger.  <br /></td></tr>
+<tr class="memdesc:a546dd71c5b2378c7b3c2357101a21e92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable a specific log category for the global internal logger. This function is not thread safe. Mutiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> instances.  <br /></td></tr>
 <tr class="separator:a546dd71c5b2378c7b3c2357101a21e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba1205f1e29bd995077c9e4eddf0e2fd" id="r_aba1205f1e29bd995077c9e4eddf0e2fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#aba1205f1e29bd995077c9e4eddf0e2fd">kernel_disable_log_category</a> (const <a class="el" href="bitcoinkernel_8h.html#aff35690dbbf32e8e59802fea7324d2dc">kernel_LogCategory</a> category)</td></tr>
+<tr class="memdesc:aba1205f1e29bd995077c9e4eddf0e2fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable a specific log category for the global internal logger. This function is not thread safe. Mutiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> instances.  <br /></td></tr>
 <tr class="separator:aba1205f1e29bd995077c9e4eddf0e2fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a726e39abf50a7939937b26d193e279cf" id="r_a726e39abf50a7939937b26d193e279cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a726e39abf50a7939937b26d193e279cf">kernel_logging_connection_create</a> (<a class="el" href="bitcoinkernel_8h.html#a3038d6083a61ffa44f2ba0155c951405">kernel_LogCallback</a> callback, const void *user_data, const <a class="el" href="structkernel__LoggingOptions.html">kernel_LoggingOptions</a> options)</td></tr>
 <tr class="memdesc:a726e39abf50a7939937b26d193e279cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start logging messages through the provided callback. Log messages produced before this function is first called are buffered and on calling this function are logged immediately.  <br /></td></tr>
@@ -757,7 +758,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Opaque data structure for holding a logging connection.</p>
 <p>The logging connection can be used to manually stop logging.</p>
-<p>Messages that were logged before a connection is created are buffered in a 1MB buffer. Logging can alternatively be permanently disabled by calling <a class="el" href="bitcoinkernel_8h.html#a28bde526657e45abccb8a509fb91ada2" title="This disables the global internal logger. No log messages will be buffered internally anymore once th...">kernel_disable_logging()</a>. </p>
+<p>Messages that were logged before a connection is created are buffered in a 1MB buffer. Logging can alternatively be permanently disabled by calling <a class="el" href="bitcoinkernel_8h.html#a28bde526657e45abccb8a509fb91ada2" title="This disables the global internal logger. No log messages will be buffered internally anymore once th...">kernel_disable_logging()</a>. Functions changing the logging settings are global (and not thread safe) and change the settings for all existing kernel_LoggingConnection instances. </p>
 
 </div>
 </div>
@@ -1173,7 +1174,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set the log level of the global internal logger. This does not enable the selected categories. Use <code>kernel_enable_log_category</code> to start logging from a specific, or all categories. </p>
+<p>Set the log level of the global internal logger. This does not enable the selected categories. Use <code>kernel_enable_log_category</code> to start logging from a specific, or all categories. This function is not thread safe. Mutiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> instances. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">category</td><td>If kernel_LOG_ALL is chosen, all messages at the specified level will be logged. Otherwise only messages from the specified category will be logged at the specified level and above. </td></tr>
@@ -2185,7 +2186,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Disable a specific log category for the global internal logger.</p>
+
+<p>Disable a specific log category for the global internal logger. This function is not thread safe. Mutiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> instances. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">category</td><td>If kernel_LOG_ALL is chosen, all categories will be disabled. </td></tr>
@@ -2210,7 +2212,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This disables the global internal logger. No log messages will be buffered internally anymore once this is called and the buffer is cleared. This function should only be called once. Log messages will be buffered until this function is called, or a logging connection is created. </p>
+<p>This disables the global internal logger. No log messages will be buffered internally anymore once this is called and the buffer is cleared. This function should only be called once and is not thread or re-entry safe. Log messages will be buffered until this function is called, or a logging connection is created. </p>
 
 </div>
 </div>
@@ -2230,7 +2232,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enable a specific log category for the global internal logger. </p>
+<p>Enable a specific log category for the global internal logger. This function is not thread safe. Mutiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> instances. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">category</td><td>If kernel_LOG_ALL is chosen, all categories will be enabled. </td></tr>

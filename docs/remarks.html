@@ -73,7 +73,10 @@ $(function() {
   <div class="headertitle"><div class="title">Remarks</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="context"></a>
+<div class="textblock"><h1><a class="anchor" id="purpose"></a>
+Purpose</h1>
+<p>This header currently exposes an API for interacting with parts of Bitcoin Core's consensus code. Users can validate blocks, iterate the block index, read block und undo data from disk, and validate scripts. The header is unversioned and not stable yet. Users should expect breaking changes. It is also not yet included in releases of Bitcoin Core.</p>
+<h1><a class="anchor" id="context"></a>
 Context</h1>
 <p>The library provides a built-in static constant kernel context. This static context offers only limited functionality. It detects and self-checks the correct sha256 implementation, initializes the random number generator and self-checks the secp256k1 static context. It is used internally for otherwise "context-free" operations. This means that the user is not required to initialize their own context before using the library.</p>
 <p>The user should create their own context for passing it to state-rich validation functions and holding callbacks for kernel events.</p>

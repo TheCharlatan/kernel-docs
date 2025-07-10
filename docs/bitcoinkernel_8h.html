@@ -168,8 +168,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:a694adc3152f84e45518f59450b41ed03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3038d6083a61ffa44f2ba0155c951405" id="r_a3038d6083a61ffa44f2ba0155c951405"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a3038d6083a61ffa44f2ba0155c951405">kernel_LogCallback</a>) (void *user_data, const char *message, size_t message_len)</td></tr>
 <tr class="separator:a3038d6083a61ffa44f2ba0155c951405"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a344e5668512162647d99ba68897b1d6b" id="r_a344e5668512162647d99ba68897b1d6b"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a344e5668512162647d99ba68897b1d6b">kernel_NotifyBlockTip</a>) (void *user_data, <a class="el" href="bitcoinkernel_8h.html#a2dc7fe1d183d89846c2c2b2254f844ce">kernel_SynchronizationState</a> state, const <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *index)</td></tr>
-<tr class="separator:a344e5668512162647d99ba68897b1d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ffc412c649d5daf2b58e32973febf0f" id="r_a2ffc412c649d5daf2b58e32973febf0f"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a2ffc412c649d5daf2b58e32973febf0f">kernel_NotifyBlockTip</a>) (void *user_data, <a class="el" href="bitcoinkernel_8h.html#a2dc7fe1d183d89846c2c2b2254f844ce">kernel_SynchronizationState</a> state, const <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *index, double verification_progress)</td></tr>
+<tr class="separator:a2ffc412c649d5daf2b58e32973febf0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14e7d86d0d59c07fb6e4dc9cc07d97d5" id="r_a14e7d86d0d59c07fb6e4dc9cc07d97d5"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a14e7d86d0d59c07fb6e4dc9cc07d97d5">kernel_NotifyHeaderTip</a>) (void *user_data, <a class="el" href="bitcoinkernel_8h.html#a2dc7fe1d183d89846c2c2b2254f844ce">kernel_SynchronizationState</a> state, int64_t height, int64_t timestamp, bool presync)</td></tr>
 <tr class="separator:a14e7d86d0d59c07fb6e4dc9cc07d97d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56b782636eb1444dda1e235550972653" id="r_a56b782636eb1444dda1e235550972653"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a56b782636eb1444dda1e235550972653">kernel_NotifyProgress</a>) (void *user_data, const char *title, size_t title_len, int progress_percent, bool resume_possible)</td></tr>
@@ -478,6 +478,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a2046ea0872dbb44decb31ddf854e0bf8" id="r_a2046ea0872dbb44decb31ddf854e0bf8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a2046ea0872dbb44decb31ddf854e0bf8">kernel_get_transaction_undo_size</a> (const <a class="el" href="bitcoinkernel_8h.html#a694adc3152f84e45518f59450b41ed03">kernel_BlockUndo</a> *block_undo, uint64_t transaction_undo_index)</td></tr>
 <tr class="memdesc:a2046ea0872dbb44decb31ddf854e0bf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of previous transaction outputs contained in the transaction undo data.  <br /></td></tr>
 <tr class="separator:a2046ea0872dbb44decb31ddf854e0bf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c680305f14d0aca7a13bf459ec9259c" id="r_a3c680305f14d0aca7a13bf459ec9259c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a3c680305f14d0aca7a13bf459ec9259c">kernel_get_undo_output_height_by_index</a> (const <a class="el" href="bitcoinkernel_8h.html#a694adc3152f84e45518f59450b41ed03">kernel_BlockUndo</a> *block_undo, uint64_t transaction_undo_index, uint64_t output_index)</td></tr>
+<tr class="memdesc:a3c680305f14d0aca7a13bf459ec9259c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the block height of the block that contains the output at output_index within the transaction undo data at the provided index of the block undo data.  <br /></td></tr>
+<tr class="separator:a3c680305f14d0aca7a13bf459ec9259c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c198b551df7c57883f3311e4a3524e6" id="r_a9c198b551df7c57883f3311e4a3524e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a6fbb4bd835f2cfd09b644d4747fad2ac">kernel_TransactionOutput</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a9c198b551df7c57883f3311e4a3524e6">kernel_get_undo_output_by_index</a> (const <a class="el" href="bitcoinkernel_8h.html#a694adc3152f84e45518f59450b41ed03">kernel_BlockUndo</a> *block_undo, uint64_t transaction_undo_index, uint64_t output_index)</td></tr>
 <tr class="memdesc:a9c198b551df7c57883f3311e4a3524e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a transaction output contained in the transaction undo data of a block undo data at a certain index.  <br /></td></tr>
 <tr class="separator:a9c198b551df7c57883f3311e4a3524e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -762,14 +765,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a344e5668512162647d99ba68897b1d6b" name="a344e5668512162647d99ba68897b1d6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a344e5668512162647d99ba68897b1d6b">&#9670;&#160;</a></span>kernel_NotifyBlockTip</h2>
+<a id="a2ffc412c649d5daf2b58e32973febf0f" name="a2ffc412c649d5daf2b58e32973febf0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ffc412c649d5daf2b58e32973febf0f">&#9670;&#160;</a></span>kernel_NotifyBlockTip</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* kernel_NotifyBlockTip) (void *user_data, <a class="el" href="bitcoinkernel_8h.html#a2dc7fe1d183d89846c2c2b2254f844ce">kernel_SynchronizationState</a> state, const <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *index)</td>
+          <td class="memname">typedef void(* kernel_NotifyBlockTip) (void *user_data, <a class="el" href="bitcoinkernel_8h.html#a2dc7fe1d183d89846c2c2b2254f844ce">kernel_SynchronizationState</a> state, const <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *index, double verification_progress)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2605,7 +2608,52 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A transaction output pointer, or null on error. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A transaction output pointer, or null if provided indices are out of bounds. </dd></dl>
+
+</div>
+</div>
+<a id="a3c680305f14d0aca7a13bf459ec9259c" name="a3c680305f14d0aca7a13bf459ec9259c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c680305f14d0aca7a13bf459ec9259c">&#9670;&#160;</a></span>kernel_get_undo_output_height_by_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> uint32_t kernel_get_undo_output_height_by_index </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#a694adc3152f84e45518f59450b41ed03">kernel_BlockUndo</a> *&#160;</td>
+          <td class="paramname"><em>block_undo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>transaction_undo_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>output_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the block height of the block that contains the output at output_index within the transaction undo data at the provided index of the block undo data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_undo</td><td>Non-null. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">transaction_undo_index</td><td>The index of the transaction undo data within the block undo data. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">output_index</td><td>The index of the targeted transaction output within the transaction undo data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The block height of the output, or 0 if provided indices are out of bounds. </dd></dl>
 
 </div>
 </div>

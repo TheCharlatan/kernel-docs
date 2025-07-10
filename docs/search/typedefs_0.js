@@ -12,7 +12,7 @@ var searchData=
   ['kernel_5fcontextoptions_9',['kernel_ContextOptions',['../bitcoinkernel_8h.html#a1230a5e294e2dd7df5b37b5671bc476c',1,'bitcoinkernel.h']]],
   ['kernel_5flogcallback_10',['kernel_LogCallback',['../bitcoinkernel_8h.html#a3038d6083a61ffa44f2ba0155c951405',1,'bitcoinkernel.h']]],
   ['kernel_5floggingconnection_11',['kernel_LoggingConnection',['../bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1',1,'bitcoinkernel.h']]],
-  ['kernel_5fnotifyblocktip_12',['kernel_NotifyBlockTip',['../bitcoinkernel_8h.html#a344e5668512162647d99ba68897b1d6b',1,'bitcoinkernel.h']]],
+  ['kernel_5fnotifyblocktip_12',['kernel_NotifyBlockTip',['../bitcoinkernel_8h.html#a2ffc412c649d5daf2b58e32973febf0f',1,'bitcoinkernel.h']]],
   ['kernel_5fnotifyfatalerror_13',['kernel_NotifyFatalError',['../bitcoinkernel_8h.html#ac64b2b971c92954f51e90f8b3c7a4ede',1,'bitcoinkernel.h']]],
   ['kernel_5fnotifyflusherror_14',['kernel_NotifyFlushError',['../bitcoinkernel_8h.html#a6be2ded8379dbb5cf0a36cd23fed135a',1,'bitcoinkernel.h']]],
   ['kernel_5fnotifyheadertip_15',['kernel_NotifyHeaderTip',['../bitcoinkernel_8h.html#a14e7d86d0d59c07fb6e4dc9cc07d97d5',1,'bitcoinkernel.h']]],

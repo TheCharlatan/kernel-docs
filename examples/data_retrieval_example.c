@@ -37,8 +37,8 @@ int main() {
     if (chainman == NULL) return 1;
     kernel_chainstate_manager_options_destroy(chainman_options);
 
-    kernel_BlockIndex* index = kernel_get_block_index_from_genesis(context, chainman);
-    kernel_Block* genesis = kernel_read_block_from_disk(context, chainman, index);
+    kernel_BlockIndex* index = kernel_block_index_get_genesis(context, chainman);
+    kernel_Block* genesis = kernel_block_read(context, chainman, index);
     // Now do something with this genesis block.
 
     kernel_block_destroy(genesis);

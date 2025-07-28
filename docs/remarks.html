@@ -82,7 +82,7 @@ Context</h1>
 <p>The user should create their own context for passing it to state-rich validation functions and holding callbacks for kernel events.</p>
 <h1><a class="anchor" id="error"></a>
 Error handling</h1>
-<p>Functions communicate an error through their return types, usually returning a nullptr, or false if an error is encountered. Additionally, verification functions, e.g. for scripts, may communicate more detailed error information through status code out parameters.</p>
+<p>Functions communicate an error through their return types, usually returning a nullptr, 0, or false if an error is encountered. Additionally, verification functions, e.g. for scripts, may communicate more detailed error information through status code out parameters.</p>
 <p>Fine-grained validation information is communicated through the validation interface.</p>
 <p>The kernel notifications issue callbacks for errors. These are usually indicative of a system error. If such an error is issued, it is recommended to halt and tear down the existing kernel objects. Remediating the error may require system intervention by the user.</p>
 <h1><a class="anchor" id="pointer"></a>

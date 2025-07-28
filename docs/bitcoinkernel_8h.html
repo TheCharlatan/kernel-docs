@@ -291,9 +291,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ae6e851d31737c327e381a22123894c10" id="r_ae6e851d31737c327e381a22123894c10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#ac46029269b0eddda0d528c5bea1e766a">kernel_ScriptPubkey</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#ae6e851d31737c327e381a22123894c10">kernel_script_pubkey_create</a> (const unsigned char *script_pubkey, size_t script_pubkey_len)</td></tr>
 <tr class="memdesc:ae6e851d31737c327e381a22123894c10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a script pubkey from serialized data.  <br /></td></tr>
 <tr class="separator:ae6e851d31737c327e381a22123894c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad94cd629220ddf4434b436e3e9f67823" id="r_ad94cd629220ddf4434b436e3e9f67823"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="structkernel__ByteArray.html">kernel_ByteArray</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#ad94cd629220ddf4434b436e3e9f67823">kernel_copy_script_pubkey_data</a> (const <a class="el" href="bitcoinkernel_8h.html#ac46029269b0eddda0d528c5bea1e766a">kernel_ScriptPubkey</a> *script_pubkey)</td></tr>
-<tr class="memdesc:ad94cd629220ddf4434b436e3e9f67823"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the script pubkey data into the returned byte array.  <br /></td></tr>
-<tr class="separator:ad94cd629220ddf4434b436e3e9f67823"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb3e5d517da617d73f54ff89c1fa60da" id="r_abb3e5d517da617d73f54ff89c1fa60da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="structkernel__ByteArray.html">kernel_ByteArray</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#abb3e5d517da617d73f54ff89c1fa60da">kernel_script_pubkey_copy_data</a> (const <a class="el" href="bitcoinkernel_8h.html#ac46029269b0eddda0d528c5bea1e766a">kernel_ScriptPubkey</a> *script_pubkey)</td></tr>
+<tr class="memdesc:abb3e5d517da617d73f54ff89c1fa60da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the script pubkey data into the returned byte array.  <br /></td></tr>
+<tr class="separator:abb3e5d517da617d73f54ff89c1fa60da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca1073fc1cc1ab809df54f0d3abaed6f" id="r_aca1073fc1cc1ab809df54f0d3abaed6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#aca1073fc1cc1ab809df54f0d3abaed6f">kernel_script_pubkey_destroy</a> (<a class="el" href="bitcoinkernel_8h.html#ac46029269b0eddda0d528c5bea1e766a">kernel_ScriptPubkey</a> *script_pubkey)</td></tr>
 <tr class="separator:aca1073fc1cc1ab809df54f0d3abaed6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">TransactionOutput</div></td></tr>
@@ -302,12 +302,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a0c08318a7c12789cf29536a173c91c39" id="r_a0c08318a7c12789cf29536a173c91c39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a6fbb4bd835f2cfd09b644d4747fad2ac">kernel_TransactionOutput</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a0c08318a7c12789cf29536a173c91c39">kernel_transaction_output_create</a> (const <a class="el" href="bitcoinkernel_8h.html#ac46029269b0eddda0d528c5bea1e766a">kernel_ScriptPubkey</a> *script_pubkey, int64_t amount)</td></tr>
 <tr class="memdesc:a0c08318a7c12789cf29536a173c91c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a transaction output from a script pubkey and an amount.  <br /></td></tr>
 <tr class="separator:a0c08318a7c12789cf29536a173c91c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf932729e7714384722de1c3ef807f05" id="r_abf932729e7714384722de1c3ef807f05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#ac46029269b0eddda0d528c5bea1e766a">kernel_ScriptPubkey</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#abf932729e7714384722de1c3ef807f05">kernel_copy_script_pubkey_from_output</a> (<a class="el" href="bitcoinkernel_8h.html#a6fbb4bd835f2cfd09b644d4747fad2ac">kernel_TransactionOutput</a> *transaction_output)</td></tr>
-<tr class="memdesc:abf932729e7714384722de1c3ef807f05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the script pubkey of an output in the returned script pubkey opaque object.  <br /></td></tr>
-<tr class="separator:abf932729e7714384722de1c3ef807f05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78ecc473fe3c9e215be78762c7d500b9" id="r_a78ecc473fe3c9e215be78762c7d500b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a78ecc473fe3c9e215be78762c7d500b9">kernel_get_transaction_output_amount</a> (<a class="el" href="bitcoinkernel_8h.html#a6fbb4bd835f2cfd09b644d4747fad2ac">kernel_TransactionOutput</a> *transaction_output)</td></tr>
-<tr class="memdesc:a78ecc473fe3c9e215be78762c7d500b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the amount associated with this transaction output.  <br /></td></tr>
-<tr class="separator:a78ecc473fe3c9e215be78762c7d500b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3719d42d4325ba862e9dce89d6d49f7" id="r_ab3719d42d4325ba862e9dce89d6d49f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#ac46029269b0eddda0d528c5bea1e766a">kernel_ScriptPubkey</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#ab3719d42d4325ba862e9dce89d6d49f7">kernel_transaction_output_copy_script_pubkey</a> (<a class="el" href="bitcoinkernel_8h.html#a6fbb4bd835f2cfd09b644d4747fad2ac">kernel_TransactionOutput</a> *transaction_output)</td></tr>
+<tr class="memdesc:ab3719d42d4325ba862e9dce89d6d49f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the script pubkey of an output in the returned script pubkey opaque object.  <br /></td></tr>
+<tr class="separator:ab3719d42d4325ba862e9dce89d6d49f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace78c151156df4351d6d53ffe7beef78" id="r_ace78c151156df4351d6d53ffe7beef78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#ace78c151156df4351d6d53ffe7beef78">kernel_transaction_output_get_amount</a> (<a class="el" href="bitcoinkernel_8h.html#a6fbb4bd835f2cfd09b644d4747fad2ac">kernel_TransactionOutput</a> *transaction_output)</td></tr>
+<tr class="memdesc:ace78c151156df4351d6d53ffe7beef78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the amount associated with this transaction output.  <br /></td></tr>
+<tr class="separator:ace78c151156df4351d6d53ffe7beef78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a947782db8356fdff76c2a0306cf4bc17" id="r_a947782db8356fdff76c2a0306cf4bc17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a947782db8356fdff76c2a0306cf4bc17">kernel_transaction_output_destroy</a> (<a class="el" href="bitcoinkernel_8h.html#a6fbb4bd835f2cfd09b644d4747fad2ac">kernel_TransactionOutput</a> *transaction_output)</td></tr>
 <tr class="separator:a947782db8356fdff76c2a0306cf4bc17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Script</div></td></tr>
@@ -319,18 +319,18 @@ Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Logging</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Logging-related functions. </p>
 </div></td></tr>
-<tr class="memitem:a28bde526657e45abccb8a509fb91ada2" id="r_a28bde526657e45abccb8a509fb91ada2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a28bde526657e45abccb8a509fb91ada2">kernel_disable_logging</a> ()</td></tr>
-<tr class="memdesc:a28bde526657e45abccb8a509fb91ada2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This disables the global internal logger. No log messages will be buffered internally anymore once this is called and the buffer is cleared. This function should only be called once and is not thread or re-entry safe. Log messages will be buffered until this function is called, or a logging connection is created.  <br /></td></tr>
-<tr class="separator:a28bde526657e45abccb8a509fb91ada2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0bfdf0592e2894de7d318558a1fce49" id="r_ac0bfdf0592e2894de7d318558a1fce49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#ac0bfdf0592e2894de7d318558a1fce49">kernel_add_log_level_category</a> (const <a class="el" href="bitcoinkernel_8h.html#aff35690dbbf32e8e59802fea7324d2dc">kernel_LogCategory</a> category, <a class="el" href="bitcoinkernel_8h.html#abef6efcb310317332f1528e1102b9a71">kernel_LogLevel</a> level)</td></tr>
-<tr class="memdesc:ac0bfdf0592e2894de7d318558a1fce49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the log level of the global internal logger. This does not enable the selected categories. Use <code>kernel_enable_log_category</code> to start logging from a specific, or all categories. This function is not thread safe. Mutiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> instances.  <br /></td></tr>
-<tr class="separator:ac0bfdf0592e2894de7d318558a1fce49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a546dd71c5b2378c7b3c2357101a21e92" id="r_a546dd71c5b2378c7b3c2357101a21e92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a546dd71c5b2378c7b3c2357101a21e92">kernel_enable_log_category</a> (const <a class="el" href="bitcoinkernel_8h.html#aff35690dbbf32e8e59802fea7324d2dc">kernel_LogCategory</a> category)</td></tr>
-<tr class="memdesc:a546dd71c5b2378c7b3c2357101a21e92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable a specific log category for the global internal logger. This function is not thread safe. Mutiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> instances.  <br /></td></tr>
-<tr class="separator:a546dd71c5b2378c7b3c2357101a21e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba1205f1e29bd995077c9e4eddf0e2fd" id="r_aba1205f1e29bd995077c9e4eddf0e2fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#aba1205f1e29bd995077c9e4eddf0e2fd">kernel_disable_log_category</a> (const <a class="el" href="bitcoinkernel_8h.html#aff35690dbbf32e8e59802fea7324d2dc">kernel_LogCategory</a> category)</td></tr>
-<tr class="memdesc:aba1205f1e29bd995077c9e4eddf0e2fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable a specific log category for the global internal logger. This function is not thread safe. Mutiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> instances.  <br /></td></tr>
-<tr class="separator:aba1205f1e29bd995077c9e4eddf0e2fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49373bee211cd981af871dbfa6cd8040" id="r_a49373bee211cd981af871dbfa6cd8040"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a49373bee211cd981af871dbfa6cd8040">kernel_logging_disable</a> ()</td></tr>
+<tr class="memdesc:a49373bee211cd981af871dbfa6cd8040"><td class="mdescLeft">&#160;</td><td class="mdescRight">This disables the global internal logger. No log messages will be buffered internally anymore once this is called and the buffer is cleared. This function should only be called once and is not thread or re-entry safe. Log messages will be buffered until this function is called, or a logging connection is created.  <br /></td></tr>
+<tr class="separator:a49373bee211cd981af871dbfa6cd8040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad668e1cb7c082d5cf1d9719ebc65d915" id="r_ad668e1cb7c082d5cf1d9719ebc65d915"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#ad668e1cb7c082d5cf1d9719ebc65d915">kernel_logging_set_level_category</a> (const <a class="el" href="bitcoinkernel_8h.html#aff35690dbbf32e8e59802fea7324d2dc">kernel_LogCategory</a> category, <a class="el" href="bitcoinkernel_8h.html#abef6efcb310317332f1528e1102b9a71">kernel_LogLevel</a> level)</td></tr>
+<tr class="memdesc:ad668e1cb7c082d5cf1d9719ebc65d915"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the log level of the global internal logger. This does not enable the selected categories. Use <code>kernel_enable_log_category</code> to start logging from a specific, or all categories. This function is not thread safe. Mutiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> instances.  <br /></td></tr>
+<tr class="separator:ad668e1cb7c082d5cf1d9719ebc65d915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fcd4aaea703f159d73ee46765d8e94e" id="r_a1fcd4aaea703f159d73ee46765d8e94e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a1fcd4aaea703f159d73ee46765d8e94e">kernel_logging_enable_category</a> (const <a class="el" href="bitcoinkernel_8h.html#aff35690dbbf32e8e59802fea7324d2dc">kernel_LogCategory</a> category)</td></tr>
+<tr class="memdesc:a1fcd4aaea703f159d73ee46765d8e94e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable a specific log category for the global internal logger. This function is not thread safe. Mutiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> instances.  <br /></td></tr>
+<tr class="separator:a1fcd4aaea703f159d73ee46765d8e94e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd068b4f13decaa0b131363d69504583" id="r_acd068b4f13decaa0b131363d69504583"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#acd068b4f13decaa0b131363d69504583">kernel_logging_disable_category</a> (const <a class="el" href="bitcoinkernel_8h.html#aff35690dbbf32e8e59802fea7324d2dc">kernel_LogCategory</a> category)</td></tr>
+<tr class="memdesc:acd068b4f13decaa0b131363d69504583"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable a specific log category for the global internal logger. This function is not thread safe. Mutiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> instances.  <br /></td></tr>
+<tr class="separator:acd068b4f13decaa0b131363d69504583"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a726e39abf50a7939937b26d193e279cf" id="r_a726e39abf50a7939937b26d193e279cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a726e39abf50a7939937b26d193e279cf">kernel_logging_connection_create</a> (<a class="el" href="bitcoinkernel_8h.html#a3038d6083a61ffa44f2ba0155c951405">kernel_LogCallback</a> callback, const void *user_data, const <a class="el" href="structkernel__LoggingOptions.html">kernel_LoggingOptions</a> options)</td></tr>
 <tr class="memdesc:a726e39abf50a7939937b26d193e279cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start logging messages through the provided callback. Log messages produced before this function is first called are buffered and on calling this function are logged immediately.  <br /></td></tr>
 <tr class="separator:a726e39abf50a7939937b26d193e279cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -381,7 +381,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:afe3cb9eb4f05555a5c9a7ebd8516bf36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of available worker threads used during validation.  <br /></td></tr>
 <tr class="separator:afe3cb9eb4f05555a5c9a7ebd8516bf36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c8aac002fc2e8a2216231bceba95d57" id="r_a7c8aac002fc2e8a2216231bceba95d57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a7c8aac002fc2e8a2216231bceba95d57">kernel_chainstate_manager_options_set_wipe_dbs</a> (<a class="el" href="bitcoinkernel_8h.html#aed37cc92a0ea09a8b1dd3af406b16750">kernel_ChainstateManagerOptions</a> *chainstate_manager_options, bool wipe_block_tree_db, bool wipe_chainstate_db)</td></tr>
-<tr class="memdesc:a7c8aac002fc2e8a2216231bceba95d57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets wipe db in the options. In combination with calling <a class="el" href="bitcoinkernel_8h.html#a6ed30f76f9dedd138d17abaef0ad4c64">kernel_import_blocks</a> this triggers either a full reindex, or a reindex of just the chainstate database.  <br /></td></tr>
+<tr class="memdesc:a7c8aac002fc2e8a2216231bceba95d57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets wipe db in the options. In combination with calling kernel_import_blocks this triggers either a full reindex, or a reindex of just the chainstate database.  <br /></td></tr>
 <tr class="separator:a7c8aac002fc2e8a2216231bceba95d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cd53cffb73b52816ff2ebe7a3e913e4" id="r_a2cd53cffb73b52816ff2ebe7a3e913e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a2cd53cffb73b52816ff2ebe7a3e913e4">kernel_chainstate_manager_options_set_block_tree_db_in_memory</a> (<a class="el" href="bitcoinkernel_8h.html#aed37cc92a0ea09a8b1dd3af406b16750">kernel_ChainstateManagerOptions</a> *chainstate_manager_options, bool block_tree_db_in_memory)</td></tr>
 <tr class="memdesc:a2cd53cffb73b52816ff2ebe7a3e913e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets block tree db in memory in the options.  <br /></td></tr>
@@ -397,9 +397,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a5aa39a4692783eb74c8e429d76bc18ad" id="r_a5aa39a4692783eb74c8e429d76bc18ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a5aa39a4692783eb74c8e429d76bc18ad">kernel_chainstate_manager_create</a> (const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *context, const <a class="el" href="bitcoinkernel_8h.html#aed37cc92a0ea09a8b1dd3af406b16750">kernel_ChainstateManagerOptions</a> *chainstate_manager_options) 2)</td></tr>
 <tr class="memdesc:a5aa39a4692783eb74c8e429d76bc18ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a chainstate manager. This is the main object for many validation tasks as well as for retrieving data from the chain and interacting with its chainstate and indexes. It is only valid for as long as the passed in context also remains in memory.  <br /></td></tr>
 <tr class="separator:a5aa39a4692783eb74c8e429d76bc18ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ed30f76f9dedd138d17abaef0ad4c64" id="r_a6ed30f76f9dedd138d17abaef0ad4c64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a6ed30f76f9dedd138d17abaef0ad4c64">kernel_import_blocks</a> (const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *context, <a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *chainstate_manager, const char **block_file_paths, size_t *block_file_paths_lens, size_t block_file_paths_len) 2)</td></tr>
-<tr class="memdesc:a6ed30f76f9dedd138d17abaef0ad4c64"><td class="mdescLeft">&#160;</td><td class="mdescRight">May be called once the kernel_ChainstateManager is instantiated. Triggers the start of a reindex if the option was previously set for the chainstate and block manager. Can also import an array of existing block files selected by the user.  <br /></td></tr>
-<tr class="separator:a6ed30f76f9dedd138d17abaef0ad4c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbeb252182ad5508ccdb6bc3ee84ff0e" id="r_abbeb252182ad5508ccdb6bc3ee84ff0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#abbeb252182ad5508ccdb6bc3ee84ff0e">kernel_chainstate_manager_import_blocks</a> (const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *context, <a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *chainstate_manager, const char **block_file_paths, size_t *block_file_paths_lens, size_t block_file_paths_len) 2)</td></tr>
+<tr class="memdesc:abbeb252182ad5508ccdb6bc3ee84ff0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">May be called once the kernel_ChainstateManager is instantiated. Triggers the start of a reindex if the option was previously set for the chainstate and block manager. Can also import an array of existing block files selected by the user.  <br /></td></tr>
+<tr class="separator:abbeb252182ad5508ccdb6bc3ee84ff0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ebe8193bdc7728db0927a3560dd13b5" id="r_a0ebe8193bdc7728db0927a3560dd13b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a0ebe8193bdc7728db0927a3560dd13b5">kernel_chainstate_manager_process_block</a> (const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *context, <a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *chainstate_manager, <a class="el" href="bitcoinkernel_8h.html#a0e8ccba0664f03964db6f65d70ad791e">kernel_Block</a> *block, bool *new_block) 2</td></tr>
 <tr class="memdesc:a0ebe8193bdc7728db0927a3560dd13b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process and validate the passed in block with the chainstate manager. More detailed validation information in case of a failure can also be retrieved through a registered validation interface. If the block fails to validate the <code>block_checked</code> callback's 'BlockValidationState' will contain details.  <br /></td></tr>
 <tr class="separator:a0ebe8193bdc7728db0927a3560dd13b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -408,58 +408,59 @@ Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Block</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Functions for working with blocks. </p>
 </div></td></tr>
-<tr class="memitem:a83e0dfdc5f80c662cf1c0dda13bf8ee6" id="r_a83e0dfdc5f80c662cf1c0dda13bf8ee6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a0e8ccba0664f03964db6f65d70ad791e">kernel_Block</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a83e0dfdc5f80c662cf1c0dda13bf8ee6">kernel_read_block_from_disk</a> (const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *context, <a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *chainstate_manager, const <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *block_index) 2</td></tr>
-<tr class="memdesc:a83e0dfdc5f80c662cf1c0dda13bf8ee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the block the passed in block index points to from disk and returns it.  <br /></td></tr>
-<tr class="separator:a83e0dfdc5f80c662cf1c0dda13bf8ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ff463eed8441f0faea8e375d9466006" id="r_a7ff463eed8441f0faea8e375d9466006"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a0e8ccba0664f03964db6f65d70ad791e">kernel_Block</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a7ff463eed8441f0faea8e375d9466006">kernel_block_read</a> (const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *context, <a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *chainstate_manager, const <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *block_index) 2</td></tr>
+<tr class="memdesc:a7ff463eed8441f0faea8e375d9466006"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the block the passed in block index points to from disk and returns it.  <br /></td></tr>
+<tr class="separator:a7ff463eed8441f0faea8e375d9466006"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a557fc457cc7045041f15887a235ab233" id="r_a557fc457cc7045041f15887a235ab233"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a0e8ccba0664f03964db6f65d70ad791e">kernel_Block</a> <a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a0e8ccba0664f03964db6f65d70ad791e">kernel_Block</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a557fc457cc7045041f15887a235ab233">kernel_block_create</a> (const unsigned char *raw_block, size_t raw_block_len)</td></tr>
 <tr class="memdesc:a557fc457cc7045041f15887a235ab233"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a serialized raw block into a new block object.  <br /></td></tr>
 <tr class="separator:a557fc457cc7045041f15887a235ab233"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2c2e2a768417cc3b3445a6c44cbd8b4" id="r_af2c2e2a768417cc3b3445a6c44cbd8b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="structkernel__BlockHash.html">kernel_BlockHash</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#af2c2e2a768417cc3b3445a6c44cbd8b4">kernel_block_get_hash</a> (<a class="el" href="bitcoinkernel_8h.html#a0e8ccba0664f03964db6f65d70ad791e">kernel_Block</a> *block)</td></tr>
 <tr class="memdesc:af2c2e2a768417cc3b3445a6c44cbd8b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate and return the hash of a block.  <br /></td></tr>
 <tr class="separator:af2c2e2a768417cc3b3445a6c44cbd8b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60dfb32de9125314f504f5790e6a51c5" id="r_a60dfb32de9125314f504f5790e6a51c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="structkernel__BlockHash.html">kernel_BlockHash</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a60dfb32de9125314f504f5790e6a51c5">kernel_block_pointer_get_hash</a> (const <a class="el" href="bitcoinkernel_8h.html#abc65a7929ad15c3fd456f6efb3096fdc">kernel_BlockPointer</a> *block)</td></tr>
+<tr class="memdesc:a60dfb32de9125314f504f5790e6a51c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate and return the hash of a block.  <br /></td></tr>
+<tr class="separator:a60dfb32de9125314f504f5790e6a51c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab67903dc5017eeb215710b572864b7f4" id="r_ab67903dc5017eeb215710b572864b7f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="structkernel__ByteArray.html">kernel_ByteArray</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#ab67903dc5017eeb215710b572864b7f4">kernel_block_copy_data</a> (<a class="el" href="bitcoinkernel_8h.html#a0e8ccba0664f03964db6f65d70ad791e">kernel_Block</a> *block)</td></tr>
+<tr class="memdesc:ab67903dc5017eeb215710b572864b7f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies block data into the returned byte array.  <br /></td></tr>
+<tr class="separator:ab67903dc5017eeb215710b572864b7f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ea3806c30dd3a903711135f7853f47f" id="r_a5ea3806c30dd3a903711135f7853f47f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="structkernel__ByteArray.html">kernel_ByteArray</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a5ea3806c30dd3a903711135f7853f47f">kernel_block_pointer_copy_data</a> (const <a class="el" href="bitcoinkernel_8h.html#abc65a7929ad15c3fd456f6efb3096fdc">kernel_BlockPointer</a> *block)</td></tr>
+<tr class="memdesc:a5ea3806c30dd3a903711135f7853f47f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies block data into the returned byte array.  <br /></td></tr>
+<tr class="separator:a5ea3806c30dd3a903711135f7853f47f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77f85a09e135a01001c0f50db64dfd31" id="r_a77f85a09e135a01001c0f50db64dfd31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a77f85a09e135a01001c0f50db64dfd31">kernel_block_destroy</a> (<a class="el" href="bitcoinkernel_8h.html#a0e8ccba0664f03964db6f65d70ad791e">kernel_Block</a> *block)</td></tr>
+<tr class="separator:a77f85a09e135a01001c0f50db64dfd31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">ByteArray</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Functions for working with byte arrays. </p>
 </div></td></tr>
-<tr class="memitem:a60dfb32de9125314f504f5790e6a51c5" id="r_a60dfb32de9125314f504f5790e6a51c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="structkernel__BlockHash.html">kernel_BlockHash</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a60dfb32de9125314f504f5790e6a51c5">kernel_block_pointer_get_hash</a> (const <a class="el" href="bitcoinkernel_8h.html#abc65a7929ad15c3fd456f6efb3096fdc">kernel_BlockPointer</a> *block)</td></tr>
-<tr class="separator:a60dfb32de9125314f504f5790e6a51c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff45e1096ceb1cb54f8085596e33ccd1" id="r_aff45e1096ceb1cb54f8085596e33ccd1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="structkernel__ByteArray.html">kernel_ByteArray</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#aff45e1096ceb1cb54f8085596e33ccd1">kernel_copy_block_data</a> (<a class="el" href="bitcoinkernel_8h.html#a0e8ccba0664f03964db6f65d70ad791e">kernel_Block</a> *block)</td></tr>
-<tr class="memdesc:aff45e1096ceb1cb54f8085596e33ccd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies block data into the returned byte array.  <br /></td></tr>
-<tr class="separator:aff45e1096ceb1cb54f8085596e33ccd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fc0c2e64505e6ec5798368b48670c74" id="r_a9fc0c2e64505e6ec5798368b48670c74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="structkernel__ByteArray.html">kernel_ByteArray</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a9fc0c2e64505e6ec5798368b48670c74">kernel_copy_block_pointer_data</a> (const <a class="el" href="bitcoinkernel_8h.html#abc65a7929ad15c3fd456f6efb3096fdc">kernel_BlockPointer</a> *block)</td></tr>
-<tr class="memdesc:a9fc0c2e64505e6ec5798368b48670c74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies block data into the returned byte array.  <br /></td></tr>
-<tr class="separator:a9fc0c2e64505e6ec5798368b48670c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77f85a09e135a01001c0f50db64dfd31" id="r_a77f85a09e135a01001c0f50db64dfd31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a77f85a09e135a01001c0f50db64dfd31">kernel_block_destroy</a> (<a class="el" href="bitcoinkernel_8h.html#a0e8ccba0664f03964db6f65d70ad791e">kernel_Block</a> *block)</td></tr>
-<tr class="separator:a77f85a09e135a01001c0f50db64dfd31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1039e3b2ec6058602328744e533fa0c" id="r_aa1039e3b2ec6058602328744e533fa0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#aa1039e3b2ec6058602328744e533fa0c">kernel_byte_array_destroy</a> (<a class="el" href="structkernel__ByteArray.html">kernel_ByteArray</a> *byte_array)</td></tr>
 <tr class="separator:aa1039e3b2ec6058602328744e533fa0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">BlockValidationState</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Functions for working with block validation states. </p>
 </div></td></tr>
-<tr class="memitem:a417ff2474d205263b556b2c9ba165205" id="r_a417ff2474d205263b556b2c9ba165205"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a2f9b88989f2f30f9b103fc466655d19e">kernel_ValidationMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a417ff2474d205263b556b2c9ba165205">kernel_get_validation_mode_from_block_validation_state</a> (const <a class="el" href="bitcoinkernel_8h.html#a3d67fbcb3a758b8ab5f6fd8d2119fb38">kernel_BlockValidationState</a> *block_validation_state)</td></tr>
-<tr class="separator:a417ff2474d205263b556b2c9ba165205"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17d5eccf36b73a5bf98a85ccf725cdfe" id="r_a17d5eccf36b73a5bf98a85ccf725cdfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a9d9e25845e651f3aa1ba62e54329cf0c">kernel_BlockValidationResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a17d5eccf36b73a5bf98a85ccf725cdfe">kernel_get_block_validation_result_from_block_validation_state</a> (const <a class="el" href="bitcoinkernel_8h.html#a3d67fbcb3a758b8ab5f6fd8d2119fb38">kernel_BlockValidationState</a> *block_validation_state)</td></tr>
-<tr class="separator:a17d5eccf36b73a5bf98a85ccf725cdfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9de54f4e2d4c7dd5df72a1ed194e0343" id="r_a9de54f4e2d4c7dd5df72a1ed194e0343"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a2f9b88989f2f30f9b103fc466655d19e">kernel_ValidationMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a9de54f4e2d4c7dd5df72a1ed194e0343">kernel_block_validation_state_get_validation_mode</a> (const <a class="el" href="bitcoinkernel_8h.html#a3d67fbcb3a758b8ab5f6fd8d2119fb38">kernel_BlockValidationState</a> *block_validation_state)</td></tr>
+<tr class="separator:a9de54f4e2d4c7dd5df72a1ed194e0343"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8dba87a3eadc0c6f81ce27adc4df2a0" id="r_ac8dba87a3eadc0c6f81ce27adc4df2a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a9d9e25845e651f3aa1ba62e54329cf0c">kernel_BlockValidationResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#ac8dba87a3eadc0c6f81ce27adc4df2a0">kernel_block_validation_state_get_block_validation_result</a> (const <a class="el" href="bitcoinkernel_8h.html#a3d67fbcb3a758b8ab5f6fd8d2119fb38">kernel_BlockValidationState</a> *block_validation_state)</td></tr>
+<tr class="separator:ac8dba87a3eadc0c6f81ce27adc4df2a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">BlockIndex</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Functions for working with block indexes. </p>
 </div></td></tr>
-<tr class="memitem:ab6bb157faaa9bd0bdf29f1147492ae4a" id="r_ab6bb157faaa9bd0bdf29f1147492ae4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#ab6bb157faaa9bd0bdf29f1147492ae4a">kernel_get_block_index_from_tip</a> (const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *context, <a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *chainstate_manager) 2)</td></tr>
-<tr class="memdesc:ab6bb157faaa9bd0bdf29f1147492ae4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the block index entry of the current chain tip. Once returned, there is no guarantee that it remains in the active chain.  <br /></td></tr>
-<tr class="separator:ab6bb157faaa9bd0bdf29f1147492ae4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdf32fc021b55db877fe1a3713535ce2" id="r_acdf32fc021b55db877fe1a3713535ce2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#acdf32fc021b55db877fe1a3713535ce2">kernel_get_block_index_from_genesis</a> (const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *context, <a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *chainstate_manager) 2)</td></tr>
-<tr class="memdesc:acdf32fc021b55db877fe1a3713535ce2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the block index entry of the genesis block.  <br /></td></tr>
-<tr class="separator:acdf32fc021b55db877fe1a3713535ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefbfd8fc3b2270a370dc3ab44f1d6fb7" id="r_aefbfd8fc3b2270a370dc3ab44f1d6fb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#aefbfd8fc3b2270a370dc3ab44f1d6fb7">kernel_get_block_index_from_hash</a> (const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *context, <a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *chainstate_manager, <a class="el" href="structkernel__BlockHash.html">kernel_BlockHash</a> *block_hash) 2</td></tr>
-<tr class="memdesc:aefbfd8fc3b2270a370dc3ab44f1d6fb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a block index by its block hash.  <br /></td></tr>
-<tr class="separator:aefbfd8fc3b2270a370dc3ab44f1d6fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dfeaa9e7533c8325487db5911d84a26" id="r_a6dfeaa9e7533c8325487db5911d84a26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> <a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a6dfeaa9e7533c8325487db5911d84a26">kernel_get_block_index_from_height</a> (const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *context, <a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *chainstate_manager, int block_height) 2)</td></tr>
-<tr class="memdesc:a6dfeaa9e7533c8325487db5911d84a26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a block index by its height in the currently active chain. Once retrieved there is no guarantee that it remains in the active chain.  <br /></td></tr>
-<tr class="separator:a6dfeaa9e7533c8325487db5911d84a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7b0124b835af50ffa435d8cf6876b90" id="r_ab7b0124b835af50ffa435d8cf6876b90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#ab7b0124b835af50ffa435d8cf6876b90">kernel_get_next_block_index</a> (const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *context, <a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *chainstate_manager, const <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *block_index) 2</td></tr>
-<tr class="memdesc:ab7b0124b835af50ffa435d8cf6876b90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the next block index in the currently active chain, or null if the current block index is the tip, or is not in the currently active chain.  <br /></td></tr>
-<tr class="separator:ab7b0124b835af50ffa435d8cf6876b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0583ac4bb5db079dfa8372605e98a9a6" id="r_a0583ac4bb5db079dfa8372605e98a9a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> <a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a0583ac4bb5db079dfa8372605e98a9a6">kernel_get_previous_block_index</a> (const <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *block_index)</td></tr>
-<tr class="memdesc:a0583ac4bb5db079dfa8372605e98a9a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the previous block index in the chain, or null if the current block index entry is the genesis block.  <br /></td></tr>
-<tr class="separator:a0583ac4bb5db079dfa8372605e98a9a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a779a4d205de88780e3c55fb9a0de15c0" id="r_a779a4d205de88780e3c55fb9a0de15c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a779a4d205de88780e3c55fb9a0de15c0">kernel_block_index_get_tip</a> (const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *context, <a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *chainstate_manager) 2)</td></tr>
+<tr class="memdesc:a779a4d205de88780e3c55fb9a0de15c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the block index entry of the current chain tip. Once returned, there is no guarantee that it remains in the active chain.  <br /></td></tr>
+<tr class="separator:a779a4d205de88780e3c55fb9a0de15c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a667578e9015f9b1e4d61e469e0b9eeb0" id="r_a667578e9015f9b1e4d61e469e0b9eeb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a667578e9015f9b1e4d61e469e0b9eeb0">kernel_block_index_get_genesis</a> (const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *context, <a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *chainstate_manager) 2)</td></tr>
+<tr class="memdesc:a667578e9015f9b1e4d61e469e0b9eeb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the block index entry of the genesis block.  <br /></td></tr>
+<tr class="separator:a667578e9015f9b1e4d61e469e0b9eeb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05192572f3ab43878140750d297b6e62" id="r_a05192572f3ab43878140750d297b6e62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a05192572f3ab43878140750d297b6e62">kernel_block_index_get_by_hash</a> (const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *context, <a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *chainstate_manager, <a class="el" href="structkernel__BlockHash.html">kernel_BlockHash</a> *block_hash) 2</td></tr>
+<tr class="memdesc:a05192572f3ab43878140750d297b6e62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a block index by its block hash.  <br /></td></tr>
+<tr class="separator:a05192572f3ab43878140750d297b6e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e6710c06d24aa2bba7152d1682811fc" id="r_a0e6710c06d24aa2bba7152d1682811fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> <a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a0e6710c06d24aa2bba7152d1682811fc">kernel_block_index_get_by_height</a> (const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *context, <a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *chainstate_manager, int block_height) 2)</td></tr>
+<tr class="memdesc:a0e6710c06d24aa2bba7152d1682811fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a block index by its height in the currently active chain. Once retrieved there is no guarantee that it remains in the active chain.  <br /></td></tr>
+<tr class="separator:a0e6710c06d24aa2bba7152d1682811fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f1639be07b1a96f66839a02fc4a17e" id="r_ac0f1639be07b1a96f66839a02fc4a17e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#ac0f1639be07b1a96f66839a02fc4a17e">kernel_block_index_get_next</a> (const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *context, <a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *chainstate_manager, const <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *block_index) 2</td></tr>
+<tr class="memdesc:ac0f1639be07b1a96f66839a02fc4a17e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the next block index in the currently active chain, or null if the current block index is the tip, or is not in the currently active chain.  <br /></td></tr>
+<tr class="separator:ac0f1639be07b1a96f66839a02fc4a17e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0146d07ed66620a65008ae7fb1c97b7d" id="r_a0146d07ed66620a65008ae7fb1c97b7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> <a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a0146d07ed66620a65008ae7fb1c97b7d">kernel_block_index_get_previous</a> (const <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *block_index)</td></tr>
+<tr class="memdesc:a0146d07ed66620a65008ae7fb1c97b7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the previous block index in the chain, or null if the current block index entry is the genesis block.  <br /></td></tr>
+<tr class="separator:a0146d07ed66620a65008ae7fb1c97b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2671d5e77cc985266753f29e11883889" id="r_a2671d5e77cc985266753f29e11883889"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a2671d5e77cc985266753f29e11883889">kernel_block_index_get_height</a> (const <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *block_index)</td></tr>
 <tr class="memdesc:a2671d5e77cc985266753f29e11883889"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the height of a certain block index.  <br /></td></tr>
 <tr class="separator:a2671d5e77cc985266753f29e11883889"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -469,21 +470,21 @@ Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">BlockUndo</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Functions for working with block undo data. </p>
 </div></td></tr>
-<tr class="memitem:a9b2b372359a44ed9acd7a78ac703f8c4" id="r_a9b2b372359a44ed9acd7a78ac703f8c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a694adc3152f84e45518f59450b41ed03">kernel_BlockUndo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a9b2b372359a44ed9acd7a78ac703f8c4">kernel_read_block_undo_from_disk</a> (const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *context, <a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *chainstate_manager, const <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *block_index) 2</td></tr>
-<tr class="memdesc:a9b2b372359a44ed9acd7a78ac703f8c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the block undo data the passed in block index points to from disk and returns it.  <br /></td></tr>
-<tr class="separator:a9b2b372359a44ed9acd7a78ac703f8c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8381ee2c3e7b8a930553f532cd450ac" id="r_ab8381ee2c3e7b8a930553f532cd450ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a694adc3152f84e45518f59450b41ed03">kernel_BlockUndo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#ab8381ee2c3e7b8a930553f532cd450ac">kernel_block_undo_read</a> (const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *context, <a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *chainstate_manager, const <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *block_index) 2</td></tr>
+<tr class="memdesc:ab8381ee2c3e7b8a930553f532cd450ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the block undo data the passed in block index points to from disk and returns it.  <br /></td></tr>
+<tr class="separator:ab8381ee2c3e7b8a930553f532cd450ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add85ddbf0d521c25bee1b631b68c7d3a" id="r_add85ddbf0d521c25bee1b631b68c7d3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a694adc3152f84e45518f59450b41ed03">kernel_BlockUndo</a> <a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#add85ddbf0d521c25bee1b631b68c7d3a">kernel_block_undo_size</a> (const <a class="el" href="bitcoinkernel_8h.html#a694adc3152f84e45518f59450b41ed03">kernel_BlockUndo</a> *block_undo)</td></tr>
 <tr class="memdesc:add85ddbf0d521c25bee1b631b68c7d3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of transactions whose undo data is contained in block undo.  <br /></td></tr>
 <tr class="separator:add85ddbf0d521c25bee1b631b68c7d3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2046ea0872dbb44decb31ddf854e0bf8" id="r_a2046ea0872dbb44decb31ddf854e0bf8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a2046ea0872dbb44decb31ddf854e0bf8">kernel_get_transaction_undo_size</a> (const <a class="el" href="bitcoinkernel_8h.html#a694adc3152f84e45518f59450b41ed03">kernel_BlockUndo</a> *block_undo, uint64_t transaction_undo_index)</td></tr>
-<tr class="memdesc:a2046ea0872dbb44decb31ddf854e0bf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of previous transaction outputs contained in the transaction undo data.  <br /></td></tr>
-<tr class="separator:a2046ea0872dbb44decb31ddf854e0bf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c680305f14d0aca7a13bf459ec9259c" id="r_a3c680305f14d0aca7a13bf459ec9259c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a3c680305f14d0aca7a13bf459ec9259c">kernel_get_undo_output_height_by_index</a> (const <a class="el" href="bitcoinkernel_8h.html#a694adc3152f84e45518f59450b41ed03">kernel_BlockUndo</a> *block_undo, uint64_t transaction_undo_index, uint64_t output_index)</td></tr>
-<tr class="memdesc:a3c680305f14d0aca7a13bf459ec9259c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the block height of the block that contains the output at output_index within the transaction undo data at the provided index of the block undo data.  <br /></td></tr>
-<tr class="separator:a3c680305f14d0aca7a13bf459ec9259c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c198b551df7c57883f3311e4a3524e6" id="r_a9c198b551df7c57883f3311e4a3524e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a6fbb4bd835f2cfd09b644d4747fad2ac">kernel_TransactionOutput</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a9c198b551df7c57883f3311e4a3524e6">kernel_get_undo_output_by_index</a> (const <a class="el" href="bitcoinkernel_8h.html#a694adc3152f84e45518f59450b41ed03">kernel_BlockUndo</a> *block_undo, uint64_t transaction_undo_index, uint64_t output_index)</td></tr>
-<tr class="memdesc:a9c198b551df7c57883f3311e4a3524e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a transaction output contained in the transaction undo data of a block undo data at a certain index.  <br /></td></tr>
-<tr class="separator:a9c198b551df7c57883f3311e4a3524e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed0affc4153f4b278caff3189a886861" id="r_aed0affc4153f4b278caff3189a886861"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#aed0affc4153f4b278caff3189a886861">kernel_block_undo_get_transaction_undo_size</a> (const <a class="el" href="bitcoinkernel_8h.html#a694adc3152f84e45518f59450b41ed03">kernel_BlockUndo</a> *block_undo, uint64_t transaction_undo_index)</td></tr>
+<tr class="memdesc:aed0affc4153f4b278caff3189a886861"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of previous transaction outputs contained in the transaction undo data.  <br /></td></tr>
+<tr class="separator:aed0affc4153f4b278caff3189a886861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84d53e5b9f1f6eb829716226d642bd5e" id="r_a84d53e5b9f1f6eb829716226d642bd5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a84d53e5b9f1f6eb829716226d642bd5e">kernel_block_undo_get_transaction_output_height_by_index</a> (const <a class="el" href="bitcoinkernel_8h.html#a694adc3152f84e45518f59450b41ed03">kernel_BlockUndo</a> *block_undo, uint64_t transaction_undo_index, uint64_t output_index)</td></tr>
+<tr class="memdesc:a84d53e5b9f1f6eb829716226d642bd5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the block height of the block that contains the output at output_index within the transaction undo data at the provided index of the block undo data.  <br /></td></tr>
+<tr class="separator:a84d53e5b9f1f6eb829716226d642bd5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91fb562f9f48b1765b47cce83ae261f7" id="r_a91fb562f9f48b1765b47cce83ae261f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a6fbb4bd835f2cfd09b644d4747fad2ac">kernel_TransactionOutput</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a91fb562f9f48b1765b47cce83ae261f7">kernel_block_undo_copy_transaction_output_by_index</a> (const <a class="el" href="bitcoinkernel_8h.html#a694adc3152f84e45518f59450b41ed03">kernel_BlockUndo</a> *block_undo, uint64_t transaction_undo_index, uint64_t output_index)</td></tr>
+<tr class="memdesc:a91fb562f9f48b1765b47cce83ae261f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a transaction output contained in the transaction undo data of a block undo data at a certain index. This value is copied from the underlying data and thus owned entirely by the user.  <br /></td></tr>
+<tr class="separator:a91fb562f9f48b1765b47cce83ae261f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7ef10a62eff79707649603b041a278f" id="r_ae7ef10a62eff79707649603b041a278f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#ae7ef10a62eff79707649603b041a278f">kernel_block_undo_destroy</a> (<a class="el" href="bitcoinkernel_8h.html#a694adc3152f84e45518f59450b41ed03">kernel_BlockUndo</a> *block_undo)</td></tr>
 <tr class="separator:ae7ef10a62eff79707649603b041a278f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">BlockHash</div></td></tr>
@@ -761,7 +762,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Opaque data structure for holding a logging connection.</p>
 <p>The logging connection can be used to manually stop logging.</p>
-<p>Messages that were logged before a connection is created are buffered in a 1MB buffer. Logging can alternatively be permanently disabled by calling <a class="el" href="bitcoinkernel_8h.html#a28bde526657e45abccb8a509fb91ada2" title="This disables the global internal logger. No log messages will be buffered internally anymore once th...">kernel_disable_logging()</a>. Functions changing the logging settings are global (and not thread safe) and change the settings for all existing kernel_LoggingConnection instances. </p>
+<p>Messages that were logged before a connection is created are buffered in a 1MB buffer. Logging can alternatively be permanently disabled by calling kernel_disable_logging(). Functions changing the logging settings are global (and not thread safe) and change the settings for all existing kernel_LoggingConnection instances. </p>
 
 </div>
 </div>
@@ -1151,40 +1152,30 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ac0bfdf0592e2894de7d318558a1fce49" name="ac0bfdf0592e2894de7d318558a1fce49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0bfdf0592e2894de7d318558a1fce49">&#9670;&#160;</a></span>kernel_add_log_level_category()</h2>
+<a id="ab67903dc5017eeb215710b572864b7f4" name="ab67903dc5017eeb215710b572864b7f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab67903dc5017eeb215710b572864b7f4">&#9670;&#160;</a></span>kernel_block_copy_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void kernel_add_log_level_category </td>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="structkernel__ByteArray.html">kernel_ByteArray</a> * kernel_block_copy_data </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#aff35690dbbf32e8e59802fea7324d2dc">kernel_LogCategory</a>&#160;</td>
-          <td class="paramname"><em>category</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#a0e8ccba0664f03964db6f65d70ad791e">kernel_Block</a> *&#160;</td>
+          <td class="paramname"><em>block</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#abef6efcb310317332f1528e1102b9a71">kernel_LogLevel</a>&#160;</td>
-          <td class="paramname"><em>level</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set the log level of the global internal logger. This does not enable the selected categories. Use <code>kernel_enable_log_category</code> to start logging from a specific, or all categories. This function is not thread safe. Mutiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> instances. </p>
+<p>Copies block data into the returned byte array. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">category</td><td>If kernel_LOG_ALL is chosen, all messages at the specified level will be logged. Otherwise only messages from the specified category will be logged at the specified level and above. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>Log level at which the log category is set. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block</td><td>Non-null. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Allocated byte array holding the block data. </dd></dl>
 
 </div>
 </div>
@@ -1334,7 +1325,135 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The block hash. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The block hash, or null if the block index has no associated hash. </dd></dl>
+
+</div>
+</div>
+<a id="a05192572f3ab43878140750d297b6e62" name="a05192572f3ab43878140750d297b6e62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05192572f3ab43878140750d297b6e62">&#9670;&#160;</a></span>kernel_block_index_get_by_hash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> * kernel_block_index_get_by_hash </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *&#160;</td>
+          <td class="paramname"><em>chainstate_manager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structkernel__BlockHash.html">kernel_BlockHash</a> *&#160;</td>
+          <td class="paramname"><em>block_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve a block index by its block hash. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Non-null. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager</td><td>Non-null. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_hash</td><td>Non-null. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The block index of the block with the passed in hash, or null if the block hash is not found. </dd></dl>
+
+</div>
+</div>
+<a id="a0e6710c06d24aa2bba7152d1682811fc" name="a0e6710c06d24aa2bba7152d1682811fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e6710c06d24aa2bba7152d1682811fc">&#9670;&#160;</a></span>kernel_block_index_get_by_height()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> <a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> * kernel_block_index_get_by_height </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *&#160;</td>
+          <td class="paramname"><em>chainstate_manager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>block_height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve a block index by its height in the currently active chain. Once retrieved there is no guarantee that it remains in the active chain. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Non-null. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager</td><td>Non-null. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_height</td><td>Height in the chain of the to be retrieved block index. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The block index at a certain height in the currently active chain, or null if the height is out of bounds. </dd></dl>
+
+</div>
+</div>
+<a id="a667578e9015f9b1e4d61e469e0b9eeb0" name="a667578e9015f9b1e4d61e469e0b9eeb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a667578e9015f9b1e4d61e469e0b9eeb0">&#9670;&#160;</a></span>kernel_block_index_get_genesis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> * kernel_block_index_get_genesis </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *&#160;</td>
+          <td class="paramname"><em>chainstate_manager</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the block index entry of the genesis block. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Non-null. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager</td><td>Non-null. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The block index of the genesis block, or null on error. </dd></dl>
 
 </div>
 </div>
@@ -1365,6 +1484,143 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ac0f1639be07b1a96f66839a02fc4a17e" name="ac0f1639be07b1a96f66839a02fc4a17e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0f1639be07b1a96f66839a02fc4a17e">&#9670;&#160;</a></span>kernel_block_index_get_next()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> * kernel_block_index_get_next </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *&#160;</td>
+          <td class="paramname"><em>chainstate_manager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *&#160;</td>
+          <td class="paramname"><em>block_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the next block index in the currently active chain, or null if the current block index is the tip, or is not in the currently active chain. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Non-null. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_index</td><td>Non-null. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager</td><td>Non-null. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The next block index in the currently active chain, or null if the block_index is the chain tip. </dd></dl>
+
+</div>
+</div>
+<a id="a0146d07ed66620a65008ae7fb1c97b7d" name="a0146d07ed66620a65008ae7fb1c97b7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0146d07ed66620a65008ae7fb1c97b7d">&#9670;&#160;</a></span>kernel_block_index_get_previous()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> <a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> * kernel_block_index_get_previous </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *&#160;</td>
+          <td class="paramname"><em>block_index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the previous block index in the chain, or null if the current block index entry is the genesis block. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_index</td><td>Non-null. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The previous block index, or null on error or if the current block index is the genesis block. </dd></dl>
+
+</div>
+</div>
+<a id="a779a4d205de88780e3c55fb9a0de15c0" name="a779a4d205de88780e3c55fb9a0de15c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a779a4d205de88780e3c55fb9a0de15c0">&#9670;&#160;</a></span>kernel_block_index_get_tip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> * kernel_block_index_get_tip </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *&#160;</td>
+          <td class="paramname"><em>chainstate_manager</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the block index entry of the current chain tip. Once returned, there is no guarantee that it remains in the active chain. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Non-null. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager</td><td>Non-null. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The block index of the current tip, or null if the chain is empty. </dd></dl>
+
+</div>
+</div>
+<a id="a5ea3806c30dd3a903711135f7853f47f" name="a5ea3806c30dd3a903711135f7853f47f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ea3806c30dd3a903711135f7853f47f">&#9670;&#160;</a></span>kernel_block_pointer_copy_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="structkernel__ByteArray.html">kernel_ByteArray</a> * kernel_block_pointer_copy_data </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#abc65a7929ad15c3fd456f6efb3096fdc">kernel_BlockPointer</a> *&#160;</td>
+          <td class="paramname"><em>block</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copies block data into the returned byte array. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">block</td><td>Non-null. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Allocated byte array holding the block data. </dd></dl>
+
+</div>
+</div>
 <a id="a60dfb32de9125314f504f5790e6a51c5" name="a60dfb32de9125314f504f5790e6a51c5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a60dfb32de9125314f504f5790e6a51c5">&#9670;&#160;</a></span>kernel_block_pointer_get_hash()</h2>
 
@@ -1380,6 +1636,105 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Calculate and return the hash of a block. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">block</td><td>Non-null. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The block hash. </dd></dl>
+
+</div>
+</div>
+<a id="a7ff463eed8441f0faea8e375d9466006" name="a7ff463eed8441f0faea8e375d9466006"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ff463eed8441f0faea8e375d9466006">&#9670;&#160;</a></span>kernel_block_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a0e8ccba0664f03964db6f65d70ad791e">kernel_Block</a> * kernel_block_read </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *&#160;</td>
+          <td class="paramname"><em>chainstate_manager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *&#160;</td>
+          <td class="paramname"><em>block_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reads the block the passed in block index points to from disk and returns it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Non-null. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager</td><td>Non-null. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_index</td><td>Non-null. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The read out block, or null on error. </dd></dl>
+
+</div>
+</div>
+<a id="a91fb562f9f48b1765b47cce83ae261f7" name="a91fb562f9f48b1765b47cce83ae261f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91fb562f9f48b1765b47cce83ae261f7">&#9670;&#160;</a></span>kernel_block_undo_copy_transaction_output_by_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a6fbb4bd835f2cfd09b644d4747fad2ac">kernel_TransactionOutput</a> * kernel_block_undo_copy_transaction_output_by_index </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#a694adc3152f84e45518f59450b41ed03">kernel_BlockUndo</a> *&#160;</td>
+          <td class="paramname"><em>block_undo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>transaction_undo_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>output_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return a transaction output contained in the transaction undo data of a block undo data at a certain index. This value is copied from the underlying data and thus owned entirely by the user. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_undo</td><td>Non-null. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">transaction_undo_index</td><td>The index of the transaction undo data within the block undo data. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">output_index</td><td>The index of the to be retrieved transaction output within the transaction undo data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A transaction output pointer, or null if provided indices are out of bounds. </dd></dl>
 
 </div>
 </div>
@@ -1399,6 +1754,134 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Destroy the block undo data. </p>
+
+</div>
+</div>
+<a id="a84d53e5b9f1f6eb829716226d642bd5e" name="a84d53e5b9f1f6eb829716226d642bd5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84d53e5b9f1f6eb829716226d642bd5e">&#9670;&#160;</a></span>kernel_block_undo_get_transaction_output_height_by_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> uint32_t kernel_block_undo_get_transaction_output_height_by_index </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#a694adc3152f84e45518f59450b41ed03">kernel_BlockUndo</a> *&#160;</td>
+          <td class="paramname"><em>block_undo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>transaction_undo_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>output_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the block height of the block that contains the output at output_index within the transaction undo data at the provided index of the block undo data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_undo</td><td>Non-null. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">transaction_undo_index</td><td>The index of the transaction undo data within the block undo data. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">output_index</td><td>The index of the targeted transaction output within the transaction undo data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The block height of the output, or 0 if provided indices are out of bounds. </dd></dl>
+
+</div>
+</div>
+<a id="aed0affc4153f4b278caff3189a886861" name="aed0affc4153f4b278caff3189a886861"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed0affc4153f4b278caff3189a886861">&#9670;&#160;</a></span>kernel_block_undo_get_transaction_undo_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> uint64_t kernel_block_undo_get_transaction_undo_size </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#a694adc3152f84e45518f59450b41ed03">kernel_BlockUndo</a> *&#160;</td>
+          <td class="paramname"><em>block_undo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>transaction_undo_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of previous transaction outputs contained in the transaction undo data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_undo</td><td>Non-null, the block undo data from which tx_undo was retrieved from. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">transaction_undo_index</td><td>The index of the transaction undo data within the block undo data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of previous transaction outputs in the transaction, or 0 if the provided index is out of bounds. </dd></dl>
+
+</div>
+</div>
+<a id="ab8381ee2c3e7b8a930553f532cd450ac" name="ab8381ee2c3e7b8a930553f532cd450ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8381ee2c3e7b8a930553f532cd450ac">&#9670;&#160;</a></span>kernel_block_undo_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a694adc3152f84e45518f59450b41ed03">kernel_BlockUndo</a> * kernel_block_undo_read </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *&#160;</td>
+          <td class="paramname"><em>chainstate_manager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *&#160;</td>
+          <td class="paramname"><em>block_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reads the block undo data the passed in block index points to from disk and returns it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Non-null. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager</td><td>Non-null. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_index</td><td>Non-null. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The read out block undo data, or null on error. </dd></dl>
 
 </div>
 </div>
@@ -1426,6 +1909,44 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The number of transaction undo data in the block undo. </dd></dl>
+
+</div>
+</div>
+<a id="ac8dba87a3eadc0c6f81ce27adc4df2a0" name="ac8dba87a3eadc0c6f81ce27adc4df2a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8dba87a3eadc0c6f81ce27adc4df2a0">&#9670;&#160;</a></span>kernel_block_validation_state_get_block_validation_result()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a9d9e25845e651f3aa1ba62e54329cf0c">kernel_BlockValidationResult</a> kernel_block_validation_state_get_block_validation_result </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#a3d67fbcb3a758b8ab5f6fd8d2119fb38">kernel_BlockValidationState</a> *&#160;</td>
+          <td class="paramname"><em>block_validation_state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the validation result from an opaque block validation state pointer. </p>
+
+</div>
+</div>
+<a id="a9de54f4e2d4c7dd5df72a1ed194e0343" name="a9de54f4e2d4c7dd5df72a1ed194e0343"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9de54f4e2d4c7dd5df72a1ed194e0343">&#9670;&#160;</a></span>kernel_block_validation_state_get_validation_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a2f9b88989f2f30f9b103fc466655d19e">kernel_ValidationMode</a> kernel_block_validation_state_get_validation_mode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#a3d67fbcb3a758b8ab5f6fd8d2119fb38">kernel_BlockValidationState</a> *&#160;</td>
+          <td class="paramname"><em>block_validation_state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the validation mode from an opaque block validation state pointer. </p>
 
 </div>
 </div>
@@ -1558,6 +2079,64 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Destroy the chainstate manager. </p>
+
+</div>
+</div>
+<a id="abbeb252182ad5508ccdb6bc3ee84ff0e" name="abbeb252182ad5508ccdb6bc3ee84ff0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbeb252182ad5508ccdb6bc3ee84ff0e">&#9670;&#160;</a></span>kernel_chainstate_manager_import_blocks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> bool kernel_chainstate_manager_import_blocks </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *&#160;</td>
+          <td class="paramname"><em>chainstate_manager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char **&#160;</td>
+          <td class="paramname"><em>block_file_paths</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *&#160;</td>
+          <td class="paramname"><em>block_file_paths_lens</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>block_file_paths_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>May be called once the kernel_ChainstateManager is instantiated. Triggers the start of a reindex if the option was previously set for the chainstate and block manager. Can also import an array of existing block files selected by the user. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Non-null. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager</td><td>Non-null. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_file_paths</td><td>Nullable, array of block files described by their full filesystem paths. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_file_paths_len</td><td>Length of the block_file_paths array. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the import blocks call was completed successfully. </dd></dl>
 
 </div>
 </div>
@@ -1743,7 +2322,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets wipe db in the options. In combination with calling <a class="el" href="bitcoinkernel_8h.html#a6ed30f76f9dedd138d17abaef0ad4c64">kernel_import_blocks</a> this triggers either a full reindex, or a reindex of just the chainstate database. </p>
+<p>Sets wipe db in the options. In combination with calling kernel_import_blocks this triggers either a full reindex, or a reindex of just the chainstate database. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager_options</td><td>Non-null, created by <a class="el" href="bitcoinkernel_8h.html#aa0d91f503312aefaf749a19fb0f48dd8">kernel_chainstate_manager_options_create</a>. </td></tr>
@@ -2066,674 +2645,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aff45e1096ceb1cb54f8085596e33ccd1" name="aff45e1096ceb1cb54f8085596e33ccd1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff45e1096ceb1cb54f8085596e33ccd1">&#9670;&#160;</a></span>kernel_copy_block_data()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="structkernel__ByteArray.html">kernel_ByteArray</a> * kernel_copy_block_data </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#a0e8ccba0664f03964db6f65d70ad791e">kernel_Block</a> *&#160;</td>
-          <td class="paramname"><em>block</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Copies block data into the returned byte array. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">block</td><td>Non-null. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Allocated byte array holding the block data, or null on error. </dd></dl>
-
-</div>
-</div>
-<a id="a9fc0c2e64505e6ec5798368b48670c74" name="a9fc0c2e64505e6ec5798368b48670c74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fc0c2e64505e6ec5798368b48670c74">&#9670;&#160;</a></span>kernel_copy_block_pointer_data()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="structkernel__ByteArray.html">kernel_ByteArray</a> * kernel_copy_block_pointer_data </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#abc65a7929ad15c3fd456f6efb3096fdc">kernel_BlockPointer</a> *&#160;</td>
-          <td class="paramname"><em>block</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Copies block data into the returned byte array. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">block</td><td>Non-null. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Allocated byte array holding the block data, or null on error. </dd></dl>
-
-</div>
-</div>
-<a id="ad94cd629220ddf4434b436e3e9f67823" name="ad94cd629220ddf4434b436e3e9f67823"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad94cd629220ddf4434b436e3e9f67823">&#9670;&#160;</a></span>kernel_copy_script_pubkey_data()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="structkernel__ByteArray.html">kernel_ByteArray</a> * kernel_copy_script_pubkey_data </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#ac46029269b0eddda0d528c5bea1e766a">kernel_ScriptPubkey</a> *&#160;</td>
-          <td class="paramname"><em>script_pubkey</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Copies the script pubkey data into the returned byte array. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">script_pubkey</td><td>Non-null. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The serialized script pubkey data. </dd></dl>
-
-</div>
-</div>
-<a id="abf932729e7714384722de1c3ef807f05" name="abf932729e7714384722de1c3ef807f05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf932729e7714384722de1c3ef807f05">&#9670;&#160;</a></span>kernel_copy_script_pubkey_from_output()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#ac46029269b0eddda0d528c5bea1e766a">kernel_ScriptPubkey</a> * kernel_copy_script_pubkey_from_output </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#a6fbb4bd835f2cfd09b644d4747fad2ac">kernel_TransactionOutput</a> *&#160;</td>
-          <td class="paramname"><em>transaction_output</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Copies the script pubkey of an output in the returned script pubkey opaque object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">transaction_output</td><td>Non-null. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The data for the output's script pubkey. </dd></dl>
-
-</div>
-</div>
-<a id="aba1205f1e29bd995077c9e4eddf0e2fd" name="aba1205f1e29bd995077c9e4eddf0e2fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba1205f1e29bd995077c9e4eddf0e2fd">&#9670;&#160;</a></span>kernel_disable_log_category()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void kernel_disable_log_category </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#aff35690dbbf32e8e59802fea7324d2dc">kernel_LogCategory</a>&#160;</td>
-          <td class="paramname"><em>category</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Disable a specific log category for the global internal logger. This function is not thread safe. Mutiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> instances. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">category</td><td>If kernel_LOG_ALL is chosen, all categories will be disabled. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a28bde526657e45abccb8a509fb91ada2" name="a28bde526657e45abccb8a509fb91ada2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28bde526657e45abccb8a509fb91ada2">&#9670;&#160;</a></span>kernel_disable_logging()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void kernel_disable_logging </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This disables the global internal logger. No log messages will be buffered internally anymore once this is called and the buffer is cleared. This function should only be called once and is not thread or re-entry safe. Log messages will be buffered until this function is called, or a logging connection is created. </p>
-
-</div>
-</div>
-<a id="a546dd71c5b2378c7b3c2357101a21e92" name="a546dd71c5b2378c7b3c2357101a21e92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a546dd71c5b2378c7b3c2357101a21e92">&#9670;&#160;</a></span>kernel_enable_log_category()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void kernel_enable_log_category </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#aff35690dbbf32e8e59802fea7324d2dc">kernel_LogCategory</a>&#160;</td>
-          <td class="paramname"><em>category</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Enable a specific log category for the global internal logger. This function is not thread safe. Mutiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> instances. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">category</td><td>If kernel_LOG_ALL is chosen, all categories will be enabled. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="acdf32fc021b55db877fe1a3713535ce2" name="acdf32fc021b55db877fe1a3713535ce2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acdf32fc021b55db877fe1a3713535ce2">&#9670;&#160;</a></span>kernel_get_block_index_from_genesis()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> * kernel_get_block_index_from_genesis </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *&#160;</td>
-          <td class="paramname"><em>chainstate_manager</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the block index entry of the genesis block. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Non-null. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager</td><td>Non-null. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The block index of the genesis block, or null on error. </dd></dl>
-
-</div>
-</div>
-<a id="aefbfd8fc3b2270a370dc3ab44f1d6fb7" name="aefbfd8fc3b2270a370dc3ab44f1d6fb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefbfd8fc3b2270a370dc3ab44f1d6fb7">&#9670;&#160;</a></span>kernel_get_block_index_from_hash()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> * kernel_get_block_index_from_hash </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *&#160;</td>
-          <td class="paramname"><em>chainstate_manager</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structkernel__BlockHash.html">kernel_BlockHash</a> *&#160;</td>
-          <td class="paramname"><em>block_hash</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Retrieve a block index by its block hash. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Non-null. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager</td><td>Non-null. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">block_hash</td><td>Non-null. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The block index of the block with the passed in hash, or null on error. </dd></dl>
-
-</div>
-</div>
-<a id="a6dfeaa9e7533c8325487db5911d84a26" name="a6dfeaa9e7533c8325487db5911d84a26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6dfeaa9e7533c8325487db5911d84a26">&#9670;&#160;</a></span>kernel_get_block_index_from_height()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> <a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> * kernel_get_block_index_from_height </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *&#160;</td>
-          <td class="paramname"><em>chainstate_manager</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>block_height</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Retrieve a block index by its height in the currently active chain. Once retrieved there is no guarantee that it remains in the active chain. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Non-null. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager</td><td>Non-null. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">block_height</td><td>Height in the chain of the to be retrieved block index. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The block index at a certain height in the currently active chain, or null on error. </dd></dl>
-
-</div>
-</div>
-<a id="ab6bb157faaa9bd0bdf29f1147492ae4a" name="ab6bb157faaa9bd0bdf29f1147492ae4a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6bb157faaa9bd0bdf29f1147492ae4a">&#9670;&#160;</a></span>kernel_get_block_index_from_tip()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> * kernel_get_block_index_from_tip </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *&#160;</td>
-          <td class="paramname"><em>chainstate_manager</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the block index entry of the current chain tip. Once returned, there is no guarantee that it remains in the active chain. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Non-null. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager</td><td>Non-null. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The block index of the current tip. </dd></dl>
-
-</div>
-</div>
-<a id="a17d5eccf36b73a5bf98a85ccf725cdfe" name="a17d5eccf36b73a5bf98a85ccf725cdfe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17d5eccf36b73a5bf98a85ccf725cdfe">&#9670;&#160;</a></span>kernel_get_block_validation_result_from_block_validation_state()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a9d9e25845e651f3aa1ba62e54329cf0c">kernel_BlockValidationResult</a> kernel_get_block_validation_result_from_block_validation_state </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#a3d67fbcb3a758b8ab5f6fd8d2119fb38">kernel_BlockValidationState</a> *&#160;</td>
-          <td class="paramname"><em>block_validation_state</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Returns the validation result from an opaque block validation state pointer. </p>
-
-</div>
-</div>
-<a id="ab7b0124b835af50ffa435d8cf6876b90" name="ab7b0124b835af50ffa435d8cf6876b90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7b0124b835af50ffa435d8cf6876b90">&#9670;&#160;</a></span>kernel_get_next_block_index()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> * kernel_get_next_block_index </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *&#160;</td>
-          <td class="paramname"><em>chainstate_manager</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *&#160;</td>
-          <td class="paramname"><em>block_index</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return the next block index in the currently active chain, or null if the current block index is the tip, or is not in the currently active chain. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Non-null. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">block_index</td><td>Non-null. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager</td><td>Non-null. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The next block index in the currently active chain, or null on error. </dd></dl>
-
-</div>
-</div>
-<a id="a0583ac4bb5db079dfa8372605e98a9a6" name="a0583ac4bb5db079dfa8372605e98a9a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0583ac4bb5db079dfa8372605e98a9a6">&#9670;&#160;</a></span>kernel_get_previous_block_index()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> <a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> * kernel_get_previous_block_index </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *&#160;</td>
-          <td class="paramname"><em>block_index</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the previous block index in the chain, or null if the current block index entry is the genesis block. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">block_index</td><td>Non-null. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The previous block index, or null on error or if the current block index is the genesis block. </dd></dl>
-
-</div>
-</div>
-<a id="a78ecc473fe3c9e215be78762c7d500b9" name="a78ecc473fe3c9e215be78762c7d500b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78ecc473fe3c9e215be78762c7d500b9">&#9670;&#160;</a></span>kernel_get_transaction_output_amount()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> int64_t kernel_get_transaction_output_amount </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#a6fbb4bd835f2cfd09b644d4747fad2ac">kernel_TransactionOutput</a> *&#160;</td>
-          <td class="paramname"><em>transaction_output</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Gets the amount associated with this transaction output. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">transaction_output</td><td>Non-null. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The amount. </dd></dl>
-
-</div>
-</div>
-<a id="a2046ea0872dbb44decb31ddf854e0bf8" name="a2046ea0872dbb44decb31ddf854e0bf8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2046ea0872dbb44decb31ddf854e0bf8">&#9670;&#160;</a></span>kernel_get_transaction_undo_size()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> uint64_t kernel_get_transaction_undo_size </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#a694adc3152f84e45518f59450b41ed03">kernel_BlockUndo</a> *&#160;</td>
-          <td class="paramname"><em>block_undo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
-          <td class="paramname"><em>transaction_undo_index</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the number of previous transaction outputs contained in the transaction undo data. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">block_undo</td><td>Non-null, the block undo data from which tx_undo was retrieved from. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">transaction_undo_index</td><td>The index of the transaction undo data within the block undo data. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The number of previous transaction outputs in the transaction. </dd></dl>
-
-</div>
-</div>
-<a id="a9c198b551df7c57883f3311e4a3524e6" name="a9c198b551df7c57883f3311e4a3524e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c198b551df7c57883f3311e4a3524e6">&#9670;&#160;</a></span>kernel_get_undo_output_by_index()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a6fbb4bd835f2cfd09b644d4747fad2ac">kernel_TransactionOutput</a> * kernel_get_undo_output_by_index </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#a694adc3152f84e45518f59450b41ed03">kernel_BlockUndo</a> *&#160;</td>
-          <td class="paramname"><em>block_undo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
-          <td class="paramname"><em>transaction_undo_index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
-          <td class="paramname"><em>output_index</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return a transaction output contained in the transaction undo data of a block undo data at a certain index. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">block_undo</td><td>Non-null. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">transaction_undo_index</td><td>The index of the transaction undo data within the block undo data. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">output_index</td><td>The index of the to be retrieved transaction output within the transaction undo data. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A transaction output pointer, or null if provided indices are out of bounds. </dd></dl>
-
-</div>
-</div>
-<a id="a3c680305f14d0aca7a13bf459ec9259c" name="a3c680305f14d0aca7a13bf459ec9259c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c680305f14d0aca7a13bf459ec9259c">&#9670;&#160;</a></span>kernel_get_undo_output_height_by_index()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> uint32_t kernel_get_undo_output_height_by_index </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#a694adc3152f84e45518f59450b41ed03">kernel_BlockUndo</a> *&#160;</td>
-          <td class="paramname"><em>block_undo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
-          <td class="paramname"><em>transaction_undo_index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
-          <td class="paramname"><em>output_index</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the block height of the block that contains the output at output_index within the transaction undo data at the provided index of the block undo data. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">block_undo</td><td>Non-null. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">transaction_undo_index</td><td>The index of the transaction undo data within the block undo data. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">output_index</td><td>The index of the targeted transaction output within the transaction undo data. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The block height of the output, or 0 if provided indices are out of bounds. </dd></dl>
-
-</div>
-</div>
-<a id="a417ff2474d205263b556b2c9ba165205" name="a417ff2474d205263b556b2c9ba165205"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a417ff2474d205263b556b2c9ba165205">&#9670;&#160;</a></span>kernel_get_validation_mode_from_block_validation_state()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a2f9b88989f2f30f9b103fc466655d19e">kernel_ValidationMode</a> kernel_get_validation_mode_from_block_validation_state </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#a3d67fbcb3a758b8ab5f6fd8d2119fb38">kernel_BlockValidationState</a> *&#160;</td>
-          <td class="paramname"><em>block_validation_state</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Returns the validation mode from an opaque block validation state pointer. </p>
-
-</div>
-</div>
-<a id="a6ed30f76f9dedd138d17abaef0ad4c64" name="a6ed30f76f9dedd138d17abaef0ad4c64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ed30f76f9dedd138d17abaef0ad4c64">&#9670;&#160;</a></span>kernel_import_blocks()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> bool kernel_import_blocks </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *&#160;</td>
-          <td class="paramname"><em>chainstate_manager</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char **&#160;</td>
-          <td class="paramname"><em>block_file_paths</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t *&#160;</td>
-          <td class="paramname"><em>block_file_paths_lens</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>block_file_paths_len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>May be called once the kernel_ChainstateManager is instantiated. Triggers the start of a reindex if the option was previously set for the chainstate and block manager. Can also import an array of existing block files selected by the user. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Non-null. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager</td><td>Non-null. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">block_file_paths</td><td>Nullable, array of block files described by their full filesystem paths. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">block_file_paths_len</td><td>Length of the block_file_paths array. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True if the import blocks call was completed successfully. </dd></dl>
-
-</div>
-</div>
 <a id="a726e39abf50a7939937b26d193e279cf" name="a726e39abf50a7939937b26d193e279cf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a726e39abf50a7939937b26d193e279cf">&#9670;&#160;</a></span>kernel_logging_connection_create()</h2>
 
@@ -2798,29 +2709,94 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a83e0dfdc5f80c662cf1c0dda13bf8ee6" name="a83e0dfdc5f80c662cf1c0dda13bf8ee6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83e0dfdc5f80c662cf1c0dda13bf8ee6">&#9670;&#160;</a></span>kernel_read_block_from_disk()</h2>
+<a id="a49373bee211cd981af871dbfa6cd8040" name="a49373bee211cd981af871dbfa6cd8040"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49373bee211cd981af871dbfa6cd8040">&#9670;&#160;</a></span>kernel_logging_disable()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a0e8ccba0664f03964db6f65d70ad791e">kernel_Block</a> * kernel_read_block_from_disk </td>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void kernel_logging_disable </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This disables the global internal logger. No log messages will be buffered internally anymore once this is called and the buffer is cleared. This function should only be called once and is not thread or re-entry safe. Log messages will be buffered until this function is called, or a logging connection is created. </p>
+
+</div>
+</div>
+<a id="acd068b4f13decaa0b131363d69504583" name="acd068b4f13decaa0b131363d69504583"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd068b4f13decaa0b131363d69504583">&#9670;&#160;</a></span>kernel_logging_disable_category()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void kernel_logging_disable_category </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#aff35690dbbf32e8e59802fea7324d2dc">kernel_LogCategory</a>&#160;</td>
+          <td class="paramname"><em>category</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disable a specific log category for the global internal logger. This function is not thread safe. Mutiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> instances. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">category</td><td>If kernel_LOG_ALL is chosen, all categories will be disabled. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1fcd4aaea703f159d73ee46765d8e94e" name="a1fcd4aaea703f159d73ee46765d8e94e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fcd4aaea703f159d73ee46765d8e94e">&#9670;&#160;</a></span>kernel_logging_enable_category()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void kernel_logging_enable_category </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#aff35690dbbf32e8e59802fea7324d2dc">kernel_LogCategory</a>&#160;</td>
+          <td class="paramname"><em>category</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable a specific log category for the global internal logger. This function is not thread safe. Mutiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> instances. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">category</td><td>If kernel_LOG_ALL is chosen, all categories will be enabled. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad668e1cb7c082d5cf1d9719ebc65d915" name="ad668e1cb7c082d5cf1d9719ebc65d915"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad668e1cb7c082d5cf1d9719ebc65d915">&#9670;&#160;</a></span>kernel_logging_set_level_category()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void kernel_logging_set_level_category </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#aff35690dbbf32e8e59802fea7324d2dc">kernel_LogCategory</a>&#160;</td>
+          <td class="paramname"><em>category</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *&#160;</td>
-          <td class="paramname"><em>chainstate_manager</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *&#160;</td>
-          <td class="paramname"><em>block_index</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#abef6efcb310317332f1528e1102b9a71">kernel_LogLevel</a>&#160;</td>
+          <td class="paramname"><em>level</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2830,61 +2806,41 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Reads the block the passed in block index points to from disk and returns it. </p>
+<p>Set the log level of the global internal logger. This does not enable the selected categories. Use <code>kernel_enable_log_category</code> to start logging from a specific, or all categories. This function is not thread safe. Mutiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> instances. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Non-null. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager</td><td>Non-null. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">block_index</td><td>Non-null. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">category</td><td>If kernel_LOG_ALL is chosen, all messages at the specified level will be logged. Otherwise only messages from the specified category will be logged at the specified level and above. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>Log level at which the log category is set. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The read out block, or null on error. </dd></dl>
 
 </div>
 </div>
-<a id="a9b2b372359a44ed9acd7a78ac703f8c4" name="a9b2b372359a44ed9acd7a78ac703f8c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b2b372359a44ed9acd7a78ac703f8c4">&#9670;&#160;</a></span>kernel_read_block_undo_from_disk()</h2>
+<a id="abb3e5d517da617d73f54ff89c1fa60da" name="abb3e5d517da617d73f54ff89c1fa60da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb3e5d517da617d73f54ff89c1fa60da">&#9670;&#160;</a></span>kernel_script_pubkey_copy_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a694adc3152f84e45518f59450b41ed03">kernel_BlockUndo</a> * kernel_read_block_undo_from_disk </td>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="structkernel__ByteArray.html">kernel_ByteArray</a> * kernel_script_pubkey_copy_data </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a> *&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#ac46029269b0eddda0d528c5bea1e766a">kernel_ScriptPubkey</a> *&#160;</td>
+          <td class="paramname"><em>script_pubkey</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a> *&#160;</td>
-          <td class="paramname"><em>chainstate_manager</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a> *&#160;</td>
-          <td class="paramname"><em>block_index</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Reads the block undo data the passed in block index points to from disk and returns it. </p>
+<p>Copies the script pubkey data into the returned byte array. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Non-null. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager</td><td>Non-null. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">block_index</td><td>Non-null. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">script_pubkey</td><td>Non-null. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The read out block undo data, or null on error. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The serialized script pubkey data. </dd></dl>
 
 </div>
 </div>
@@ -2922,7 +2878,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The script pubkey, or null on error. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The script pubkey. </dd></dl>
 
 </div>
 </div>
@@ -3002,6 +2958,33 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ab3719d42d4325ba862e9dce89d6d49f7" name="ab3719d42d4325ba862e9dce89d6d49f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3719d42d4325ba862e9dce89d6d49f7">&#9670;&#160;</a></span>kernel_transaction_output_copy_script_pubkey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#ac46029269b0eddda0d528c5bea1e766a">kernel_ScriptPubkey</a> * kernel_transaction_output_copy_script_pubkey </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#a6fbb4bd835f2cfd09b644d4747fad2ac">kernel_TransactionOutput</a> *&#160;</td>
+          <td class="paramname"><em>transaction_output</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copies the script pubkey of an output in the returned script pubkey opaque object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">transaction_output</td><td>Non-null. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The data for the output's script pubkey. </dd></dl>
+
+</div>
+</div>
 <a id="a0c08318a7c12789cf29536a173c91c39" name="a0c08318a7c12789cf29536a173c91c39"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0c08318a7c12789cf29536a173c91c39">&#9670;&#160;</a></span>kernel_transaction_output_create()</h2>
 
@@ -3056,6 +3039,33 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Destroy the transaction output. </p>
+
+</div>
+</div>
+<a id="ace78c151156df4351d6d53ffe7beef78" name="ace78c151156df4351d6d53ffe7beef78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace78c151156df4351d6d53ffe7beef78">&#9670;&#160;</a></span>kernel_transaction_output_get_amount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> int64_t kernel_transaction_output_get_amount </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#a6fbb4bd835f2cfd09b644d4747fad2ac">kernel_TransactionOutput</a> *&#160;</td>
+          <td class="paramname"><em>transaction_output</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the amount associated with this transaction output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">transaction_output</td><td>Non-null. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The amount. </dd></dl>
 
 </div>
 </div>

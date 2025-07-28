@@ -129,8 +129,6 @@ Data Structures</h2></td></tr>
 Macros</h2></td></tr>
 <tr class="memitem:a012147c9e39e35558753fca94f091e26" id="r_a012147c9e39e35558753fca94f091e26"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a></td></tr>
 <tr class="separator:a012147c9e39e35558753fca94f091e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bfa3290918ac6f668eec68fa30f2428" id="r_a8bfa3290918ac6f668eec68fa30f2428"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a8bfa3290918ac6f668eec68fa30f2428">BITCOINKERNEL_GNUC_PREREQ</a>(_maj,  _min)&#160;&#160;&#160;0</td></tr>
-<tr class="separator:a8bfa3290918ac6f668eec68fa30f2428"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a259ab885452a8081ca971f8804489930" id="r_a259ab885452a8081ca971f8804489930"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a259ab885452a8081ca971f8804489930">BITCOINKERNEL_WARN_UNUSED_RESULT</a></td></tr>
 <tr class="separator:a259ab885452a8081ca971f8804489930"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70490d496006ecc54b23662de7d5b413" id="r_a70490d496006ecc54b23662de7d5b413"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a70490d496006ecc54b23662de7d5b413">BITCOINKERNEL_ARG_NONNULL</a>(...)</td></tr>
@@ -323,7 +321,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a49373bee211cd981af871dbfa6cd8040"><td class="mdescLeft">&#160;</td><td class="mdescRight">This disables the global internal logger. No log messages will be buffered internally anymore once this is called and the buffer is cleared. This function should only be called once and is not thread or re-entry safe. Log messages will be buffered until this function is called, or a logging connection is created.  <br /></td></tr>
 <tr class="separator:a49373bee211cd981af871dbfa6cd8040"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad668e1cb7c082d5cf1d9719ebc65d915" id="r_ad668e1cb7c082d5cf1d9719ebc65d915"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#ad668e1cb7c082d5cf1d9719ebc65d915">kernel_logging_set_level_category</a> (const <a class="el" href="bitcoinkernel_8h.html#aff35690dbbf32e8e59802fea7324d2dc">kernel_LogCategory</a> category, <a class="el" href="bitcoinkernel_8h.html#abef6efcb310317332f1528e1102b9a71">kernel_LogLevel</a> level)</td></tr>
-<tr class="memdesc:ad668e1cb7c082d5cf1d9719ebc65d915"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the log level of the global internal logger. This does not enable the selected categories. Use <code>kernel_enable_log_category</code> to start logging from a specific, or all categories. This function is not thread safe. Mutiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> instances.  <br /></td></tr>
+<tr class="memdesc:ad668e1cb7c082d5cf1d9719ebc65d915"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the log level of the global internal logger. This does not enable the selected categories. Use <a class="el" href="bitcoinkernel_8h.html#a1fcd4aaea703f159d73ee46765d8e94e">kernel_logging_enable_category</a> to start logging from a specific, or all categories. This function is not thread safe. Mutiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> instances.  <br /></td></tr>
 <tr class="separator:ad668e1cb7c082d5cf1d9719ebc65d915"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fcd4aaea703f159d73ee46765d8e94e" id="r_a1fcd4aaea703f159d73ee46765d8e94e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a1fcd4aaea703f159d73ee46765d8e94e">kernel_logging_enable_category</a> (const <a class="el" href="bitcoinkernel_8h.html#aff35690dbbf32e8e59802fea7324d2dc">kernel_LogCategory</a> category)</td></tr>
 <tr class="memdesc:a1fcd4aaea703f159d73ee46765d8e94e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable a specific log category for the global internal logger. This function is not thread safe. Mutiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> instances.  <br /></td></tr>
@@ -381,7 +379,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:afe3cb9eb4f05555a5c9a7ebd8516bf36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of available worker threads used during validation.  <br /></td></tr>
 <tr class="separator:afe3cb9eb4f05555a5c9a7ebd8516bf36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c8aac002fc2e8a2216231bceba95d57" id="r_a7c8aac002fc2e8a2216231bceba95d57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a7c8aac002fc2e8a2216231bceba95d57">kernel_chainstate_manager_options_set_wipe_dbs</a> (<a class="el" href="bitcoinkernel_8h.html#aed37cc92a0ea09a8b1dd3af406b16750">kernel_ChainstateManagerOptions</a> *chainstate_manager_options, bool wipe_block_tree_db, bool wipe_chainstate_db)</td></tr>
-<tr class="memdesc:a7c8aac002fc2e8a2216231bceba95d57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets wipe db in the options. In combination with calling kernel_import_blocks this triggers either a full reindex, or a reindex of just the chainstate database.  <br /></td></tr>
+<tr class="memdesc:a7c8aac002fc2e8a2216231bceba95d57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets wipe db in the options. In combination with calling <a class="el" href="bitcoinkernel_8h.html#abbeb252182ad5508ccdb6bc3ee84ff0e">kernel_chainstate_manager_import_blocks</a> this triggers either a full reindex, or a reindex of just the chainstate database.  <br /></td></tr>
 <tr class="separator:a7c8aac002fc2e8a2216231bceba95d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cd53cffb73b52816ff2ebe7a3e913e4" id="r_a2cd53cffb73b52816ff2ebe7a3e913e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a2cd53cffb73b52816ff2ebe7a3e913e4">kernel_chainstate_manager_options_set_block_tree_db_in_memory</a> (<a class="el" href="bitcoinkernel_8h.html#aed37cc92a0ea09a8b1dd3af406b16750">kernel_ChainstateManagerOptions</a> *chainstate_manager_options, bool block_tree_db_in_memory)</td></tr>
 <tr class="memdesc:a2cd53cffb73b52816ff2ebe7a3e913e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets block tree db in memory in the options.  <br /></td></tr>
@@ -523,34 +521,6 @@ Functions</h2></td></tr>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>...</em></td><td>)</td>
           <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a8bfa3290918ac6f668eec68fa30f2428" name="a8bfa3290918ac6f668eec68fa30f2428"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8bfa3290918ac6f668eec68fa30f2428">&#9670;&#160;</a></span>BITCOINKERNEL_GNUC_PREREQ</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define BITCOINKERNEL_GNUC_PREREQ</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">_maj, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">_min&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -762,7 +732,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Opaque data structure for holding a logging connection.</p>
 <p>The logging connection can be used to manually stop logging.</p>
-<p>Messages that were logged before a connection is created are buffered in a 1MB buffer. Logging can alternatively be permanently disabled by calling kernel_disable_logging(). Functions changing the logging settings are global (and not thread safe) and change the settings for all existing kernel_LoggingConnection instances. </p>
+<p>Messages that were logged before a connection is created are buffered in a 1MB buffer. Logging can alternatively be permanently disabled by calling <a class="el" href="bitcoinkernel_8h.html#a49373bee211cd981af871dbfa6cd8040">kernel_logging_disable</a>. Functions changing the logging settings are global (and not thread safe) and change the settings for all existing kernel_LoggingConnection instances. </p>
 
 </div>
 </div>
@@ -2322,7 +2292,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets wipe db in the options. In combination with calling kernel_import_blocks this triggers either a full reindex, or a reindex of just the chainstate database. </p>
+<p>Sets wipe db in the options. In combination with calling <a class="el" href="bitcoinkernel_8h.html#abbeb252182ad5508ccdb6bc3ee84ff0e">kernel_chainstate_manager_import_blocks</a> this triggers either a full reindex, or a reindex of just the chainstate database. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager_options</td><td>Non-null, created by <a class="el" href="bitcoinkernel_8h.html#aa0d91f503312aefaf749a19fb0f48dd8">kernel_chainstate_manager_options_create</a>. </td></tr>
@@ -2806,7 +2776,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set the log level of the global internal logger. This does not enable the selected categories. Use <code>kernel_enable_log_category</code> to start logging from a specific, or all categories. This function is not thread safe. Mutiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> instances. </p>
+<p>Set the log level of the global internal logger. This does not enable the selected categories. Use <a class="el" href="bitcoinkernel_8h.html#a1fcd4aaea703f159d73ee46765d8e94e">kernel_logging_enable_category</a> to start logging from a specific, or all categories. This function is not thread safe. Mutiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a089eaea802032f168ce9e378a24224a1">kernel_LoggingConnection</a> instances. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">category</td><td>If kernel_LOG_ALL is chosen, all messages at the specified level will be logged. Otherwise only messages from the specified category will be logged at the specified level and above. </td></tr>

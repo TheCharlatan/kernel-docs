@@ -9,14 +9,14 @@ void handle_error(void* _, const char* msg, size_t msg_size)
     exit(0);
 }
 
-void block_checked(void* _, const kernel_BlockPointer* block, const kernel_BlockValidationState* state)
+void block_checked(void* _, btck_Block* block, const btck_BlockValidationState* state)
 {
     printf("Checked block\n");
 }
 
 int main() {
-    kernel_ContextOptions* context_options = kernel_context_options_create();
-    kernel_NotificationInterfaceCallbacks notifications = {
+    btck_ContextOptions* context_options = btck_context_options_create();
+    btck_NotificationInterfaceCallbacks notifications = {
         .user_data = NULL,
         .block_tip = NULL,
         .header_tip = NULL,
@@ -26,26 +26,26 @@ int main() {
         .flush_error = handle_error,
         .fatal_error = handle_error,
     };
-    kernel_context_options_set_notifications(context_options, notifications);
-    kernel_ValidationInterfaceCallbacks validation_interface = {
+    btck_context_options_set_notifications(context_options, notifications);
+    btck_ValidationInterfaceCallbacks validation_interface = {
         .user_data = NULL,
         .block_checked = block_checked,
     };
-    kernel_context_options_set_validation_interface(context_options, validation_interface);
-    kernel_ChainParameters* chainparams = kernel_chain_parameters_create(kernel_CHAIN_TYPE_REGTEST);
-    kernel_context_options_set_chainparams(context_options, chainparams);
-    kernel_chain_parameters_destroy(chainparams);
-    kernel_Context* context = kernel_context_create(context_options);
-    kernel_context_options_destroy(context_options);
+    btck_context_options_set_validation_interface(context_options, validation_interface);
+    btck_ChainParameters* chainparams = btck_chain_parameters_create(btck_ChainType_REGTEST);
+    btck_context_options_set_chainparams(context_options, chainparams);
+    btck_chain_parameters_destroy(chainparams);
+    btck_Context* context = btck_context_create(context_options);
+    btck_context_options_destroy(context_options);
     if (context == NULL) return 1;
 
     const char data_dir[] = ".bitcoin";
     const char blocks_dir[] = ".bitcoin/blocks";
-    kernel_ChainstateManagerOptions* chainman_options = kernel_chainstate_manager_options_create(context, data_dir, sizeof(data_dir) - 1, blocks_dir, sizeof(blocks_dir) - 1);
+    btck_ChainstateManagerOptions* chainman_options = btck_chainstate_manager_options_create(context, data_dir, sizeof(data_dir) - 1, blocks_dir, sizeof(blocks_dir) - 1);
     if (chainman_options == NULL) return 1;
-    kernel_ChainstateManager* chainman = kernel_chainstate_manager_create(context, chainman_options);
+    btck_ChainstateManager* chainman = btck_chainstate_manager_create(chainman_options);
     if (chainman == NULL) return 1;
-    kernel_chainstate_manager_options_destroy(chainman_options);
+    btck_chainstate_manager_options_destroy(chainman_options);
 
     static const unsigned char block_data[] = {
         0x00, 0x00, 0x00, 0x20, 0x06, 0x22, 0x6e, 0x46, 0x11, 0x1a, 0x0b, 0x59, 0xca, 0xaf, 0x12, 0x60,
@@ -66,14 +66,14 @@ int main() {
         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
     };
 
-    kernel_Block* block = kernel_block_create(block_data, sizeof(block_data));
+    btck_Block* block = btck_block_create(block_data, sizeof(block_data));
     if (block == NULL) return 1;
 
-    bool new_block = true;
-    int res = kernel_chainstate_manager_process_block(context, chainman, block, &new_block);
+    int new_block = 1;
+    int res = btck_chainstate_manager_process_block(chainman, block, &new_block);
 
-    kernel_block_destroy(block);
-    kernel_chainstate_manager_destroy(chainman, context);
-    kernel_context_destroy(context);
+    btck_block_destroy(block);
+    btck_chainstate_manager_destroy(chainman);
+    btck_context_destroy(context);
     return !(res && new_block);
 }

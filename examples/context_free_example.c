@@ -28,30 +28,30 @@ int main() {
         0xab, 0xc0
     }; 
 
-    kernel_Transaction* transaction = kernel_transaction_create(tx, sizeof(tx));
+    btck_Transaction* transaction = btck_transaction_create(tx, sizeof(tx));
     if (transaction == NULL) return 1;
-    kernel_ScriptPubkey* script_pubkey = kernel_script_pubkey_create(script, sizeof(script));
+    btck_ScriptPubkey* script_pubkey = btck_script_pubkey_create(script, sizeof(script));
     if (script_pubkey == NULL) return 1;
     int64_t amount = 88480;
 
-    kernel_TransactionOutput* output = kernel_transaction_output_create(script_pubkey, amount);
-    const kernel_TransactionOutput* output_ = output;
+    btck_TransactionOutput* output = btck_transaction_output_create(script_pubkey, amount);
+    const btck_TransactionOutput* output_ = output;
 
-    kernel_ScriptVerifyStatus status = kernel_SCRIPT_VERIFY_OK;
+    btck_ScriptVerifyStatus status = btck_ScriptVerifyStatus_SCRIPT_VERIFY_OK;
 
-    bool result = kernel_verify_script(
+    int result = btck_script_pubkey_verify(
             /*script_pubkey=*/ script_pubkey,
             /*amount=*/ amount,
             /*tx_to=*/ transaction,
             /*spent_outputs=*/ &output_,
             /*spent_outputs_len=*/1,
             /*input_index=*/ 0,
-            /*flags=*/ kernel_SCRIPT_FLAGS_VERIFY_ALL,
+            /*flags=*/ btck_ScriptVerificationFlags_ALL,
             /*status*/ &status);
 
-    kernel_transaction_output_destroy(output);
-    kernel_script_pubkey_destroy(script_pubkey);
-    kernel_transaction_destroy(transaction);
+    btck_transaction_output_destroy(output);
+    btck_script_pubkey_destroy(script_pubkey);
+    btck_transaction_destroy(transaction);
 
-    return !(result && status == kernel_SCRIPT_VERIFY_OK);
+    return !(result && status == btck_ScriptVerifyStatus_SCRIPT_VERIFY_OK);
 }

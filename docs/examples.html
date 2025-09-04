@@ -116,47 +116,34 @@ $(function() {
 <div class="line">        0xab, 0xc0</div>
 <div class="line">    }; </div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_typedef" href="bitcoinkernel_8h.html#a740f7a38685560673bdf6515d2a256d0">kernel_Transaction</a>* transaction = <a class="code hl_function" href="bitcoinkernel_8h.html#ac2ef9d0a7aef167ddd1809cdca390fa7">kernel_transaction_create</a>(tx, <span class="keyword">sizeof</span>(tx));</div>
+<div class="line">    btck_Transaction* transaction = btck_transaction_create(tx, <span class="keyword">sizeof</span>(tx));</div>
 <div class="line">    <span class="keywordflow">if</span> (transaction == NULL) <span class="keywordflow">return</span> 1;</div>
-<div class="line">    <a class="code hl_typedef" href="bitcoinkernel_8h.html#ac46029269b0eddda0d528c5bea1e766a">kernel_ScriptPubkey</a>* script_pubkey = <a class="code hl_function" href="bitcoinkernel_8h.html#ae6e851d31737c327e381a22123894c10">kernel_script_pubkey_create</a>(script, <span class="keyword">sizeof</span>(script));</div>
+<div class="line">    btck_ScriptPubkey* script_pubkey = btck_script_pubkey_create(script, <span class="keyword">sizeof</span>(script));</div>
 <div class="line">    <span class="keywordflow">if</span> (script_pubkey == NULL) <span class="keywordflow">return</span> 1;</div>
 <div class="line">    int64_t amount = 88480;</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_typedef" href="bitcoinkernel_8h.html#a6fbb4bd835f2cfd09b644d4747fad2ac">kernel_TransactionOutput</a>* output = <a class="code hl_function" href="bitcoinkernel_8h.html#a0c08318a7c12789cf29536a173c91c39">kernel_transaction_output_create</a>(script_pubkey, amount);</div>
-<div class="line">    <span class="keyword">const</span> <a class="code hl_typedef" href="bitcoinkernel_8h.html#a6fbb4bd835f2cfd09b644d4747fad2ac">kernel_TransactionOutput</a>* output_ = output;</div>
+<div class="line">    btck_TransactionOutput* output = btck_transaction_output_create(script_pubkey, amount);</div>
+<div class="line">    <span class="keyword">const</span> btck_TransactionOutput* output_ = output;</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_enumeration" href="bitcoinkernel_8h.html#acc92f5cc0cbbef72176eec0895ebb2ef">kernel_ScriptVerifyStatus</a> status = <a class="code hl_enumvalue" href="bitcoinkernel_8h.html#acc92f5cc0cbbef72176eec0895ebb2efabdbb9c2f2797e4023f23bbf03b55fdfb">kernel_SCRIPT_VERIFY_OK</a>;</div>
+<div class="line">    btck_ScriptVerifyStatus status = btck_ScriptVerifyStatus_SCRIPT_VERIFY_OK;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">bool</span> result = <a class="code hl_function" href="bitcoinkernel_8h.html#a32ecfecfe6fddc433021609c07569d29">kernel_verify_script</a>(</div>
+<div class="line">    <span class="keywordtype">int</span> result = btck_script_pubkey_verify(</div>
 <div class="line">            <span class="comment">/*script_pubkey=*/</span> script_pubkey,</div>
 <div class="line">            <span class="comment">/*amount=*/</span> amount,</div>
 <div class="line">            <span class="comment">/*tx_to=*/</span> transaction,</div>
 <div class="line">            <span class="comment">/*spent_outputs=*/</span> &amp;output_,</div>
 <div class="line">            <span class="comment">/*spent_outputs_len=*/</span>1,</div>
 <div class="line">            <span class="comment">/*input_index=*/</span> 0,</div>
-<div class="line">            <span class="comment">/*flags=*/</span> <a class="code hl_enumvalue" href="bitcoinkernel_8h.html#a20eacfcf39b670c2530f17b05e66a14fa8462c7fb0d525cfd090abd832ec5c96e">kernel_SCRIPT_FLAGS_VERIFY_ALL</a>,</div>
+<div class="line">            <span class="comment">/*flags=*/</span> btck_ScriptVerificationFlags_ALL,</div>
 <div class="line">            <span class="comment">/*status*/</span> &amp;status);</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_function" href="bitcoinkernel_8h.html#a947782db8356fdff76c2a0306cf4bc17">kernel_transaction_output_destroy</a>(output);</div>
-<div class="line">    <a class="code hl_function" href="bitcoinkernel_8h.html#aca1073fc1cc1ab809df54f0d3abaed6f">kernel_script_pubkey_destroy</a>(script_pubkey);</div>
-<div class="line">    <a class="code hl_function" href="bitcoinkernel_8h.html#a3a4b30672612c0c890928f1b4d8c6af3">kernel_transaction_destroy</a>(transaction);</div>
+<div class="line">    btck_transaction_output_destroy(output);</div>
+<div class="line">    btck_script_pubkey_destroy(script_pubkey);</div>
+<div class="line">    btck_transaction_destroy(transaction);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">return</span> !(result &amp;&amp; status == <a class="code hl_enumvalue" href="bitcoinkernel_8h.html#acc92f5cc0cbbef72176eec0895ebb2efabdbb9c2f2797e4023f23bbf03b55fdfb">kernel_SCRIPT_VERIFY_OK</a>);</div>
+<div class="line">    <span class="keywordflow">return</span> !(result &amp;&amp; status == btck_ScriptVerifyStatus_SCRIPT_VERIFY_OK);</div>
 <div class="line">}</div>
 <div class="ttc" id="abitcoinkernel_8h_html"><div class="ttname"><a href="bitcoinkernel_8h.html">bitcoinkernel.h</a></div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a0c08318a7c12789cf29536a173c91c39"><div class="ttname"><a href="bitcoinkernel_8h.html#a0c08318a7c12789cf29536a173c91c39">kernel_transaction_output_create</a></div><div class="ttdeci">BITCOINKERNEL_API kernel_TransactionOutput * kernel_transaction_output_create(const kernel_ScriptPubkey *script_pubkey, int64_t amount)</div><div class="ttdoc">Create a transaction output from a script pubkey and an amount.</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a20eacfcf39b670c2530f17b05e66a14fa8462c7fb0d525cfd090abd832ec5c96e"><div class="ttname"><a href="bitcoinkernel_8h.html#a20eacfcf39b670c2530f17b05e66a14fa8462c7fb0d525cfd090abd832ec5c96e">kernel_SCRIPT_FLAGS_VERIFY_ALL</a></div><div class="ttdeci">@ kernel_SCRIPT_FLAGS_VERIFY_ALL</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:390</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a32ecfecfe6fddc433021609c07569d29"><div class="ttname"><a href="bitcoinkernel_8h.html#a32ecfecfe6fddc433021609c07569d29">kernel_verify_script</a></div><div class="ttdeci">BITCOINKERNEL_API bool kernel_verify_script(const kernel_ScriptPubkey *script_pubkey, int64_t amount, const kernel_Transaction *tx_to, const kernel_TransactionOutput **spent_outputs, size_t spent_outputs_len, unsigned int input_index, unsigned int flags, kernel_ScriptVerifyStatus *status) 3)</div><div class="ttdoc">Verify if the input at input_index of tx_to spends the script pubkey under the constraints specified ...</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a3a4b30672612c0c890928f1b4d8c6af3"><div class="ttname"><a href="bitcoinkernel_8h.html#a3a4b30672612c0c890928f1b4d8c6af3">kernel_transaction_destroy</a></div><div class="ttdeci">BITCOINKERNEL_API void kernel_transaction_destroy(kernel_Transaction *transaction)</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a6fbb4bd835f2cfd09b644d4747fad2ac"><div class="ttname"><a href="bitcoinkernel_8h.html#a6fbb4bd835f2cfd09b644d4747fad2ac">kernel_TransactionOutput</a></div><div class="ttdeci">struct kernel_TransactionOutput kernel_TransactionOutput</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:119</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a740f7a38685560673bdf6515d2a256d0"><div class="ttname"><a href="bitcoinkernel_8h.html#a740f7a38685560673bdf6515d2a256d0">kernel_Transaction</a></div><div class="ttdeci">struct kernel_Transaction kernel_Transaction</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:109</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a947782db8356fdff76c2a0306cf4bc17"><div class="ttname"><a href="bitcoinkernel_8h.html#a947782db8356fdff76c2a0306cf4bc17">kernel_transaction_output_destroy</a></div><div class="ttdeci">BITCOINKERNEL_API void kernel_transaction_output_destroy(kernel_TransactionOutput *transaction_output)</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_ac2ef9d0a7aef167ddd1809cdca390fa7"><div class="ttname"><a href="bitcoinkernel_8h.html#ac2ef9d0a7aef167ddd1809cdca390fa7">kernel_transaction_create</a></div><div class="ttdeci">BITCOINKERNEL_API kernel_Transaction * kernel_transaction_create(const unsigned char *raw_transaction, size_t raw_transaction_len)</div><div class="ttdoc">Create a new transaction from the serialized data.</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_ac46029269b0eddda0d528c5bea1e766a"><div class="ttname"><a href="bitcoinkernel_8h.html#ac46029269b0eddda0d528c5bea1e766a">kernel_ScriptPubkey</a></div><div class="ttdeci">struct kernel_ScriptPubkey kernel_ScriptPubkey</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:114</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_aca1073fc1cc1ab809df54f0d3abaed6f"><div class="ttname"><a href="bitcoinkernel_8h.html#aca1073fc1cc1ab809df54f0d3abaed6f">kernel_script_pubkey_destroy</a></div><div class="ttdeci">BITCOINKERNEL_API void kernel_script_pubkey_destroy(kernel_ScriptPubkey *script_pubkey)</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_acc92f5cc0cbbef72176eec0895ebb2ef"><div class="ttname"><a href="bitcoinkernel_8h.html#acc92f5cc0cbbef72176eec0895ebb2ef">kernel_ScriptVerifyStatus</a></div><div class="ttdeci">kernel_ScriptVerifyStatus</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:367</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_acc92f5cc0cbbef72176eec0895ebb2efabdbb9c2f2797e4023f23bbf03b55fdfb"><div class="ttname"><a href="bitcoinkernel_8h.html#acc92f5cc0cbbef72176eec0895ebb2efabdbb9c2f2797e4023f23bbf03b55fdfb">kernel_SCRIPT_VERIFY_OK</a></div><div class="ttdeci">@ kernel_SCRIPT_VERIFY_OK</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:368</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_ae6e851d31737c327e381a22123894c10"><div class="ttname"><a href="bitcoinkernel_8h.html#ae6e851d31737c327e381a22123894c10">kernel_script_pubkey_create</a></div><div class="ttdeci">BITCOINKERNEL_API kernel_ScriptPubkey * kernel_script_pubkey_create(const unsigned char *script_pubkey, size_t script_pubkey_len)</div><div class="ttdoc">Create a script pubkey from serialized data.</div></div>
 <div class="ttc" id="acontext__free__example_8c_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="context__free__example_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition</b> context_free_example.c:5</div></div>
 </div><!-- fragment --><p>Note that a <code>Null</code> pointer may be passed to spent_outputs if the taproot bit is not set in the flags bitfield and the amount may be zero if the segwit bit is not set.</p>
 <h1><a class="anchor" id="full-validation"></a>
@@ -176,15 +163,15 @@ $(function() {
 <div class="line">    exit(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="validate__block__example_8c.html#a58f8f99e6e193ccd4e03ff7ebadde0b0">block_checked</a>(<span class="keywordtype">void</span>* _, <span class="keyword">const</span> <a class="code hl_typedef" href="bitcoinkernel_8h.html#abc65a7929ad15c3fd456f6efb3096fdc">kernel_BlockPointer</a>* block, <span class="keyword">const</span> <a class="code hl_typedef" href="bitcoinkernel_8h.html#a3d67fbcb3a758b8ab5f6fd8d2119fb38">kernel_BlockValidationState</a>* state)</div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="validate__block__example_8c.html#a6bc19079c8a300d7dfce72b492206083">block_checked</a>(<span class="keywordtype">void</span>* _, btck_Block* block, <span class="keyword">const</span> btck_BlockValidationState* state)</div>
 <div class="line">{</div>
 <div class="line">    printf(<span class="stringliteral">&quot;Checked block\n&quot;</span>);</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="context__free__example_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
-<div class="line">    <a class="code hl_typedef" href="bitcoinkernel_8h.html#a1230a5e294e2dd7df5b37b5671bc476c">kernel_ContextOptions</a>* context_options = <a class="code hl_function" href="bitcoinkernel_8h.html#ac3ff778c15cdc8b8ab067b99bb686f89">kernel_context_options_create</a>();</div>
-<div class="line">    <a class="code hl_struct" href="structkernel__NotificationInterfaceCallbacks.html">kernel_NotificationInterfaceCallbacks</a> notifications = {</div>
-<div class="line">        .<a class="code hl_variable" href="structkernel__NotificationInterfaceCallbacks.html#ab34dd6219869dc97a9c5d64a0c94d007">user_data</a> = NULL,</div>
+<div class="line">    btck_ContextOptions* context_options = btck_context_options_create();</div>
+<div class="line">    btck_NotificationInterfaceCallbacks notifications = {</div>
+<div class="line">        .user_data = NULL,</div>
 <div class="line">        .block_tip = NULL,</div>
 <div class="line">        .header_tip = NULL,</div>
 <div class="line">        .progress = NULL,</div>
@@ -193,26 +180,26 @@ $(function() {
 <div class="line">        .flush_error = <a class="code hl_function" href="data__retrieval__example_8c.html#a31425dca2f328c215ff960feeff6a496">handle_error</a>,</div>
 <div class="line">        .fatal_error = <a class="code hl_function" href="data__retrieval__example_8c.html#a31425dca2f328c215ff960feeff6a496">handle_error</a>,</div>
 <div class="line">    };</div>
-<div class="line">    <a class="code hl_function" href="bitcoinkernel_8h.html#ae7a82a08466ded3b55589964fe2adf48">kernel_context_options_set_notifications</a>(context_options, notifications);</div>
-<div class="line">    <a class="code hl_struct" href="structkernel__ValidationInterfaceCallbacks.html">kernel_ValidationInterfaceCallbacks</a> validation_interface = {</div>
-<div class="line">        .<a class="code hl_variable" href="structkernel__ValidationInterfaceCallbacks.html#a8aacbdbde9bffaab17dfd346dde6a926">user_data</a> = NULL,</div>
-<div class="line">        .block_checked = <a class="code hl_function" href="validate__block__example_8c.html#a58f8f99e6e193ccd4e03ff7ebadde0b0">block_checked</a>,</div>
+<div class="line">    btck_context_options_set_notifications(context_options, notifications);</div>
+<div class="line">    btck_ValidationInterfaceCallbacks validation_interface = {</div>
+<div class="line">        .user_data = NULL,</div>
+<div class="line">        .block_checked = <a class="code hl_function" href="validate__block__example_8c.html#a6bc19079c8a300d7dfce72b492206083">block_checked</a>,</div>
 <div class="line">    };</div>
-<div class="line">    <a class="code hl_function" href="bitcoinkernel_8h.html#a0922736a56877474001ae0274dee96a7">kernel_context_options_set_validation_interface</a>(context_options, validation_interface);</div>
-<div class="line">    <a class="code hl_typedef" href="bitcoinkernel_8h.html#a3b2868f6fae5c8cc8b8a9e8f666aa360">kernel_ChainParameters</a>* chainparams = <a class="code hl_function" href="bitcoinkernel_8h.html#a3af9eb3d4da8618b0519041387dd72db">kernel_chain_parameters_create</a>(<a class="code hl_enumvalue" href="bitcoinkernel_8h.html#a3893a7bd5233df43876eb9689bd57ee5a1241927e4440dda16abdef81c9b809d5">kernel_CHAIN_TYPE_REGTEST</a>);</div>
-<div class="line">    <a class="code hl_function" href="bitcoinkernel_8h.html#a7d21dac4eaadd5a543586ef8c9f0b11b">kernel_context_options_set_chainparams</a>(context_options, chainparams);</div>
-<div class="line">    <a class="code hl_function" href="bitcoinkernel_8h.html#a6f87bb71e88169a63e1b9f29d3730145">kernel_chain_parameters_destroy</a>(chainparams);</div>
-<div class="line">    <a class="code hl_typedef" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a>* context = <a class="code hl_function" href="bitcoinkernel_8h.html#a4d08e62d2e27ae52016e8a79841a3d81">kernel_context_create</a>(context_options);</div>
-<div class="line">    <a class="code hl_function" href="bitcoinkernel_8h.html#a5c517b07a80522138b7ae44e5b7d05f8">kernel_context_options_destroy</a>(context_options);</div>
+<div class="line">    btck_context_options_set_validation_interface(context_options, validation_interface);</div>
+<div class="line">    btck_ChainParameters* chainparams = btck_chain_parameters_create(btck_ChainType_REGTEST);</div>
+<div class="line">    btck_context_options_set_chainparams(context_options, chainparams);</div>
+<div class="line">    btck_chain_parameters_destroy(chainparams);</div>
+<div class="line">    btck_Context* context = btck_context_create(context_options);</div>
+<div class="line">    btck_context_options_destroy(context_options);</div>
 <div class="line">    <span class="keywordflow">if</span> (context == NULL) <span class="keywordflow">return</span> 1;</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> data_dir[] = <span class="stringliteral">&quot;.bitcoin&quot;</span>;</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> blocks_dir[] = <span class="stringliteral">&quot;.bitcoin/blocks&quot;</span>;</div>
-<div class="line">    <a class="code hl_typedef" href="bitcoinkernel_8h.html#aed37cc92a0ea09a8b1dd3af406b16750">kernel_ChainstateManagerOptions</a>* chainman_options = <a class="code hl_function" href="bitcoinkernel_8h.html#aa0d91f503312aefaf749a19fb0f48dd8">kernel_chainstate_manager_options_create</a>(context, data_dir, <span class="keyword">sizeof</span>(data_dir) - 1, blocks_dir, <span class="keyword">sizeof</span>(blocks_dir) - 1);</div>
+<div class="line">    btck_ChainstateManagerOptions* chainman_options = btck_chainstate_manager_options_create(context, data_dir, <span class="keyword">sizeof</span>(data_dir) - 1, blocks_dir, <span class="keyword">sizeof</span>(blocks_dir) - 1);</div>
 <div class="line">    <span class="keywordflow">if</span> (chainman_options == NULL) <span class="keywordflow">return</span> 1;</div>
-<div class="line">    <a class="code hl_typedef" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a>* chainman = <a class="code hl_function" href="bitcoinkernel_8h.html#a5aa39a4692783eb74c8e429d76bc18ad">kernel_chainstate_manager_create</a>(context, chainman_options);</div>
+<div class="line">    btck_ChainstateManager* chainman = btck_chainstate_manager_create(chainman_options);</div>
 <div class="line">    <span class="keywordflow">if</span> (chainman == NULL) <span class="keywordflow">return</span> 1;</div>
-<div class="line">    <a class="code hl_function" href="bitcoinkernel_8h.html#a9e798fa5db358be889ac887b371456aa">kernel_chainstate_manager_options_destroy</a>(chainman_options);</div>
+<div class="line">    btck_chainstate_manager_options_destroy(chainman_options);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> block_data[] = {</div>
 <div class="line">        0x00, 0x00, 0x00, 0x20, 0x06, 0x22, 0x6e, 0x46, 0x11, 0x1a, 0x0b, 0x59, 0xca, 0xaf, 0x12, 0x60,</div>
@@ -233,48 +220,19 @@ $(function() {
 <div class="line">        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
 <div class="line">    };</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_typedef" href="bitcoinkernel_8h.html#a0e8ccba0664f03964db6f65d70ad791e">kernel_Block</a>* block = <a class="code hl_function" href="bitcoinkernel_8h.html#a557fc457cc7045041f15887a235ab233">kernel_block_create</a>(block_data, <span class="keyword">sizeof</span>(block_data));</div>
+<div class="line">    btck_Block* block = btck_block_create(block_data, <span class="keyword">sizeof</span>(block_data));</div>
 <div class="line">    <span class="keywordflow">if</span> (block == NULL) <span class="keywordflow">return</span> 1;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">bool</span> new_block = <span class="keyword">true</span>;</div>
-<div class="line">    <span class="keywordtype">int</span> res = <a class="code hl_function" href="bitcoinkernel_8h.html#a0ebe8193bdc7728db0927a3560dd13b5">kernel_chainstate_manager_process_block</a>(context, chainman, block, &amp;new_block);</div>
+<div class="line">    <span class="keywordtype">int</span> new_block = 1;</div>
+<div class="line">    <span class="keywordtype">int</span> res = btck_chainstate_manager_process_block(chainman, block, &amp;new_block);</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_function" href="bitcoinkernel_8h.html#a77f85a09e135a01001c0f50db64dfd31">kernel_block_destroy</a>(block);</div>
-<div class="line">    <a class="code hl_function" href="bitcoinkernel_8h.html#af8fd55a4b91868a2178d661187d16f68">kernel_chainstate_manager_destroy</a>(chainman, context);</div>
-<div class="line">    <a class="code hl_function" href="bitcoinkernel_8h.html#a7bc5d362e47d6bc0812c541e01d8fa60">kernel_context_destroy</a>(context);</div>
+<div class="line">    btck_block_destroy(block);</div>
+<div class="line">    btck_chainstate_manager_destroy(chainman);</div>
+<div class="line">    btck_context_destroy(context);</div>
 <div class="line">    <span class="keywordflow">return</span> !(res &amp;&amp; new_block);</div>
 <div class="line">}</div>
-<div class="ttc" id="abitcoinkernel_8h_html_a0922736a56877474001ae0274dee96a7"><div class="ttname"><a href="bitcoinkernel_8h.html#a0922736a56877474001ae0274dee96a7">kernel_context_options_set_validation_interface</a></div><div class="ttdeci">BITCOINKERNEL_API void kernel_context_options_set_validation_interface(kernel_ContextOptions *context_options, kernel_ValidationInterfaceCallbacks validation_interface_callbacks)</div><div class="ttdoc">Set the validation interface callbacks for the context options. The context created with the options ...</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a0e8ccba0664f03964db6f65d70ad791e"><div class="ttname"><a href="bitcoinkernel_8h.html#a0e8ccba0664f03964db6f65d70ad791e">kernel_Block</a></div><div class="ttdeci">struct kernel_Block kernel_Block</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:205</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a0ebe8193bdc7728db0927a3560dd13b5"><div class="ttname"><a href="bitcoinkernel_8h.html#a0ebe8193bdc7728db0927a3560dd13b5">kernel_chainstate_manager_process_block</a></div><div class="ttdeci">BITCOINKERNEL_API bool kernel_chainstate_manager_process_block(const kernel_Context *context, kernel_ChainstateManager *chainstate_manager, kernel_Block *block, bool *new_block) 2</div><div class="ttdoc">Process and validate the passed in block with the chainstate manager. More detailed validation inform...</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a1230a5e294e2dd7df5b37b5671bc476c"><div class="ttname"><a href="bitcoinkernel_8h.html#a1230a5e294e2dd7df5b37b5671bc476c">kernel_ContextOptions</a></div><div class="ttdeci">struct kernel_ContextOptions kernel_ContextOptions</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:152</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a3893a7bd5233df43876eb9689bd57ee5a1241927e4440dda16abdef81c9b809d5"><div class="ttname"><a href="bitcoinkernel_8h.html#a3893a7bd5233df43876eb9689bd57ee5a1241927e4440dda16abdef81c9b809d5">kernel_CHAIN_TYPE_REGTEST</a></div><div class="ttdeci">@ kernel_CHAIN_TYPE_REGTEST</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:407</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a3af9eb3d4da8618b0519041387dd72db"><div class="ttname"><a href="bitcoinkernel_8h.html#a3af9eb3d4da8618b0519041387dd72db">kernel_chain_parameters_create</a></div><div class="ttdeci">BITCOINKERNEL_API kernel_ChainParameters * kernel_chain_parameters_create(const kernel_ChainType chain_type)</div><div class="ttdoc">Creates a chain parameters struct with default parameters based on the passed in chain type.</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a3b2868f6fae5c8cc8b8a9e8f666aa360"><div class="ttname"><a href="bitcoinkernel_8h.html#a3b2868f6fae5c8cc8b8a9e8f666aa360">kernel_ChainParameters</a></div><div class="ttdeci">struct kernel_ChainParameters kernel_ChainParameters</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:141</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a3d67fbcb3a758b8ab5f6fd8d2119fb38"><div class="ttname"><a href="bitcoinkernel_8h.html#a3d67fbcb3a758b8ab5f6fd8d2119fb38">kernel_BlockValidationState</a></div><div class="ttdeci">struct kernel_BlockValidationState kernel_BlockValidationState</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:219</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a4d08e62d2e27ae52016e8a79841a3d81"><div class="ttname"><a href="bitcoinkernel_8h.html#a4d08e62d2e27ae52016e8a79841a3d81">kernel_context_create</a></div><div class="ttdeci">BITCOINKERNEL_API kernel_Context * kernel_context_create(const kernel_ContextOptions *context_options)</div><div class="ttdoc">Create a new kernel context. If the options have not been previously set, their corresponding fields ...</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a557fc457cc7045041f15887a235ab233"><div class="ttname"><a href="bitcoinkernel_8h.html#a557fc457cc7045041f15887a235ab233">kernel_block_create</a></div><div class="ttdeci">BITCOINKERNEL_API kernel_Block BITCOINKERNEL_API kernel_Block * kernel_block_create(const unsigned char *raw_block, size_t raw_block_len)</div><div class="ttdoc">Parse a serialized raw block into a new block object.</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a5aa39a4692783eb74c8e429d76bc18ad"><div class="ttname"><a href="bitcoinkernel_8h.html#a5aa39a4692783eb74c8e429d76bc18ad">kernel_chainstate_manager_create</a></div><div class="ttdeci">BITCOINKERNEL_API kernel_ChainstateManager * kernel_chainstate_manager_create(const kernel_Context *context, const kernel_ChainstateManagerOptions *chainstate_manager_options) 2)</div><div class="ttdoc">Create a chainstate manager. This is the main object for many validation tasks as well as for retriev...</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a5c517b07a80522138b7ae44e5b7d05f8"><div class="ttname"><a href="bitcoinkernel_8h.html#a5c517b07a80522138b7ae44e5b7d05f8">kernel_context_options_destroy</a></div><div class="ttdeci">BITCOINKERNEL_API void kernel_context_options_destroy(kernel_ContextOptions *context_options)</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a6f87bb71e88169a63e1b9f29d3730145"><div class="ttname"><a href="bitcoinkernel_8h.html#a6f87bb71e88169a63e1b9f29d3730145">kernel_chain_parameters_destroy</a></div><div class="ttdeci">BITCOINKERNEL_API void kernel_chain_parameters_destroy(kernel_ChainParameters *chain_parameters)</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a77f85a09e135a01001c0f50db64dfd31"><div class="ttname"><a href="bitcoinkernel_8h.html#a77f85a09e135a01001c0f50db64dfd31">kernel_block_destroy</a></div><div class="ttdeci">BITCOINKERNEL_API void kernel_block_destroy(kernel_Block *block)</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a7bc5d362e47d6bc0812c541e01d8fa60"><div class="ttname"><a href="bitcoinkernel_8h.html#a7bc5d362e47d6bc0812c541e01d8fa60">kernel_context_destroy</a></div><div class="ttdeci">BITCOINKERNEL_API void kernel_context_destroy(kernel_Context *context)</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a7d21dac4eaadd5a543586ef8c9f0b11b"><div class="ttname"><a href="bitcoinkernel_8h.html#a7d21dac4eaadd5a543586ef8c9f0b11b">kernel_context_options_set_chainparams</a></div><div class="ttdeci">BITCOINKERNEL_API void kernel_context_options_set_chainparams(kernel_ContextOptions *context_options, const kernel_ChainParameters *chain_parameters) 2)</div><div class="ttdoc">Sets the chain params for the context options. The context created with the options will be configure...</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a9e798fa5db358be889ac887b371456aa"><div class="ttname"><a href="bitcoinkernel_8h.html#a9e798fa5db358be889ac887b371456aa">kernel_chainstate_manager_options_destroy</a></div><div class="ttdeci">BITCOINKERNEL_API void kernel_chainstate_manager_options_destroy(kernel_ChainstateManagerOptions *chainstate_manager_options)</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_aa0d91f503312aefaf749a19fb0f48dd8"><div class="ttname"><a href="bitcoinkernel_8h.html#aa0d91f503312aefaf749a19fb0f48dd8">kernel_chainstate_manager_options_create</a></div><div class="ttdeci">BITCOINKERNEL_API kernel_ChainstateManagerOptions * kernel_chainstate_manager_options_create(const kernel_Context *context, const char *data_directory, size_t data_directory_len, const char *blocks_directory, size_t blocks_directory_len) 2)</div><div class="ttdoc">Create options for the chainstate manager.</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_abc65a7929ad15c3fd456f6efb3096fdc"><div class="ttname"><a href="bitcoinkernel_8h.html#abc65a7929ad15c3fd456f6efb3096fdc">kernel_BlockPointer</a></div><div class="ttdeci">struct kernel_BlockPointer kernel_BlockPointer</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:211</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_ac3ff778c15cdc8b8ab067b99bb686f89"><div class="ttname"><a href="bitcoinkernel_8h.html#ac3ff778c15cdc8b8ab067b99bb686f89">kernel_context_options_create</a></div><div class="ttdeci">BITCOINKERNEL_API kernel_ContextOptions * kernel_context_options_create()</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_aca62716d9bacf32b453d266bb739e6a8"><div class="ttname"><a href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a></div><div class="ttdeci">struct kernel_ChainstateManager kernel_ChainstateManager</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:200</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_ae7a82a08466ded3b55589964fe2adf48"><div class="ttname"><a href="bitcoinkernel_8h.html#ae7a82a08466ded3b55589964fe2adf48">kernel_context_options_set_notifications</a></div><div class="ttdeci">BITCOINKERNEL_API void kernel_context_options_set_notifications(kernel_ContextOptions *context_options, kernel_NotificationInterfaceCallbacks notifications)</div><div class="ttdoc">Set the kernel notifications for the context options. The context created with the options will be co...</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_aed37cc92a0ea09a8b1dd3af406b16750"><div class="ttname"><a href="bitcoinkernel_8h.html#aed37cc92a0ea09a8b1dd3af406b16750">kernel_ChainstateManagerOptions</a></div><div class="ttdeci">struct kernel_ChainstateManagerOptions kernel_ChainstateManagerOptions</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:186</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_af595d5c3fc4061c6bfd0afc01aafcc89"><div class="ttname"><a href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a></div><div class="ttdeci">struct kernel_Context kernel_Context</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:168</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_af8fd55a4b91868a2178d661187d16f68"><div class="ttname"><a href="bitcoinkernel_8h.html#af8fd55a4b91868a2178d661187d16f68">kernel_chainstate_manager_destroy</a></div><div class="ttdeci">BITCOINKERNEL_API bool BITCOINKERNEL_API void kernel_chainstate_manager_destroy(kernel_ChainstateManager *chainstate_manager, const kernel_Context *context)</div></div>
 <div class="ttc" id="adata__retrieval__example_8c_html_a31425dca2f328c215ff960feeff6a496"><div class="ttname"><a href="data__retrieval__example_8c.html#a31425dca2f328c215ff960feeff6a496">handle_error</a></div><div class="ttdeci">void handle_error(void *_, const char *msg, size_t msg_size)</div><div class="ttdef"><b>Definition</b> data_retrieval_example.c:6</div></div>
-<div class="ttc" id="astructkernel__NotificationInterfaceCallbacks_html"><div class="ttname"><a href="structkernel__NotificationInterfaceCallbacks.html">kernel_NotificationInterfaceCallbacks</a></div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:316</div></div>
-<div class="ttc" id="astructkernel__NotificationInterfaceCallbacks_html_ab34dd6219869dc97a9c5d64a0c94d007"><div class="ttname"><a href="structkernel__NotificationInterfaceCallbacks.html#ab34dd6219869dc97a9c5d64a0c94d007">kernel_NotificationInterfaceCallbacks::user_data</a></div><div class="ttdeci">const void * user_data</div><div class="ttdoc">Holds a user-defined opaque structure that is passed to the notification callbacks.</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:317</div></div>
-<div class="ttc" id="astructkernel__ValidationInterfaceCallbacks_html"><div class="ttname"><a href="structkernel__ValidationInterfaceCallbacks.html">kernel_ValidationInterfaceCallbacks</a></div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:301</div></div>
-<div class="ttc" id="astructkernel__ValidationInterfaceCallbacks_html_a8aacbdbde9bffaab17dfd346dde6a926"><div class="ttname"><a href="structkernel__ValidationInterfaceCallbacks.html#a8aacbdbde9bffaab17dfd346dde6a926">kernel_ValidationInterfaceCallbacks::user_data</a></div><div class="ttdeci">const void * user_data</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:302</div></div>
-<div class="ttc" id="avalidate__block__example_8c_html_a58f8f99e6e193ccd4e03ff7ebadde0b0"><div class="ttname"><a href="validate__block__example_8c.html#a58f8f99e6e193ccd4e03ff7ebadde0b0">block_checked</a></div><div class="ttdeci">void block_checked(void *_, const kernel_BlockPointer *block, const kernel_BlockValidationState *state)</div><div class="ttdef"><b>Definition</b> validate_block_example.c:12</div></div>
+<div class="ttc" id="avalidate__block__example_8c_html_a6bc19079c8a300d7dfce72b492206083"><div class="ttname"><a href="validate__block__example_8c.html#a6bc19079c8a300d7dfce72b492206083">block_checked</a></div><div class="ttdeci">void block_checked(void *_, btck_Block *block, const btck_BlockValidationState *state)</div><div class="ttdef"><b>Definition</b> validate_block_example.c:12</div></div>
 </div><!-- fragment --><h1><a class="anchor" id="retrieval"></a>
 Data retrieval</h1>
 <p>The only difference when using the kernel library just for data retrieval compared to the "Full" validation case is that the chainstate manager does not issue validation interface callbacks, so no such callbacks need to be configured.</p>
@@ -291,9 +249,9 @@ Data retrieval</h1>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="context__free__example_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
-<div class="line">    <a class="code hl_typedef" href="bitcoinkernel_8h.html#a1230a5e294e2dd7df5b37b5671bc476c">kernel_ContextOptions</a>* context_options = <a class="code hl_function" href="bitcoinkernel_8h.html#ac3ff778c15cdc8b8ab067b99bb686f89">kernel_context_options_create</a>();</div>
-<div class="line">    <a class="code hl_struct" href="structkernel__NotificationInterfaceCallbacks.html">kernel_NotificationInterfaceCallbacks</a> notifications = {</div>
-<div class="line">        .<a class="code hl_variable" href="structkernel__NotificationInterfaceCallbacks.html#ab34dd6219869dc97a9c5d64a0c94d007">user_data</a> = NULL,</div>
+<div class="line">    btck_ContextOptions* context_options = btck_context_options_create();</div>
+<div class="line">    btck_NotificationInterfaceCallbacks notifications = {</div>
+<div class="line">        .user_data = NULL,</div>
 <div class="line">        .block_tip = NULL,</div>
 <div class="line">        .header_tip = NULL,</div>
 <div class="line">        .progress = NULL,</div>
@@ -302,35 +260,33 @@ Data retrieval</h1>
 <div class="line">        .flush_error = <a class="code hl_function" href="data__retrieval__example_8c.html#a31425dca2f328c215ff960feeff6a496">handle_error</a>,</div>
 <div class="line">        .fatal_error = <a class="code hl_function" href="data__retrieval__example_8c.html#a31425dca2f328c215ff960feeff6a496">handle_error</a>,</div>
 <div class="line">    };</div>
-<div class="line">    <a class="code hl_function" href="bitcoinkernel_8h.html#ae7a82a08466ded3b55589964fe2adf48">kernel_context_options_set_notifications</a>(context_options, notifications);</div>
-<div class="line">    <a class="code hl_typedef" href="bitcoinkernel_8h.html#a3b2868f6fae5c8cc8b8a9e8f666aa360">kernel_ChainParameters</a>* chainparams = <a class="code hl_function" href="bitcoinkernel_8h.html#a3af9eb3d4da8618b0519041387dd72db">kernel_chain_parameters_create</a>(<a class="code hl_enumvalue" href="bitcoinkernel_8h.html#a3893a7bd5233df43876eb9689bd57ee5a1241927e4440dda16abdef81c9b809d5">kernel_CHAIN_TYPE_REGTEST</a>);</div>
-<div class="line">    <a class="code hl_function" href="bitcoinkernel_8h.html#a7d21dac4eaadd5a543586ef8c9f0b11b">kernel_context_options_set_chainparams</a>(context_options, chainparams);</div>
-<div class="line">    <a class="code hl_function" href="bitcoinkernel_8h.html#a6f87bb71e88169a63e1b9f29d3730145">kernel_chain_parameters_destroy</a>(chainparams);</div>
-<div class="line">    <a class="code hl_typedef" href="bitcoinkernel_8h.html#af595d5c3fc4061c6bfd0afc01aafcc89">kernel_Context</a>* context = <a class="code hl_function" href="bitcoinkernel_8h.html#a4d08e62d2e27ae52016e8a79841a3d81">kernel_context_create</a>(context_options);</div>
-<div class="line">    <a class="code hl_function" href="bitcoinkernel_8h.html#a5c517b07a80522138b7ae44e5b7d05f8">kernel_context_options_destroy</a>(context_options);</div>
+<div class="line">    btck_context_options_set_notifications(context_options, notifications);</div>
+<div class="line">    btck_ChainParameters* chainparams = btck_chain_parameters_create(btck_ChainType_REGTEST);</div>
+<div class="line">    btck_context_options_set_chainparams(context_options, chainparams);</div>
+<div class="line">    btck_chain_parameters_destroy(chainparams);</div>
+<div class="line">    btck_Context* context = btck_context_create(context_options);</div>
+<div class="line">    btck_context_options_destroy(context_options);</div>
 <div class="line">    <span class="keywordflow">if</span> (context == NULL) <span class="keywordflow">return</span> 1;</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> data_dir[] = <span class="stringliteral">&quot;.bitcoin&quot;</span>;</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> blocks_dir[] = <span class="stringliteral">&quot;.bitcoin/blocks&quot;</span>;</div>
-<div class="line">    <a class="code hl_typedef" href="bitcoinkernel_8h.html#aed37cc92a0ea09a8b1dd3af406b16750">kernel_ChainstateManagerOptions</a>* chainman_options = <a class="code hl_function" href="bitcoinkernel_8h.html#aa0d91f503312aefaf749a19fb0f48dd8">kernel_chainstate_manager_options_create</a>(context, data_dir, <span class="keyword">sizeof</span>(data_dir) - 1, blocks_dir, <span class="keyword">sizeof</span>(blocks_dir));</div>
+<div class="line">    btck_ChainstateManagerOptions* chainman_options = btck_chainstate_manager_options_create(context, data_dir, <span class="keyword">sizeof</span>(data_dir) - 1, blocks_dir, <span class="keyword">sizeof</span>(blocks_dir));</div>
 <div class="line">    <span class="keywordflow">if</span> (chainman_options == NULL) <span class="keywordflow">return</span> 1;</div>
-<div class="line">    <a class="code hl_typedef" href="bitcoinkernel_8h.html#aca62716d9bacf32b453d266bb739e6a8">kernel_ChainstateManager</a>* chainman = <a class="code hl_function" href="bitcoinkernel_8h.html#a5aa39a4692783eb74c8e429d76bc18ad">kernel_chainstate_manager_create</a>(context, chainman_options);</div>
+<div class="line">    btck_ChainstateManager* chainman = btck_chainstate_manager_create(chainman_options);</div>
 <div class="line">    <span class="keywordflow">if</span> (chainman == NULL) <span class="keywordflow">return</span> 1;</div>
-<div class="line">    <a class="code hl_function" href="bitcoinkernel_8h.html#a9e798fa5db358be889ac887b371456aa">kernel_chainstate_manager_options_destroy</a>(chainman_options);</div>
+<div class="line">    btck_chainstate_manager_options_destroy(chainman_options);</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_typedef" href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a>* index = <a class="code hl_function" href="bitcoinkernel_8h.html#a667578e9015f9b1e4d61e469e0b9eeb0">kernel_block_index_get_genesis</a>(context, chainman);</div>
-<div class="line">    <a class="code hl_typedef" href="bitcoinkernel_8h.html#a0e8ccba0664f03964db6f65d70ad791e">kernel_Block</a>* genesis = <a class="code hl_function" href="bitcoinkernel_8h.html#a7ff463eed8441f0faea8e375d9466006">kernel_block_read</a>(context, chainman, index);</div>
+<div class="line">    <span class="keyword">const</span> btck_Chain* chain = btck_chainstate_manager_get_active_chain(chainman);</div>
+<div class="line">    btck_BlockTreeEntry* entry = btck_chain_get_genesis(chain);</div>
+<div class="line">    btck_Block* genesis = btck_block_read(chainman, entry);</div>
 <div class="line">    <span class="comment">// Now do something with this genesis block.</span></div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_function" href="bitcoinkernel_8h.html#a77f85a09e135a01001c0f50db64dfd31">kernel_block_destroy</a>(genesis);</div>
-<div class="line">    <a class="code hl_function" href="bitcoinkernel_8h.html#af8fd55a4b91868a2178d661187d16f68">kernel_chainstate_manager_destroy</a>(chainman, context);</div>
-<div class="line">    <a class="code hl_function" href="bitcoinkernel_8h.html#a7bc5d362e47d6bc0812c541e01d8fa60">kernel_context_destroy</a>(context);</div>
+<div class="line">    btck_block_destroy(genesis);</div>
+<div class="line">    btck_chainstate_manager_destroy(chainman);</div>
+<div class="line">    btck_context_destroy(context);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="abitcoinkernel_8h_html_a667578e9015f9b1e4d61e469e0b9eeb0"><div class="ttname"><a href="bitcoinkernel_8h.html#a667578e9015f9b1e4d61e469e0b9eeb0">kernel_block_index_get_genesis</a></div><div class="ttdeci">BITCOINKERNEL_API kernel_BlockIndex * kernel_block_index_get_genesis(const kernel_Context *context, kernel_ChainstateManager *chainstate_manager) 2)</div><div class="ttdoc">Get the block index entry of the genesis block.</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a7ff463eed8441f0faea8e375d9466006"><div class="ttname"><a href="bitcoinkernel_8h.html#a7ff463eed8441f0faea8e375d9466006">kernel_block_read</a></div><div class="ttdeci">BITCOINKERNEL_API kernel_Block * kernel_block_read(const kernel_Context *context, kernel_ChainstateManager *chainstate_manager, const kernel_BlockIndex *block_index) 2</div><div class="ttdoc">Reads the block the passed in block index points to from disk and returns it.</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_acfc203b8db359f39e07bb55691652832"><div class="ttname"><a href="bitcoinkernel_8h.html#acfc203b8db359f39e07bb55691652832">kernel_BlockIndex</a></div><div class="ttdeci">struct kernel_BlockIndex kernel_BlockIndex</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:177</div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

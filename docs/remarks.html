@@ -90,6 +90,7 @@ Pointer and argument conventions</h1>
 <p>The user is responsible for de-allocating the memory owned by pointers returned by functions. Typically pointers returned by *_create(...) functions can be de-allocated by corresponding *_destroy(...) functions.</p>
 <p>A function that takes pointer arguments makes no assumptions on their lifetime. Once the function returns the user can safely de-allocate the passed in arguments.</p>
 <p>Pointers passed by callbacks are not owned by the user and are only valid for the duration of the callback. They are always marked as <code>const</code> and must not be de-allocated by the user.</p>
+<p>Some pointers returned by functions also give access to non-owned resources. These pointers are also marked as const and must not be de-allocated by the user. Ownership of these resources may be taken by copying. They are typically used for iteration with minimal overhead and require some care by the programmer that their lifetime is not extended beyond that of the original object.</p>
 <p>Array lengths follow the pointer argument they describe. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['data_0',['data',['../structkernel__ByteArray.html#aa5949a2c8bf65e70dfbed07732395600',1,'kernel_ByteArray']]]
+  ['fatal_5ferror_0',['fatal_error',['../structbtck__NotificationInterfaceCallbacks.html#aa73c9186d0f6edd6b44e75194ab0004e',1,'btck_NotificationInterfaceCallbacks']]],
+  ['flush_5ferror_1',['flush_error',['../structbtck__NotificationInterfaceCallbacks.html#a7169e1281024355d5d2d50e989515ffd',1,'btck_NotificationInterfaceCallbacks']]]
 ];

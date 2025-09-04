@@ -21,7 +21,7 @@
  * @section context-free "Context-free" validation
  *
  * This describes validation functions for which the user of the library is not
- * required to explicitly instantiate a @ref kernel_Context. These functions
+ * required to explicitly instantiate a @ref btck_Context. These functions
  * can validate data structures only with a subset of the full Bitcoin Core
  * rules. They do not read or write data from or to disk. Currently, this
  * includes script validation.
@@ -39,7 +39,7 @@
  *
  * @section full-validation "Full" validation
  *
- * Full validation requires the user to instantiate a @ref kernel_Context. It
+ * Full validation requires the user to instantiate a @ref btck_Context. It
  * is recommended to create a kernel notification callbacks struct to handle
  * any fatal errors arrising during processing. If a fatal error is encountered
  * it is recommended to halt further processing and tear down.

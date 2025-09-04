@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['user_5fdata_0',['user_data',['../structkernel__ValidationInterfaceCallbacks.html#a8aacbdbde9bffaab17dfd346dde6a926',1,'kernel_ValidationInterfaceCallbacks::user_data'],['../structkernel__NotificationInterfaceCallbacks.html#ab34dd6219869dc97a9c5d64a0c94d007',1,'kernel_NotificationInterfaceCallbacks::user_data']]]
+  ['validate_5fblock_5fexample_2ec_0',['validate_block_example.c',['../validate__block__example_8c.html',1,'']]],
+  ['validation_1',['validation',['../examples.html#context-free',1,'&quot;Context-free&quot; validation'],['../examples.html#full-validation',1,'&quot;Full&quot; validation']]]
 ];

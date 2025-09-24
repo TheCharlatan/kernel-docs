@@ -93,16 +93,12 @@ extern "C" {
  * lifetime. Once the function returns the user can safely de-allocate the
  * passed in arguments.
  *
- * Pointers passed by callbacks are not owned by the user and are only valid
- * for the duration of the callback. They are always marked as `const` and must
- * not be de-allocated by the user.
- *
- * Some pointers returned by functions also give access to non-owned resources.
- * These pointers are also marked as const and must not be de-allocated by the
- * user. Ownership of these resources may be taken by copying. They are
- * typically used for iteration with minimal overhead and require some care by
- * the programmer that their lifetime is not extended beyond that of the
- * original object.
+ * Const pointers represent views, and do not transfer ownership. Lifetime
+ * guarantees of these objects are described in the respective documentation.
+ * Ownership of these resources may be taken by copying. They are typically
+ * used for iteration with minimal overhead and require some care by the
+ * programmer that their lifetime is not extended beyond that of the original
+ * object.
  *
  * Array lengths follow the pointer argument they describe.
  */
@@ -130,8 +126,8 @@ typedef struct btck_TransactionOutput btck_TransactionOutput;
  * Messages that were logged before a connection is created are buffered in a
  * 1MB buffer. Logging can alternatively be permanently disabled by calling
  * @ref btck_logging_disable. Functions changing the logging settings are
- * global (and not thread safe) and change the settings for all existing
- * btck_LoggingConnection instances.
+ * global and change the settings for all existing btck_LoggingConnection
+ * instances.
  */
 typedef struct btck_LoggingConnection btck_LoggingConnection;
 
@@ -253,6 +249,13 @@ typedef struct btck_TransactionSpentOutputs btck_TransactionSpentOutputs;
  */
 typedef struct btck_Coin btck_Coin;
 
+/**
+ * Opaque data structure for holding a block hash.
+ *
+ * This is a type-safe identifier for a block.
+ */
+typedef struct btck_BlockHash btck_BlockHash;
+
 /** Current sync state passed to tip changed callbacks. */
 typedef uint8_t btck_SynchronizationState;
 #define btck_SynchronizationState_INIT_REINDEX ((btck_SynchronizationState)(0))
@@ -280,7 +283,7 @@ typedef void (*btck_DestroyCallback)(void* user_data);
 /**
  * Function signatures for the kernel notifications.
  */
-typedef void (*btck_NotifyBlockTip)(void* user_data, btck_SynchronizationState state, btck_BlockTreeEntry* entry, double verification_progress);
+typedef void (*btck_NotifyBlockTip)(void* user_data, btck_SynchronizationState state, const btck_BlockTreeEntry* entry, double verification_progress);
 typedef void (*btck_NotifyHeaderTip)(void* user_data, btck_SynchronizationState state, int64_t height, int64_t timestamp, int presync);
 typedef void (*btck_NotifyProgress)(void* user_data, const char* title, size_t title_len, int progress_percent, int resume_possible);
 typedef void (*btck_NotifyWarningSet)(void* user_data, btck_Warning warning, const char* message, size_t message_len);
@@ -429,13 +432,6 @@ typedef uint8_t btck_ChainType;
 #define btck_ChainType_TESTNET_4 ((btck_ChainType)(2))
 #define btck_ChainType_SIGNET ((btck_ChainType)(3))
 #define btck_ChainType_REGTEST ((btck_ChainType)(4))
-
-/**
- * A type-safe block identifier.
- */
-typedef struct {
-    unsigned char hash[32];
-} btck_BlockHash;
 
 /** @name Transaction
  * Functions for working with transactions.
@@ -656,10 +652,9 @@ BITCOINKERNEL_API void btck_logging_disable();
 /**
  * @brief Set the log level of the global internal logger. This does not
  * enable the selected categories. Use @ref btck_logging_enable_category to
- * start logging from a specific, or all categories. This function is not
- * thread safe. Multiple calls from different threads are allowed but must be
- * synchronized. This changes a global setting and will override settings for
- * all existing @ref btck_LoggingConnection instances.
+ * start logging from a specific, or all categories. This changes a global
+ * setting and will override settings for all existing
+ * @ref btck_LoggingConnection instances.
  *
  * @param[in] category If btck_LOG_ALL is chosen, all messages at the specified level
  *                     will be logged. Otherwise only messages from the specified category
@@ -670,9 +665,8 @@ BITCOINKERNEL_API void btck_logging_set_level_category(btck_LogCategory category
 
 /**
  * @brief Enable a specific log category for the global internal logger. This
- * function is not thread safe. Multiple calls from different threads are
- * allowed but must be synchronized. This changes a global setting and will
- * override settings for all existing @ref btck_LoggingConnection instances.
+ * changes a global setting and will override settings for all existing @ref
+ * btck_LoggingConnection instances.
  *
  * @param[in] category If btck_LOG_ALL is chosen, all categories will be enabled.
  */
@@ -680,9 +674,8 @@ BITCOINKERNEL_API void btck_logging_enable_category(btck_LogCategory category);
 
 /**
  * @brief Disable a specific log category for the global internal logger. This
- * function is not thread safe. Multiple calls from different threads are
- * allowed but must be synchronized. This changes a global setting and will
- * override settings for all existing @ref btck_LoggingConnection instances.
+ * changes a global setting and will override settings for all existing @ref
+ * btck_LoggingConnection instances.
  *
  * @param[in] category If btck_LOG_ALL is chosen, all categories will be disabled.
  */
@@ -848,7 +841,7 @@ BITCOINKERNEL_API void btck_context_destroy(btck_Context* context);
  * @param[in] block_tree_entry Non-null.
  * @return                     The previous block tree entry, or null on error or if the current block tree entry is the genesis block.
  */
-BITCOINKERNEL_API btck_BlockTreeEntry* BITCOINKERNEL_WARN_UNUSED_RESULT btck_block_tree_entry_get_previous(
+BITCOINKERNEL_API const btck_BlockTreeEntry* BITCOINKERNEL_WARN_UNUSED_RESULT btck_block_tree_entry_get_previous(
     const btck_BlockTreeEntry* block_tree_entry) BITCOINKERNEL_ARG_NONNULL(1);
 
 /**
@@ -861,9 +854,13 @@ BITCOINKERNEL_API int32_t BITCOINKERNEL_WARN_UNUSED_RESULT btck_block_tree_entry
     const btck_BlockTreeEntry* block_tree_entry) BITCOINKERNEL_ARG_NONNULL(1);
 
 /**
- * @brief Destroy the block tree entry.
+ * @brief Return the block hash associated with a block tree entry.
+ *
+ * @param[in] block_tree_entry Non-null.
+ * @return                     The block hash.
  */
-BITCOINKERNEL_API void btck_block_tree_entry_destroy(btck_BlockTreeEntry* block_tree_entry);
+BITCOINKERNEL_API btck_BlockHash* BITCOINKERNEL_WARN_UNUSED_RESULT btck_block_tree_entry_get_block_hash(
+    const btck_BlockTreeEntry* block_tree_entry) BITCOINKERNEL_ARG_NONNULL(1);
 
 ///@}
 
@@ -961,9 +958,8 @@ BITCOINKERNEL_API btck_ChainstateManager* BITCOINKERNEL_WARN_UNUSED_RESULT btck_
     const btck_ChainstateManagerOptions* chainstate_manager_options) BITCOINKERNEL_ARG_NONNULL(1);
 
 /**
- * @brief May be called once the btck_ChainstateManager is instantiated.
- * Triggers the start of a reindex if the option was previously set for the
- * chainstate and block manager. Can also import an array of existing block
+ * @brief Triggers the start of a reindex if the option was previously set for
+ * the chainstate and block manager. Can also import an array of existing block
  * files selected by the user.
  *
  * @param[in] chainstate_manager   Non-null.
@@ -1015,7 +1011,7 @@ BITCOINKERNEL_API const btck_Chain* BITCOINKERNEL_WARN_UNUSED_RESULT btck_chains
  * @return                       The block tree entry of the block with the passed in hash, or null if
  *                               the block hash is not found.
  */
-BITCOINKERNEL_API btck_BlockTreeEntry* BITCOINKERNEL_WARN_UNUSED_RESULT btck_chainstate_manager_get_block_tree_entry_by_hash(
+BITCOINKERNEL_API const btck_BlockTreeEntry* BITCOINKERNEL_WARN_UNUSED_RESULT btck_chainstate_manager_get_block_tree_entry_by_hash(
     const btck_ChainstateManager* chainstate_manager,
     const btck_BlockHash* block_hash) BITCOINKERNEL_ARG_NONNULL(1, 2);
 
@@ -1100,7 +1096,7 @@ BITCOINKERNEL_API btck_BlockHash* BITCOINKERNEL_WARN_UNUSED_RESULT btck_block_ge
  * @param[in] writer    Non-null, callback to a write bytes function.
  * @param[in] user_data Holds a user-defined opaque structure that will be
  *                      passed back through the writer callback.
- * @return              True on success.
+ * @return              0 on success.
  */
 BITCOINKERNEL_API int btck_block_to_bytes(
     const btck_Block* block,
@@ -1145,7 +1141,16 @@ BITCOINKERNEL_API btck_BlockValidationResult btck_block_validation_state_get_blo
  * @param[in] chain Non-null.
  * @return          The block tree entry of the current tip, or null if the chain is empty.
  */
-BITCOINKERNEL_API btck_BlockTreeEntry* BITCOINKERNEL_WARN_UNUSED_RESULT btck_chain_get_tip(
+BITCOINKERNEL_API const btck_BlockTreeEntry* BITCOINKERNEL_WARN_UNUSED_RESULT btck_chain_get_tip(
+    const btck_Chain* chain) BITCOINKERNEL_ARG_NONNULL(1);
+
+/**
+ * @brief Return the height of the tip of the chain.
+ *
+ * @param[in] chain Non-null.
+ * @return          The current height.
+ */
+BITCOINKERNEL_API int BITCOINKERNEL_WARN_UNUSED_RESULT btck_chain_get_height(
     const btck_Chain* chain) BITCOINKERNEL_ARG_NONNULL(1);
 
 /*
@@ -1154,7 +1159,7 @@ BITCOINKERNEL_API btck_BlockTreeEntry* BITCOINKERNEL_WARN_UNUSED_RESULT btck_cha
  * @param[in] chain Non-null.
  * @return          The block tree entry of the genesis block, or null if the chain is empty.
  */
-BITCOINKERNEL_API btck_BlockTreeEntry* BITCOINKERNEL_WARN_UNUSED_RESULT btck_chain_get_genesis(
+BITCOINKERNEL_API const btck_BlockTreeEntry* BITCOINKERNEL_WARN_UNUSED_RESULT btck_chain_get_genesis(
     const btck_Chain* chain) BITCOINKERNEL_ARG_NONNULL(1);
 
 /**
@@ -1163,9 +1168,10 @@ BITCOINKERNEL_API btck_BlockTreeEntry* BITCOINKERNEL_WARN_UNUSED_RESULT btck_cha
  *
  * @param[in] chain        Non-null.
  * @param[in] block_height Height in the chain of the to be retrieved block tree entry.
- * @return                 The block tree entry at a certain height in the currently active chain.
+ * @return                 The block tree entry at a certain height in the currently active chain, or null
+ *                         if the height is out of bounds.
  */
-BITCOINKERNEL_API btck_BlockTreeEntry* BITCOINKERNEL_WARN_UNUSED_RESULT btck_chain_get_by_height(
+BITCOINKERNEL_API const btck_BlockTreeEntry* BITCOINKERNEL_WARN_UNUSED_RESULT btck_chain_get_by_height(
     const btck_Chain* chain,
     int block_height) BITCOINKERNEL_ARG_NONNULL(1);
 
@@ -1180,11 +1186,6 @@ BITCOINKERNEL_API btck_BlockTreeEntry* BITCOINKERNEL_WARN_UNUSED_RESULT btck_cha
 BITCOINKERNEL_API int btck_chain_contains(
     const btck_Chain* chain,
     const btck_BlockTreeEntry* block_tree_entry) BITCOINKERNEL_ARG_NONNULL(1, 2);
-
-/**
- * @brief Destroy the chain.
- */
-BITCOINKERNEL_API void btck_chain_destroy(btck_Chain* chain);
 
 ///@}
 
@@ -1344,13 +1345,28 @@ BITCOINKERNEL_API void btck_coin_destroy(btck_Coin* coin);
 ///@{
 
 /**
- * @brief Return the block hash associated with a block tree entry.
- *
- * @param[in] block_tree_entry Non-null.
- * @return                     The block hash.
+ * @brief Create a block hash from its raw data.
  */
-BITCOINKERNEL_API btck_BlockHash* BITCOINKERNEL_WARN_UNUSED_RESULT btck_block_tree_entry_get_block_hash(
-    const btck_BlockTreeEntry* block_tree_entry) BITCOINKERNEL_ARG_NONNULL(1);
+BITCOINKERNEL_API btck_BlockHash* BITCOINKERNEL_WARN_UNUSED_RESULT btck_block_hash_create(
+    const unsigned char block_hash[32]) BITCOINKERNEL_ARG_NONNULL(1);
+
+/**
+ * @brief Copy a block hash.
+ *
+ * @param[in] block_hash Non-null.
+ * @return               The copied block hash.
+ */
+BITCOINKERNEL_API btck_BlockHash* BITCOINKERNEL_WARN_UNUSED_RESULT btck_block_hash_copy(
+    const btck_BlockHash* block_hash) BITCOINKERNEL_ARG_NONNULL(1);
+
+/**
+ * @brief Serializes the block hash to bytes.
+ *
+ * @param[in] block_hash     Non-null.
+ * @param[in] output         The serialized block hash.
+ */
+BITCOINKERNEL_API void btck_block_hash_to_bytes(
+    const btck_BlockHash* block_hash, unsigned char output[32]) BITCOINKERNEL_ARG_NONNULL(1, 2);
 
 /**
  * Destroy the block hash.

@@ -38,7 +38,7 @@ int main() {
     btck_chainstate_manager_options_destroy(chainman_options);
 
     const btck_Chain* chain = btck_chainstate_manager_get_active_chain(chainman);
-    btck_BlockTreeEntry* entry = btck_chain_get_genesis(chain);
+    const btck_BlockTreeEntry* entry = btck_chain_get_genesis(chain);
     btck_Block* genesis = btck_block_read(chainman, entry);
     // Now do something with this genesis block.
 

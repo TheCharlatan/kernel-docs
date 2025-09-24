@@ -116,8 +116,6 @@ Data Structures</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbtck__LoggingOptions.html">btck_LoggingOptions</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbtck__BlockHash.html">btck_BlockHash</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -276,6 +274,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:a69ea8a77fb877838ec3c00953afaa772"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88a7f6e89e363fad188133d3ea9bb748" id="r_a88a7f6e89e363fad188133d3ea9bb748"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="bitcoinkernel_8h.html#a88a7f6e89e363fad188133d3ea9bb748">btck_Coin</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a88a7f6e89e363fad188133d3ea9bb748">btck_Coin</a></td></tr>
 <tr class="separator:a88a7f6e89e363fad188133d3ea9bb748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22d81144a2752a03ab05161af7bfd1f5" id="r_a22d81144a2752a03ab05161af7bfd1f5"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="bitcoinkernel_8h.html#a22d81144a2752a03ab05161af7bfd1f5">btck_BlockHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a22d81144a2752a03ab05161af7bfd1f5">btck_BlockHash</a></td></tr>
+<tr class="separator:a22d81144a2752a03ab05161af7bfd1f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58fadd0ba23940c7b1b6e1cfe8ee5618" id="r_a58fadd0ba23940c7b1b6e1cfe8ee5618"><td class="memItemLeft" align="right" valign="top">typedef uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a58fadd0ba23940c7b1b6e1cfe8ee5618">btck_SynchronizationState</a></td></tr>
 <tr class="separator:a58fadd0ba23940c7b1b6e1cfe8ee5618"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac09a909550672c2f641db8d36da8274f" id="r_ac09a909550672c2f641db8d36da8274f"><td class="memItemLeft" align="right" valign="top">typedef uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#ac09a909550672c2f641db8d36da8274f">btck_Warning</a></td></tr>
@@ -284,8 +284,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:a43c365f9ab63ec7ee0a7c9bb1c365c93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71093f0ace733acf6de97819f19e481d" id="r_a71093f0ace733acf6de97819f19e481d"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a71093f0ace733acf6de97819f19e481d">btck_DestroyCallback</a>) (void *user_data)</td></tr>
 <tr class="separator:a71093f0ace733acf6de97819f19e481d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf94fac1bfef57369e3feb7f627739ec" id="r_adf94fac1bfef57369e3feb7f627739ec"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#adf94fac1bfef57369e3feb7f627739ec">btck_NotifyBlockTip</a>) (void *user_data, <a class="el" href="bitcoinkernel_8h.html#a58fadd0ba23940c7b1b6e1cfe8ee5618">btck_SynchronizationState</a> state, <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *entry, double verification_progress)</td></tr>
-<tr class="separator:adf94fac1bfef57369e3feb7f627739ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3067360739fbf1f6fdede8f6af87a15" id="r_ab3067360739fbf1f6fdede8f6af87a15"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#ab3067360739fbf1f6fdede8f6af87a15">btck_NotifyBlockTip</a>) (void *user_data, <a class="el" href="bitcoinkernel_8h.html#a58fadd0ba23940c7b1b6e1cfe8ee5618">btck_SynchronizationState</a> state, const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *entry, double verification_progress)</td></tr>
+<tr class="separator:ab3067360739fbf1f6fdede8f6af87a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac73b2bbf4f157c209746d8aae6e79798" id="r_ac73b2bbf4f157c209746d8aae6e79798"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#ac73b2bbf4f157c209746d8aae6e79798">btck_NotifyHeaderTip</a>) (void *user_data, <a class="el" href="bitcoinkernel_8h.html#a58fadd0ba23940c7b1b6e1cfe8ee5618">btck_SynchronizationState</a> state, int64_t height, int64_t timestamp, int presync)</td></tr>
 <tr class="separator:ac73b2bbf4f157c209746d8aae6e79798"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5be6c1588b02c40e933738095e3e390d" id="r_a5be6c1588b02c40e933738095e3e390d"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a5be6c1588b02c40e933738095e3e390d">btck_NotifyProgress</a>) (void *user_data, const char *title, size_t title_len, int progress_percent, int resume_possible)</td></tr>
@@ -381,13 +381,13 @@ Functions</h2></td></tr>
 <tr class="memdesc:adf21cc52e5d4aae8928da6fe61b975eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This disables the global internal logger. No log messages will be buffered internally anymore once this is called and the buffer is cleared. This function should only be called once and is not thread or re-entry safe. Log messages will be buffered until this function is called, or a logging connection is created.  <br /></td></tr>
 <tr class="separator:adf21cc52e5d4aae8928da6fe61b975eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6bad97eebdc31a8f4475facb600f5c7" id="r_ad6bad97eebdc31a8f4475facb600f5c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#ad6bad97eebdc31a8f4475facb600f5c7">btck_logging_set_level_category</a> (<a class="el" href="bitcoinkernel_8h.html#ab310c254a173c63cda5eaaffdc09e6e1">btck_LogCategory</a> category, <a class="el" href="bitcoinkernel_8h.html#a09151a95ff6fbcd3b19330777ba5a5f7">btck_LogLevel</a> level)</td></tr>
-<tr class="memdesc:ad6bad97eebdc31a8f4475facb600f5c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the log level of the global internal logger. This does not enable the selected categories. Use <a class="el" href="bitcoinkernel_8h.html#abfe4d2407f21c18db83f200400bb65b0">btck_logging_enable_category</a> to start logging from a specific, or all categories. This function is not thread safe. Multiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a47b529fcb8ef051fcb23cef92f0a930e">btck_LoggingConnection</a> instances.  <br /></td></tr>
+<tr class="memdesc:ad6bad97eebdc31a8f4475facb600f5c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the log level of the global internal logger. This does not enable the selected categories. Use <a class="el" href="bitcoinkernel_8h.html#abfe4d2407f21c18db83f200400bb65b0">btck_logging_enable_category</a> to start logging from a specific, or all categories. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a47b529fcb8ef051fcb23cef92f0a930e">btck_LoggingConnection</a> instances.  <br /></td></tr>
 <tr class="separator:ad6bad97eebdc31a8f4475facb600f5c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfe4d2407f21c18db83f200400bb65b0" id="r_abfe4d2407f21c18db83f200400bb65b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#abfe4d2407f21c18db83f200400bb65b0">btck_logging_enable_category</a> (<a class="el" href="bitcoinkernel_8h.html#ab310c254a173c63cda5eaaffdc09e6e1">btck_LogCategory</a> category)</td></tr>
-<tr class="memdesc:abfe4d2407f21c18db83f200400bb65b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable a specific log category for the global internal logger. This function is not thread safe. Multiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a47b529fcb8ef051fcb23cef92f0a930e">btck_LoggingConnection</a> instances.  <br /></td></tr>
+<tr class="memdesc:abfe4d2407f21c18db83f200400bb65b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable a specific log category for the global internal logger. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a47b529fcb8ef051fcb23cef92f0a930e">btck_LoggingConnection</a> instances.  <br /></td></tr>
 <tr class="separator:abfe4d2407f21c18db83f200400bb65b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f86161992c0337cfb70a3a0714db175" id="r_a4f86161992c0337cfb70a3a0714db175"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a4f86161992c0337cfb70a3a0714db175">btck_logging_disable_category</a> (<a class="el" href="bitcoinkernel_8h.html#ab310c254a173c63cda5eaaffdc09e6e1">btck_LogCategory</a> category)</td></tr>
-<tr class="memdesc:a4f86161992c0337cfb70a3a0714db175"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable a specific log category for the global internal logger. This function is not thread safe. Multiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a47b529fcb8ef051fcb23cef92f0a930e">btck_LoggingConnection</a> instances.  <br /></td></tr>
+<tr class="memdesc:a4f86161992c0337cfb70a3a0714db175"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable a specific log category for the global internal logger. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a47b529fcb8ef051fcb23cef92f0a930e">btck_LoggingConnection</a> instances.  <br /></td></tr>
 <tr class="separator:a4f86161992c0337cfb70a3a0714db175"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5dc387c28528fc673714928fadcfe71b" id="r_a5dc387c28528fc673714928fadcfe71b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a47b529fcb8ef051fcb23cef92f0a930e">btck_LoggingConnection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a5dc387c28528fc673714928fadcfe71b">btck_logging_connection_create</a> (<a class="el" href="bitcoinkernel_8h.html#a43c365f9ab63ec7ee0a7c9bb1c365c93">btck_LogCallback</a> log_callback, void *user_data, <a class="el" href="bitcoinkernel_8h.html#a71093f0ace733acf6de97819f19e481d">btck_DestroyCallback</a> user_data_destroy_callback, const <a class="el" href="structbtck__LoggingOptions.html">btck_LoggingOptions</a> options)</td></tr>
 <tr class="memdesc:a5dc387c28528fc673714928fadcfe71b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start logging messages through the provided callback. Log messages produced before this function is first called are buffered and on calling this function are logged immediately.  <br /></td></tr>
@@ -436,15 +436,15 @@ Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">BlockTreeEntry</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Functions for working with block tree entries. </p>
 </div></td></tr>
-<tr class="memitem:af481edc4d46c62dea26a6a1a17f0489c" id="r_af481edc4d46c62dea26a6a1a17f0489c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#af481edc4d46c62dea26a6a1a17f0489c">btck_block_tree_entry_get_previous</a> (const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *block_tree_entry)</td></tr>
-<tr class="memdesc:af481edc4d46c62dea26a6a1a17f0489c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the previous block tree entry in the chain, or null if the current block tree entry is the genesis block.  <br /></td></tr>
-<tr class="separator:af481edc4d46c62dea26a6a1a17f0489c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac04e75ca2b1cb41ed235a67f75e8b0ea" id="r_ac04e75ca2b1cb41ed235a67f75e8b0ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#ac04e75ca2b1cb41ed235a67f75e8b0ea">btck_block_tree_entry_get_previous</a> (const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *block_tree_entry)</td></tr>
+<tr class="memdesc:ac04e75ca2b1cb41ed235a67f75e8b0ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the previous block tree entry in the chain, or null if the current block tree entry is the genesis block.  <br /></td></tr>
+<tr class="separator:ac04e75ca2b1cb41ed235a67f75e8b0ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad5c3a6e525a22e858a0c01c83bf35d9" id="r_aad5c3a6e525a22e858a0c01c83bf35d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#aad5c3a6e525a22e858a0c01c83bf35d9">btck_block_tree_entry_get_height</a> (const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *block_tree_entry)</td></tr>
 <tr class="memdesc:aad5c3a6e525a22e858a0c01c83bf35d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the height of a certain block tree entry.  <br /></td></tr>
 <tr class="separator:aad5c3a6e525a22e858a0c01c83bf35d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96f6c44be4129e9aaf99c558e918e91a" id="r_a96f6c44be4129e9aaf99c558e918e91a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a96f6c44be4129e9aaf99c558e918e91a">btck_block_tree_entry_destroy</a> (<a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *block_tree_entry)</td></tr>
-<tr class="memdesc:a96f6c44be4129e9aaf99c558e918e91a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the block tree entry.  <br /></td></tr>
-<tr class="separator:a96f6c44be4129e9aaf99c558e918e91a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7089afb0fa25172a5a072cf63731dcec" id="r_a7089afb0fa25172a5a072cf63731dcec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a22d81144a2752a03ab05161af7bfd1f5">btck_BlockHash</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a7089afb0fa25172a5a072cf63731dcec">btck_block_tree_entry_get_block_hash</a> (const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *block_tree_entry)</td></tr>
+<tr class="memdesc:a7089afb0fa25172a5a072cf63731dcec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the block hash associated with a block tree entry.  <br /></td></tr>
+<tr class="separator:a7089afb0fa25172a5a072cf63731dcec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">ChainstateManagerOptions</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Functions for working with chainstate manager options. </p>
 </div></td></tr>
@@ -472,7 +472,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:abbe0e61130ade31331c14306b2fd7480"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a chainstate manager. This is the main object for many validation tasks as well as for retrieving data from the chain and interacting with its chainstate and indexes.  <br /></td></tr>
 <tr class="separator:abbe0e61130ade31331c14306b2fd7480"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2bc48e50a8ef444bf597c663c80ae8b" id="r_af2bc48e50a8ef444bf597c663c80ae8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#af2bc48e50a8ef444bf597c663c80ae8b">btck_chainstate_manager_import_blocks</a> (<a class="el" href="bitcoinkernel_8h.html#ab928459172b8de15c461a67af14e867b">btck_ChainstateManager</a> *chainstate_manager, const char **block_file_paths, size_t *block_file_paths_lens, size_t block_file_paths_len) 2)</td></tr>
-<tr class="memdesc:af2bc48e50a8ef444bf597c663c80ae8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">May be called once the btck_ChainstateManager is instantiated. Triggers the start of a reindex if the option was previously set for the chainstate and block manager. Can also import an array of existing block files selected by the user.  <br /></td></tr>
+<tr class="memdesc:af2bc48e50a8ef444bf597c663c80ae8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggers the start of a reindex if the option was previously set for the chainstate and block manager. Can also import an array of existing block files selected by the user.  <br /></td></tr>
 <tr class="separator:af2bc48e50a8ef444bf597c663c80ae8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abba5d67d0b802ed0ade7d471d026f0dd" id="r_abba5d67d0b802ed0ade7d471d026f0dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#abba5d67d0b802ed0ade7d471d026f0dd">btck_chainstate_manager_process_block</a> (<a class="el" href="bitcoinkernel_8h.html#ab928459172b8de15c461a67af14e867b">btck_ChainstateManager</a> *chainstate_manager, const <a class="el" href="bitcoinkernel_8h.html#ad51859829bc2bbfa8858de4736f38cc0">btck_Block</a> *block, int *new_block) 2</td></tr>
 <tr class="memdesc:abba5d67d0b802ed0ade7d471d026f0dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process and validate the passed in block with the chainstate manager. More detailed validation information in case of a failure can also be retrieved through a registered validation interface. If the block fails to validate the <code>block_checked</code> callback's 'BlockValidationState' will contain details.  <br /></td></tr>
@@ -480,9 +480,9 @@ Functions</h2></td></tr>
 <tr class="memitem:acdb5a84770be2cf4938e1385dff96adc" id="r_acdb5a84770be2cf4938e1385dff96adc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> int <a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> const <a class="el" href="bitcoinkernel_8h.html#a6f7b73d5448fbbd0954d86ff663b4ae5">btck_Chain</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#acdb5a84770be2cf4938e1385dff96adc">btck_chainstate_manager_get_active_chain</a> (const <a class="el" href="bitcoinkernel_8h.html#ab928459172b8de15c461a67af14e867b">btck_ChainstateManager</a> *chainstate_manager)</td></tr>
 <tr class="memdesc:acdb5a84770be2cf4938e1385dff96adc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the best known currently active chain. Its lifetime is dependent on the chainstate manager and state transitions within the chainstate manager, e.g. when processing blocks, will also change the chain. Data retrieved from this chain is only consistent up to the point when new data is processed in the chainstate manager. It is the user's responsibility to guard against these inconsistencies.  <br /></td></tr>
 <tr class="separator:acdb5a84770be2cf4938e1385dff96adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66a834a751b325505552a60b03fea04d" id="r_a66a834a751b325505552a60b03fea04d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a66a834a751b325505552a60b03fea04d">btck_chainstate_manager_get_block_tree_entry_by_hash</a> (const <a class="el" href="bitcoinkernel_8h.html#ab928459172b8de15c461a67af14e867b">btck_ChainstateManager</a> *chainstate_manager, const <a class="el" href="structbtck__BlockHash.html">btck_BlockHash</a> *block_hash) 2)</td></tr>
-<tr class="memdesc:a66a834a751b325505552a60b03fea04d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a block tree entry by its block hash.  <br /></td></tr>
-<tr class="separator:a66a834a751b325505552a60b03fea04d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adac10ea754e1cb6e6f9c06c2ffe0780c" id="r_adac10ea754e1cb6e6f9c06c2ffe0780c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#adac10ea754e1cb6e6f9c06c2ffe0780c">btck_chainstate_manager_get_block_tree_entry_by_hash</a> (const <a class="el" href="bitcoinkernel_8h.html#ab928459172b8de15c461a67af14e867b">btck_ChainstateManager</a> *chainstate_manager, const <a class="el" href="bitcoinkernel_8h.html#a22d81144a2752a03ab05161af7bfd1f5">btck_BlockHash</a> *block_hash) 2)</td></tr>
+<tr class="memdesc:adac10ea754e1cb6e6f9c06c2ffe0780c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a block tree entry by its block hash.  <br /></td></tr>
+<tr class="separator:adac10ea754e1cb6e6f9c06c2ffe0780c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a264b62d70cafdcbd4c30a67cc85b0dbd" id="r_a264b62d70cafdcbd4c30a67cc85b0dbd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a264b62d70cafdcbd4c30a67cc85b0dbd">btck_chainstate_manager_destroy</a> (<a class="el" href="bitcoinkernel_8h.html#ab928459172b8de15c461a67af14e867b">btck_ChainstateManager</a> *chainstate_manager)</td></tr>
 <tr class="separator:a264b62d70cafdcbd4c30a67cc85b0dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Block</div></td></tr>
@@ -503,7 +503,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a0ade6aaeb0354c0e63c6f45e7854b260" id="r_a0ade6aaeb0354c0e63c6f45e7854b260"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> const <a class="el" href="bitcoinkernel_8h.html#afbe5853894a8320434623268aa27356f">btck_Transaction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a0ade6aaeb0354c0e63c6f45e7854b260">btck_block_get_transaction_at</a> (const <a class="el" href="bitcoinkernel_8h.html#ad51859829bc2bbfa8858de4736f38cc0">btck_Block</a> *block, size_t transaction_index)</td></tr>
 <tr class="memdesc:a0ade6aaeb0354c0e63c6f45e7854b260"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the transaction at the provided index. The returned transaction is not owned and depends on the lifetime of the block.  <br /></td></tr>
 <tr class="separator:a0ade6aaeb0354c0e63c6f45e7854b260"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a560fdbd007295000d0ad4d4655bfb675" id="r_a560fdbd007295000d0ad4d4655bfb675"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="structbtck__BlockHash.html">btck_BlockHash</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a560fdbd007295000d0ad4d4655bfb675">btck_block_get_hash</a> (const <a class="el" href="bitcoinkernel_8h.html#ad51859829bc2bbfa8858de4736f38cc0">btck_Block</a> *block)</td></tr>
+<tr class="memitem:a560fdbd007295000d0ad4d4655bfb675" id="r_a560fdbd007295000d0ad4d4655bfb675"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a22d81144a2752a03ab05161af7bfd1f5">btck_BlockHash</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a560fdbd007295000d0ad4d4655bfb675">btck_block_get_hash</a> (const <a class="el" href="bitcoinkernel_8h.html#ad51859829bc2bbfa8858de4736f38cc0">btck_Block</a> *block)</td></tr>
 <tr class="separator:a560fdbd007295000d0ad4d4655bfb675"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37ed3bcca0a987c6e62fab64889a8571" id="r_a37ed3bcca0a987c6e62fab64889a8571"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a37ed3bcca0a987c6e62fab64889a8571">btck_block_to_bytes</a> (const <a class="el" href="bitcoinkernel_8h.html#ad51859829bc2bbfa8858de4736f38cc0">btck_Block</a> *block, <a class="el" href="bitcoinkernel_8h.html#a220931a33212ceb13141dc5a06e077f7">btck_WriteBytes</a> writer, void *user_data) 2)</td></tr>
 <tr class="separator:a37ed3bcca0a987c6e62fab64889a8571"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -519,20 +519,20 @@ Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Chain</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Functions for working with the chain </p>
 </div></td></tr>
-<tr class="memitem:a41a228d6eb4b2841671f593d804b4931" id="r_a41a228d6eb4b2841671f593d804b4931"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a41a228d6eb4b2841671f593d804b4931">btck_chain_get_tip</a> (const <a class="el" href="bitcoinkernel_8h.html#a6f7b73d5448fbbd0954d86ff663b4ae5">btck_Chain</a> *chain)</td></tr>
-<tr class="memdesc:a41a228d6eb4b2841671f593d804b4931"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the block tree entry of the current chain tip. Once returned, there is no guarantee that it remains in the active chain.  <br /></td></tr>
-<tr class="separator:a41a228d6eb4b2841671f593d804b4931"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75838dba88d08288e2d56d509e6adb70" id="r_a75838dba88d08288e2d56d509e6adb70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a75838dba88d08288e2d56d509e6adb70">btck_chain_get_genesis</a> (const <a class="el" href="bitcoinkernel_8h.html#a6f7b73d5448fbbd0954d86ff663b4ae5">btck_Chain</a> *chain)</td></tr>
-<tr class="separator:a75838dba88d08288e2d56d509e6adb70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5f72a1c714d613dde02053220fd2541" id="r_ad5f72a1c714d613dde02053220fd2541"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#ad5f72a1c714d613dde02053220fd2541">btck_chain_get_by_height</a> (const <a class="el" href="bitcoinkernel_8h.html#a6f7b73d5448fbbd0954d86ff663b4ae5">btck_Chain</a> *chain, int block_height)</td></tr>
-<tr class="memdesc:ad5f72a1c714d613dde02053220fd2541"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a block tree entry by its height in the currently active chain. Once retrieved there is no guarantee that it remains in the active chain.  <br /></td></tr>
-<tr class="separator:ad5f72a1c714d613dde02053220fd2541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4200e0077c2f74d810a89b623f3c0f7a" id="r_a4200e0077c2f74d810a89b623f3c0f7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a4200e0077c2f74d810a89b623f3c0f7a">btck_chain_get_tip</a> (const <a class="el" href="bitcoinkernel_8h.html#a6f7b73d5448fbbd0954d86ff663b4ae5">btck_Chain</a> *chain)</td></tr>
+<tr class="memdesc:a4200e0077c2f74d810a89b623f3c0f7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the block tree entry of the current chain tip. Once returned, there is no guarantee that it remains in the active chain.  <br /></td></tr>
+<tr class="separator:a4200e0077c2f74d810a89b623f3c0f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cae8e06e9c8abc1dd5cb14ac3d53ed1" id="r_a7cae8e06e9c8abc1dd5cb14ac3d53ed1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a7cae8e06e9c8abc1dd5cb14ac3d53ed1">btck_chain_get_height</a> (const <a class="el" href="bitcoinkernel_8h.html#a6f7b73d5448fbbd0954d86ff663b4ae5">btck_Chain</a> *chain)</td></tr>
+<tr class="memdesc:a7cae8e06e9c8abc1dd5cb14ac3d53ed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the height of the tip of the chain.  <br /></td></tr>
+<tr class="separator:a7cae8e06e9c8abc1dd5cb14ac3d53ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a654a1ae5f54cf251f50c8dca5b26bd8e" id="r_a654a1ae5f54cf251f50c8dca5b26bd8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a654a1ae5f54cf251f50c8dca5b26bd8e">btck_chain_get_genesis</a> (const <a class="el" href="bitcoinkernel_8h.html#a6f7b73d5448fbbd0954d86ff663b4ae5">btck_Chain</a> *chain)</td></tr>
+<tr class="separator:a654a1ae5f54cf251f50c8dca5b26bd8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b18e727b517b67c5c52a041ec53883f" id="r_a7b18e727b517b67c5c52a041ec53883f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a7b18e727b517b67c5c52a041ec53883f">btck_chain_get_by_height</a> (const <a class="el" href="bitcoinkernel_8h.html#a6f7b73d5448fbbd0954d86ff663b4ae5">btck_Chain</a> *chain, int block_height)</td></tr>
+<tr class="memdesc:a7b18e727b517b67c5c52a041ec53883f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a block tree entry by its height in the currently active chain. Once retrieved there is no guarantee that it remains in the active chain.  <br /></td></tr>
+<tr class="separator:a7b18e727b517b67c5c52a041ec53883f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bb59ff20015d033e9b947293f06d4bb" id="r_a8bb59ff20015d033e9b947293f06d4bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a8bb59ff20015d033e9b947293f06d4bb">btck_chain_contains</a> (const <a class="el" href="bitcoinkernel_8h.html#a6f7b73d5448fbbd0954d86ff663b4ae5">btck_Chain</a> *chain, const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *block_tree_entry) 2)</td></tr>
 <tr class="memdesc:a8bb59ff20015d033e9b947293f06d4bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the passed in chain contains the block tree entry.  <br /></td></tr>
 <tr class="separator:a8bb59ff20015d033e9b947293f06d4bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4df37948821c28370c42d428418d3dd3" id="r_a4df37948821c28370c42d428418d3dd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a4df37948821c28370c42d428418d3dd3">btck_chain_destroy</a> (<a class="el" href="bitcoinkernel_8h.html#a6f7b73d5448fbbd0954d86ff663b4ae5">btck_Chain</a> *chain)</td></tr>
-<tr class="memdesc:a4df37948821c28370c42d428418d3dd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the chain.  <br /></td></tr>
-<tr class="separator:a4df37948821c28370c42d428418d3dd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">BlockSpentOutputs</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Functions for working with block spent outputs. </p>
 </div></td></tr>
@@ -584,10 +584,16 @@ Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">BlockHash</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Functions for working with block hashes. </p>
 </div></td></tr>
-<tr class="memitem:a7089afb0fa25172a5a072cf63731dcec" id="r_a7089afb0fa25172a5a072cf63731dcec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="structbtck__BlockHash.html">btck_BlockHash</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a7089afb0fa25172a5a072cf63731dcec">btck_block_tree_entry_get_block_hash</a> (const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *block_tree_entry)</td></tr>
-<tr class="memdesc:a7089afb0fa25172a5a072cf63731dcec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the block hash associated with a block tree entry.  <br /></td></tr>
-<tr class="separator:a7089afb0fa25172a5a072cf63731dcec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a761a5ed821555942199a07435d07827b" id="r_a761a5ed821555942199a07435d07827b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a761a5ed821555942199a07435d07827b">btck_block_hash_destroy</a> (<a class="el" href="structbtck__BlockHash.html">btck_BlockHash</a> *block_hash)</td></tr>
+<tr class="memitem:aafb2f987f6c763d2952c7395ab0382f2" id="r_aafb2f987f6c763d2952c7395ab0382f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a22d81144a2752a03ab05161af7bfd1f5">btck_BlockHash</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#aafb2f987f6c763d2952c7395ab0382f2">btck_block_hash_create</a> (const unsigned char block_hash[32])</td></tr>
+<tr class="memdesc:aafb2f987f6c763d2952c7395ab0382f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a block hash from its raw data.  <br /></td></tr>
+<tr class="separator:aafb2f987f6c763d2952c7395ab0382f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7db5be824b432a01d5fbaef0b3933bcd" id="r_a7db5be824b432a01d5fbaef0b3933bcd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a22d81144a2752a03ab05161af7bfd1f5">btck_BlockHash</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a7db5be824b432a01d5fbaef0b3933bcd">btck_block_hash_copy</a> (const <a class="el" href="bitcoinkernel_8h.html#a22d81144a2752a03ab05161af7bfd1f5">btck_BlockHash</a> *block_hash)</td></tr>
+<tr class="memdesc:a7db5be824b432a01d5fbaef0b3933bcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a block hash.  <br /></td></tr>
+<tr class="separator:a7db5be824b432a01d5fbaef0b3933bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1729f61a18d841f902cfcbb668c97e9c" id="r_a1729f61a18d841f902cfcbb668c97e9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a1729f61a18d841f902cfcbb668c97e9c">btck_block_hash_to_bytes</a> (const <a class="el" href="bitcoinkernel_8h.html#a22d81144a2752a03ab05161af7bfd1f5">btck_BlockHash</a> *block_hash, unsigned char output[32]) 2)</td></tr>
+<tr class="memdesc:a1729f61a18d841f902cfcbb668c97e9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes the block hash to bytes.  <br /></td></tr>
+<tr class="separator:a1729f61a18d841f902cfcbb668c97e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a761a5ed821555942199a07435d07827b" id="r_a761a5ed821555942199a07435d07827b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a761a5ed821555942199a07435d07827b">btck_block_hash_destroy</a> (<a class="el" href="bitcoinkernel_8h.html#a22d81144a2752a03ab05161af7bfd1f5">btck_BlockHash</a> *block_hash)</td></tr>
 <tr class="separator:a761a5ed821555942199a07435d07827b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -1065,14 +1071,14 @@ Functions</h2></td></tr>
 <div class="line">                                                                         <a class="code hl_define" href="bitcoinkernel_8h.html#ad50d1de597b7852a013c4c81d1ecedef">btck_ScriptVerificationFlags_CHECKSEQUENCEVERIFY</a> | \</div>
 <div class="line">                                                                         <a class="code hl_define" href="bitcoinkernel_8h.html#a6bed3688801ebf4b2bf83b675dbb9e5b">btck_ScriptVerificationFlags_WITNESS</a> |             \</div>
 <div class="line">                                                                         <a class="code hl_define" href="bitcoinkernel_8h.html#a6844b761130357855c2464d12d6c69a6">btck_ScriptVerificationFlags_TAPROOT</a>))</div>
-<div class="ttc" id="abitcoinkernel_8h_html_a0746a903ea61b73de34c0980f2e4ed02"><div class="ttname"><a href="bitcoinkernel_8h.html#a0746a903ea61b73de34c0980f2e4ed02">btck_ScriptVerificationFlags_P2SH</a></div><div class="ttdeci">#define btck_ScriptVerificationFlags_P2SH</div><div class="ttdoc">evaluate P2SH (BIP16) subscripts</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:411</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a200a7817a18c94909abba4ee072bb504"><div class="ttname"><a href="bitcoinkernel_8h.html#a200a7817a18c94909abba4ee072bb504">btck_ScriptVerificationFlags_CHECKLOCKTIMEVERIFY</a></div><div class="ttdeci">#define btck_ScriptVerificationFlags_CHECKLOCKTIMEVERIFY</div><div class="ttdoc">enable CHECKLOCKTIMEVERIFY (BIP65)</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:414</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a6844b761130357855c2464d12d6c69a6"><div class="ttname"><a href="bitcoinkernel_8h.html#a6844b761130357855c2464d12d6c69a6">btck_ScriptVerificationFlags_TAPROOT</a></div><div class="ttdeci">#define btck_ScriptVerificationFlags_TAPROOT</div><div class="ttdoc">enable TAPROOT (BIPs 341 &amp; 342)</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:417</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a6bed3688801ebf4b2bf83b675dbb9e5b"><div class="ttname"><a href="bitcoinkernel_8h.html#a6bed3688801ebf4b2bf83b675dbb9e5b">btck_ScriptVerificationFlags_WITNESS</a></div><div class="ttdeci">#define btck_ScriptVerificationFlags_WITNESS</div><div class="ttdoc">enable WITNESS (BIP141)</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:416</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a75ce59fcb179c710b67bd593d6e2f610"><div class="ttname"><a href="bitcoinkernel_8h.html#a75ce59fcb179c710b67bd593d6e2f610">btck_ScriptVerificationFlags</a></div><div class="ttdeci">uint32_t btck_ScriptVerificationFlags</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:409</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_abf2e23ddf08f29ca64f1ac307ac0911e"><div class="ttname"><a href="bitcoinkernel_8h.html#abf2e23ddf08f29ca64f1ac307ac0911e">btck_ScriptVerificationFlags_NULLDUMMY</a></div><div class="ttdeci">#define btck_ScriptVerificationFlags_NULLDUMMY</div><div class="ttdoc">enforce NULLDUMMY (BIP147)</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:413</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_ad50d1de597b7852a013c4c81d1ecedef"><div class="ttname"><a href="bitcoinkernel_8h.html#ad50d1de597b7852a013c4c81d1ecedef">btck_ScriptVerificationFlags_CHECKSEQUENCEVERIFY</a></div><div class="ttdeci">#define btck_ScriptVerificationFlags_CHECKSEQUENCEVERIFY</div><div class="ttdoc">enable CHECKSEQUENCEVERIFY (BIP112)</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:415</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_aee5b71458e106f986b2e8c519daaf6da"><div class="ttname"><a href="bitcoinkernel_8h.html#aee5b71458e106f986b2e8c519daaf6da">btck_ScriptVerificationFlags_DERSIG</a></div><div class="ttdeci">#define btck_ScriptVerificationFlags_DERSIG</div><div class="ttdoc">enforce strict DER (BIP66) compliance</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:412</div></div>
+<div class="ttc" id="abitcoinkernel_8h_html_a0746a903ea61b73de34c0980f2e4ed02"><div class="ttname"><a href="bitcoinkernel_8h.html#a0746a903ea61b73de34c0980f2e4ed02">btck_ScriptVerificationFlags_P2SH</a></div><div class="ttdeci">#define btck_ScriptVerificationFlags_P2SH</div><div class="ttdoc">evaluate P2SH (BIP16) subscripts</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:414</div></div>
+<div class="ttc" id="abitcoinkernel_8h_html_a200a7817a18c94909abba4ee072bb504"><div class="ttname"><a href="bitcoinkernel_8h.html#a200a7817a18c94909abba4ee072bb504">btck_ScriptVerificationFlags_CHECKLOCKTIMEVERIFY</a></div><div class="ttdeci">#define btck_ScriptVerificationFlags_CHECKLOCKTIMEVERIFY</div><div class="ttdoc">enable CHECKLOCKTIMEVERIFY (BIP65)</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:417</div></div>
+<div class="ttc" id="abitcoinkernel_8h_html_a6844b761130357855c2464d12d6c69a6"><div class="ttname"><a href="bitcoinkernel_8h.html#a6844b761130357855c2464d12d6c69a6">btck_ScriptVerificationFlags_TAPROOT</a></div><div class="ttdeci">#define btck_ScriptVerificationFlags_TAPROOT</div><div class="ttdoc">enable TAPROOT (BIPs 341 &amp; 342)</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:420</div></div>
+<div class="ttc" id="abitcoinkernel_8h_html_a6bed3688801ebf4b2bf83b675dbb9e5b"><div class="ttname"><a href="bitcoinkernel_8h.html#a6bed3688801ebf4b2bf83b675dbb9e5b">btck_ScriptVerificationFlags_WITNESS</a></div><div class="ttdeci">#define btck_ScriptVerificationFlags_WITNESS</div><div class="ttdoc">enable WITNESS (BIP141)</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:419</div></div>
+<div class="ttc" id="abitcoinkernel_8h_html_a75ce59fcb179c710b67bd593d6e2f610"><div class="ttname"><a href="bitcoinkernel_8h.html#a75ce59fcb179c710b67bd593d6e2f610">btck_ScriptVerificationFlags</a></div><div class="ttdeci">uint32_t btck_ScriptVerificationFlags</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:412</div></div>
+<div class="ttc" id="abitcoinkernel_8h_html_abf2e23ddf08f29ca64f1ac307ac0911e"><div class="ttname"><a href="bitcoinkernel_8h.html#abf2e23ddf08f29ca64f1ac307ac0911e">btck_ScriptVerificationFlags_NULLDUMMY</a></div><div class="ttdeci">#define btck_ScriptVerificationFlags_NULLDUMMY</div><div class="ttdoc">enforce NULLDUMMY (BIP147)</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:416</div></div>
+<div class="ttc" id="abitcoinkernel_8h_html_ad50d1de597b7852a013c4c81d1ecedef"><div class="ttname"><a href="bitcoinkernel_8h.html#ad50d1de597b7852a013c4c81d1ecedef">btck_ScriptVerificationFlags_CHECKSEQUENCEVERIFY</a></div><div class="ttdeci">#define btck_ScriptVerificationFlags_CHECKSEQUENCEVERIFY</div><div class="ttdoc">enable CHECKSEQUENCEVERIFY (BIP112)</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:418</div></div>
+<div class="ttc" id="abitcoinkernel_8h_html_aee5b71458e106f986b2e8c519daaf6da"><div class="ttname"><a href="bitcoinkernel_8h.html#aee5b71458e106f986b2e8c519daaf6da">btck_ScriptVerificationFlags_DERSIG</a></div><div class="ttdeci">#define btck_ScriptVerificationFlags_DERSIG</div><div class="ttdoc">enforce strict DER (BIP66) compliance</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:415</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1376,6 +1382,22 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a22d81144a2752a03ab05161af7bfd1f5" name="a22d81144a2752a03ab05161af7bfd1f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22d81144a2752a03ab05161af7bfd1f5">&#9670;&#160;</a></span>btck_BlockHash</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="bitcoinkernel_8h.html#a22d81144a2752a03ab05161af7bfd1f5">btck_BlockHash</a> <a class="el" href="bitcoinkernel_8h.html#a22d81144a2752a03ab05161af7bfd1f5">btck_BlockHash</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Opaque data structure for holding a block hash.</p>
+<p>This is a type-safe identifier for a block. </p>
+
+</div>
+</div>
 <a id="a6f363c59d2848a853197db7dfaafee63" name="a6f363c59d2848a853197db7dfaafee63"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6f363c59d2848a853197db7dfaafee63">&#9670;&#160;</a></span>btck_BlockSpentOutputs</h2>
 
@@ -1625,7 +1647,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Opaque data structure for holding a logging connection.</p>
 <p>The logging connection can be used to manually stop logging.</p>
-<p>Messages that were logged before a connection is created are buffered in a 1MB buffer. Logging can alternatively be permanently disabled by calling <a class="el" href="bitcoinkernel_8h.html#adf21cc52e5d4aae8928da6fe61b975eb">btck_logging_disable</a>. Functions changing the logging settings are global (and not thread safe) and change the settings for all existing btck_LoggingConnection instances. </p>
+<p>Messages that were logged before a connection is created are buffered in a 1MB buffer. Logging can alternatively be permanently disabled by calling <a class="el" href="bitcoinkernel_8h.html#adf21cc52e5d4aae8928da6fe61b975eb">btck_logging_disable</a>. Functions changing the logging settings are global and change the settings for all existing btck_LoggingConnection instances. </p>
 
 </div>
 </div>
@@ -1644,14 +1666,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="adf94fac1bfef57369e3feb7f627739ec" name="adf94fac1bfef57369e3feb7f627739ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf94fac1bfef57369e3feb7f627739ec">&#9670;&#160;</a></span>btck_NotifyBlockTip</h2>
+<a id="ab3067360739fbf1f6fdede8f6af87a15" name="ab3067360739fbf1f6fdede8f6af87a15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3067360739fbf1f6fdede8f6af87a15">&#9670;&#160;</a></span>btck_NotifyBlockTip</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* btck_NotifyBlockTip) (void *user_data, <a class="el" href="bitcoinkernel_8h.html#a58fadd0ba23940c7b1b6e1cfe8ee5618">btck_SynchronizationState</a> state, <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *entry, double verification_progress)</td>
+          <td class="memname">typedef void(* btck_NotifyBlockTip) (void *user_data, <a class="el" href="bitcoinkernel_8h.html#a58fadd0ba23940c7b1b6e1cfe8ee5618">btck_SynchronizationState</a> state, const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *entry, double verification_progress)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2028,7 +2050,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="structbtck__BlockHash.html">btck_BlockHash</a> * btck_block_get_hash </td>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a22d81144a2752a03ab05161af7bfd1f5">btck_BlockHash</a> * btck_block_get_hash </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#ad51859829bc2bbfa8858de4736f38cc0">btck_Block</a> *&#160;</td>
           <td class="paramname"><em>block</em></td><td>)</td>
@@ -2077,6 +2099,53 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a7db5be824b432a01d5fbaef0b3933bcd" name="a7db5be824b432a01d5fbaef0b3933bcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7db5be824b432a01d5fbaef0b3933bcd">&#9670;&#160;</a></span>btck_block_hash_copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a22d81144a2752a03ab05161af7bfd1f5">btck_BlockHash</a> * btck_block_hash_copy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#a22d81144a2752a03ab05161af7bfd1f5">btck_BlockHash</a> *&#160;</td>
+          <td class="paramname"><em>block_hash</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy a block hash. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_hash</td><td>Non-null. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The copied block hash. </dd></dl>
+
+</div>
+</div>
+<a id="aafb2f987f6c763d2952c7395ab0382f2" name="aafb2f987f6c763d2952c7395ab0382f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafb2f987f6c763d2952c7395ab0382f2">&#9670;&#160;</a></span>btck_block_hash_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a22d81144a2752a03ab05161af7bfd1f5">btck_BlockHash</a> * btck_block_hash_create </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned char&#160;</td>
+          <td class="paramname"><em>block_hash</em>[32]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a block hash from its raw data. </p>
+
+</div>
+</div>
 <a id="a761a5ed821555942199a07435d07827b" name="a761a5ed821555942199a07435d07827b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a761a5ed821555942199a07435d07827b">&#9670;&#160;</a></span>btck_block_hash_destroy()</h2>
 
@@ -2086,13 +2155,50 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void btck_block_hash_destroy </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structbtck__BlockHash.html">btck_BlockHash</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#a22d81144a2752a03ab05161af7bfd1f5">btck_BlockHash</a> *&#160;</td>
           <td class="paramname"><em>block_hash</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Destroy the block hash. </p>
+
+</div>
+</div>
+<a id="a1729f61a18d841f902cfcbb668c97e9c" name="a1729f61a18d841f902cfcbb668c97e9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1729f61a18d841f902cfcbb668c97e9c">&#9670;&#160;</a></span>btck_block_hash_to_bytes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void btck_block_hash_to_bytes </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#a22d81144a2752a03ab05161af7bfd1f5">btck_BlockHash</a> *&#160;</td>
+          <td class="paramname"><em>block_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>output</em>[32]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Serializes the block hash to bytes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_hash</td><td>Non-null. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">output</td><td>The serialized block hash. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2317,26 +2423,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a96f6c44be4129e9aaf99c558e918e91a" name="a96f6c44be4129e9aaf99c558e918e91a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96f6c44be4129e9aaf99c558e918e91a">&#9670;&#160;</a></span>btck_block_tree_entry_destroy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void btck_block_tree_entry_destroy </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *&#160;</td>
-          <td class="paramname"><em>block_tree_entry</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Destroy the block tree entry. </p>
-
-</div>
-</div>
 <a id="a7089afb0fa25172a5a072cf63731dcec" name="a7089afb0fa25172a5a072cf63731dcec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7089afb0fa25172a5a072cf63731dcec">&#9670;&#160;</a></span>btck_block_tree_entry_get_block_hash()</h2>
 
@@ -2344,7 +2430,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="structbtck__BlockHash.html">btck_BlockHash</a> * btck_block_tree_entry_get_block_hash </td>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a22d81144a2752a03ab05161af7bfd1f5">btck_BlockHash</a> * btck_block_tree_entry_get_block_hash </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *&#160;</td>
           <td class="paramname"><em>block_tree_entry</em></td><td>)</td>
@@ -2391,14 +2477,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af481edc4d46c62dea26a6a1a17f0489c" name="af481edc4d46c62dea26a6a1a17f0489c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af481edc4d46c62dea26a6a1a17f0489c">&#9670;&#160;</a></span>btck_block_tree_entry_get_previous()</h2>
+<a id="ac04e75ca2b1cb41ed235a67f75e8b0ea" name="ac04e75ca2b1cb41ed235a67f75e8b0ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac04e75ca2b1cb41ed235a67f75e8b0ea">&#9670;&#160;</a></span>btck_block_tree_entry_get_previous()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> * btck_block_tree_entry_get_previous </td>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> * btck_block_tree_entry_get_previous </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *&#160;</td>
           <td class="paramname"><em>block_tree_entry</em></td><td>)</td>
@@ -2494,34 +2580,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4df37948821c28370c42d428418d3dd3" name="a4df37948821c28370c42d428418d3dd3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4df37948821c28370c42d428418d3dd3">&#9670;&#160;</a></span>btck_chain_destroy()</h2>
+<a id="a7b18e727b517b67c5c52a041ec53883f" name="a7b18e727b517b67c5c52a041ec53883f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b18e727b517b67c5c52a041ec53883f">&#9670;&#160;</a></span>btck_chain_get_by_height()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void btck_chain_destroy </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#a6f7b73d5448fbbd0954d86ff663b4ae5">btck_Chain</a> *&#160;</td>
-          <td class="paramname"><em>chain</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Destroy the chain. </p>
-
-</div>
-</div>
-<a id="ad5f72a1c714d613dde02053220fd2541" name="ad5f72a1c714d613dde02053220fd2541"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5f72a1c714d613dde02053220fd2541">&#9670;&#160;</a></span>btck_chain_get_by_height()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> * btck_chain_get_by_height </td>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> * btck_chain_get_by_height </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#a6f7b73d5448fbbd0954d86ff663b4ae5">btck_Chain</a> *&#160;</td>
           <td class="paramname"><em>chain</em>, </td>
@@ -2548,18 +2614,18 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The block tree entry at a certain height in the currently active chain. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The block tree entry at a certain height in the currently active chain, or null if the height is out of bounds. </dd></dl>
 
 </div>
 </div>
-<a id="a75838dba88d08288e2d56d509e6adb70" name="a75838dba88d08288e2d56d509e6adb70"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75838dba88d08288e2d56d509e6adb70">&#9670;&#160;</a></span>btck_chain_get_genesis()</h2>
+<a id="a654a1ae5f54cf251f50c8dca5b26bd8e" name="a654a1ae5f54cf251f50c8dca5b26bd8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a654a1ae5f54cf251f50c8dca5b26bd8e">&#9670;&#160;</a></span>btck_chain_get_genesis()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> * btck_chain_get_genesis </td>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> * btck_chain_get_genesis </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#a6f7b73d5448fbbd0954d86ff663b4ae5">btck_Chain</a> *&#160;</td>
           <td class="paramname"><em>chain</em></td><td>)</td>
@@ -2570,14 +2636,41 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a41a228d6eb4b2841671f593d804b4931" name="a41a228d6eb4b2841671f593d804b4931"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41a228d6eb4b2841671f593d804b4931">&#9670;&#160;</a></span>btck_chain_get_tip()</h2>
+<a id="a7cae8e06e9c8abc1dd5cb14ac3d53ed1" name="a7cae8e06e9c8abc1dd5cb14ac3d53ed1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cae8e06e9c8abc1dd5cb14ac3d53ed1">&#9670;&#160;</a></span>btck_chain_get_height()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> * btck_chain_get_tip </td>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> int btck_chain_get_height </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#a6f7b73d5448fbbd0954d86ff663b4ae5">btck_Chain</a> *&#160;</td>
+          <td class="paramname"><em>chain</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the height of the tip of the chain. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">chain</td><td>Non-null. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The current height. </dd></dl>
+
+</div>
+</div>
+<a id="a4200e0077c2f74d810a89b623f3c0f7a" name="a4200e0077c2f74d810a89b623f3c0f7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4200e0077c2f74d810a89b623f3c0f7a">&#9670;&#160;</a></span>btck_chain_get_tip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> * btck_chain_get_tip </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#a6f7b73d5448fbbd0954d86ff663b4ae5">btck_Chain</a> *&#160;</td>
           <td class="paramname"><em>chain</em></td><td>)</td>
@@ -2735,14 +2828,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a66a834a751b325505552a60b03fea04d" name="a66a834a751b325505552a60b03fea04d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66a834a751b325505552a60b03fea04d">&#9670;&#160;</a></span>btck_chainstate_manager_get_block_tree_entry_by_hash()</h2>
+<a id="adac10ea754e1cb6e6f9c06c2ffe0780c" name="adac10ea754e1cb6e6f9c06c2ffe0780c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adac10ea754e1cb6e6f9c06c2ffe0780c">&#9670;&#160;</a></span>btck_chainstate_manager_get_block_tree_entry_by_hash()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> * btck_chainstate_manager_get_block_tree_entry_by_hash </td>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> * btck_chainstate_manager_get_block_tree_entry_by_hash </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#ab928459172b8de15c461a67af14e867b">btck_ChainstateManager</a> *&#160;</td>
           <td class="paramname"><em>chainstate_manager</em>, </td>
@@ -2750,7 +2843,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="structbtck__BlockHash.html">btck_BlockHash</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#a22d81144a2752a03ab05161af7bfd1f5">btck_BlockHash</a> *&#160;</td>
           <td class="paramname"><em>block_hash</em>&#160;</td>
         </tr>
         <tr>
@@ -2811,7 +2904,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>May be called once the btck_ChainstateManager is instantiated. Triggers the start of a reindex if the option was previously set for the chainstate and block manager. Can also import an array of existing block files selected by the user. </p>
+<p>Triggers the start of a reindex if the option was previously set for the chainstate and block manager. Can also import an array of existing block files selected by the user. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager</td><td>Non-null. </td></tr>
@@ -3574,7 +3667,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Disable a specific log category for the global internal logger. This function is not thread safe. Multiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a47b529fcb8ef051fcb23cef92f0a930e">btck_LoggingConnection</a> instances. </p>
+<p>Disable a specific log category for the global internal logger. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a47b529fcb8ef051fcb23cef92f0a930e">btck_LoggingConnection</a> instances. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">category</td><td>If btck_LOG_ALL is chosen, all categories will be disabled. </td></tr>
@@ -3600,7 +3693,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enable a specific log category for the global internal logger. This function is not thread safe. Multiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a47b529fcb8ef051fcb23cef92f0a930e">btck_LoggingConnection</a> instances. </p>
+<p>Enable a specific log category for the global internal logger. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a47b529fcb8ef051fcb23cef92f0a930e">btck_LoggingConnection</a> instances. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">category</td><td>If btck_LOG_ALL is chosen, all categories will be enabled. </td></tr>
@@ -3636,7 +3729,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set the log level of the global internal logger. This does not enable the selected categories. Use <a class="el" href="bitcoinkernel_8h.html#abfe4d2407f21c18db83f200400bb65b0">btck_logging_enable_category</a> to start logging from a specific, or all categories. This function is not thread safe. Multiple calls from different threads are allowed but must be synchronized. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a47b529fcb8ef051fcb23cef92f0a930e">btck_LoggingConnection</a> instances. </p>
+<p>Set the log level of the global internal logger. This does not enable the selected categories. Use <a class="el" href="bitcoinkernel_8h.html#abfe4d2407f21c18db83f200400bb65b0">btck_logging_enable_category</a> to start logging from a specific, or all categories. This changes a global setting and will override settings for all existing <a class="el" href="bitcoinkernel_8h.html#a47b529fcb8ef051fcb23cef92f0a930e">btck_LoggingConnection</a> instances. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">category</td><td>If btck_LOG_ALL is chosen, all messages at the specified level will be logged. Otherwise only messages from the specified category will be logged at the specified level and above. </td></tr>

@@ -87,6 +87,14 @@ Data Fields</h2></td></tr>
 <tr class="separator:a008f9dc223f0a76529cce21aac3ad44b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36e30e8139990f3e2279a2a4d5c37ddc" id="r_a36e30e8139990f3e2279a2a4d5c37ddc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a43dcc3a83961ee894761494f640966f9">btck_ValidationInterfaceBlockChecked</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbtck__ValidationInterfaceCallbacks.html#a36e30e8139990f3e2279a2a4d5c37ddc">block_checked</a></td></tr>
 <tr class="separator:a36e30e8139990f3e2279a2a4d5c37ddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab74f8bc45b2b6af770dec36ef1b2e5f0" id="r_ab74f8bc45b2b6af770dec36ef1b2e5f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a634315b67bc08edcec3605e856887e13">btck_ValidationInterfacePowValidBlock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbtck__ValidationInterfaceCallbacks.html#ab74f8bc45b2b6af770dec36ef1b2e5f0">pow_valid_block</a></td></tr>
+<tr class="separator:ab74f8bc45b2b6af770dec36ef1b2e5f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a153bbadb55da2945fe44570ca2c6681a" id="r_a153bbadb55da2945fe44570ca2c6681a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#ab4ea175d43c07b5cdf3b20e3577012ba">btck_ValidationInterfaceBlockConnected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbtck__ValidationInterfaceCallbacks.html#a153bbadb55da2945fe44570ca2c6681a">block_connected</a></td></tr>
+<tr class="memdesc:a153bbadb55da2945fe44570ca2c6681a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when a block is valid and has now been connected to the best chain.  <br /></td></tr>
+<tr class="separator:a153bbadb55da2945fe44570ca2c6681a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7809d2baebf14c12409f5d7c0b025b51" id="r_a7809d2baebf14c12409f5d7c0b025b51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a61310b6bb77e2e1d135cb4269ef8acf5">btck_ValidationInterfaceBlockDisconnected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbtck__ValidationInterfaceCallbacks.html#a7809d2baebf14c12409f5d7c0b025b51">block_disconnected</a></td></tr>
+<tr class="memdesc:a7809d2baebf14c12409f5d7c0b025b51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called during a re-org when a block has been removed from the best chain.  <br /></td></tr>
+<tr class="separator:a7809d2baebf14c12409f5d7c0b025b51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Holds the validation interface callbacks. The user data pointer may be used to point to user-defined structures to make processing the validation callbacks easier. Note that these callbacks block any further validation execution when they are called. </p>
@@ -102,7 +110,54 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Called when a new block has been checked. Contains the result of its validation. </p>
+<p>Called when a new block has been fully validated. Contains the result of its validation. </p>
+
+</div>
+</div>
+<a id="a153bbadb55da2945fe44570ca2c6681a" name="a153bbadb55da2945fe44570ca2c6681a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a153bbadb55da2945fe44570ca2c6681a">&#9670;&#160;</a></span>block_connected</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#ab4ea175d43c07b5cdf3b20e3577012ba">btck_ValidationInterfaceBlockConnected</a> btck_ValidationInterfaceCallbacks::block_connected</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called when a block is valid and has now been connected to the best chain. </p>
+
+</div>
+</div>
+<a id="a7809d2baebf14c12409f5d7c0b025b51" name="a7809d2baebf14c12409f5d7c0b025b51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7809d2baebf14c12409f5d7c0b025b51">&#9670;&#160;</a></span>block_disconnected</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a61310b6bb77e2e1d135cb4269ef8acf5">btck_ValidationInterfaceBlockDisconnected</a> btck_ValidationInterfaceCallbacks::block_disconnected</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called during a re-org when a block has been removed from the best chain. </p>
+
+</div>
+</div>
+<a id="ab74f8bc45b2b6af770dec36ef1b2e5f0" name="ab74f8bc45b2b6af770dec36ef1b2e5f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab74f8bc45b2b6af770dec36ef1b2e5f0">&#9670;&#160;</a></span>pow_valid_block</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a634315b67bc08edcec3605e856887e13">btck_ValidationInterfacePowValidBlock</a> btck_ValidationInterfaceCallbacks::pow_valid_block</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Called when a new block extends the header chain and has a valid transaction and segwit merkle root. </p>
 
 </div>
 </div>

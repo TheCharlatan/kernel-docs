@@ -31,10 +31,16 @@ var searchData=
   ['btck_5fscriptverifystatus_28',['btck_ScriptVerifyStatus',['../bitcoinkernel_8h.html#aa8781d799756bee4a650b32c346abf40',1,'bitcoinkernel.h']]],
   ['btck_5fsynchronizationstate_29',['btck_SynchronizationState',['../bitcoinkernel_8h.html#a58fadd0ba23940c7b1b6e1cfe8ee5618',1,'bitcoinkernel.h']]],
   ['btck_5ftransaction_30',['btck_Transaction',['../bitcoinkernel_8h.html#afbe5853894a8320434623268aa27356f',1,'bitcoinkernel.h']]],
-  ['btck_5ftransactionoutput_31',['btck_TransactionOutput',['../bitcoinkernel_8h.html#ab9d30ec07aaf587636c86118390fd0ee',1,'bitcoinkernel.h']]],
-  ['btck_5ftransactionspentoutputs_32',['btck_TransactionSpentOutputs',['../bitcoinkernel_8h.html#a69ea8a77fb877838ec3c00953afaa772',1,'bitcoinkernel.h']]],
-  ['btck_5fvalidationinterfaceblockchecked_33',['btck_ValidationInterfaceBlockChecked',['../bitcoinkernel_8h.html#a43dcc3a83961ee894761494f640966f9',1,'bitcoinkernel.h']]],
-  ['btck_5fvalidationmode_34',['btck_ValidationMode',['../bitcoinkernel_8h.html#a4bc13ee068c06d10518692319d2ca456',1,'bitcoinkernel.h']]],
-  ['btck_5fwarning_35',['btck_Warning',['../bitcoinkernel_8h.html#ac09a909550672c2f641db8d36da8274f',1,'bitcoinkernel.h']]],
-  ['btck_5fwritebytes_36',['btck_WriteBytes',['../bitcoinkernel_8h.html#a220931a33212ceb13141dc5a06e077f7',1,'bitcoinkernel.h']]]
+  ['btck_5ftransactioninput_31',['btck_TransactionInput',['../bitcoinkernel_8h.html#a92e4b0a490d146fde227936837de08db',1,'bitcoinkernel.h']]],
+  ['btck_5ftransactionoutpoint_32',['btck_TransactionOutPoint',['../bitcoinkernel_8h.html#a986203c6e29bb24ef9ba3ec46de08356',1,'bitcoinkernel.h']]],
+  ['btck_5ftransactionoutput_33',['btck_TransactionOutput',['../bitcoinkernel_8h.html#ab9d30ec07aaf587636c86118390fd0ee',1,'bitcoinkernel.h']]],
+  ['btck_5ftransactionspentoutputs_34',['btck_TransactionSpentOutputs',['../bitcoinkernel_8h.html#a69ea8a77fb877838ec3c00953afaa772',1,'bitcoinkernel.h']]],
+  ['btck_5ftxid_35',['btck_Txid',['../bitcoinkernel_8h.html#af8bb67b73058a6e42670bccd112edae0',1,'bitcoinkernel.h']]],
+  ['btck_5fvalidationinterfaceblockchecked_36',['btck_ValidationInterfaceBlockChecked',['../bitcoinkernel_8h.html#a43dcc3a83961ee894761494f640966f9',1,'bitcoinkernel.h']]],
+  ['btck_5fvalidationinterfaceblockconnected_37',['btck_ValidationInterfaceBlockConnected',['../bitcoinkernel_8h.html#ab4ea175d43c07b5cdf3b20e3577012ba',1,'bitcoinkernel.h']]],
+  ['btck_5fvalidationinterfaceblockdisconnected_38',['btck_ValidationInterfaceBlockDisconnected',['../bitcoinkernel_8h.html#a61310b6bb77e2e1d135cb4269ef8acf5',1,'bitcoinkernel.h']]],
+  ['btck_5fvalidationinterfacepowvalidblock_39',['btck_ValidationInterfacePowValidBlock',['../bitcoinkernel_8h.html#a634315b67bc08edcec3605e856887e13',1,'bitcoinkernel.h']]],
+  ['btck_5fvalidationmode_40',['btck_ValidationMode',['../bitcoinkernel_8h.html#a4bc13ee068c06d10518692319d2ca456',1,'bitcoinkernel.h']]],
+  ['btck_5fwarning_41',['btck_Warning',['../bitcoinkernel_8h.html#ac09a909550672c2f641db8d36da8274f',1,'bitcoinkernel.h']]],
+  ['btck_5fwritebytes_42',['btck_WriteBytes',['../bitcoinkernel_8h.html#a220931a33212ceb13141dc5a06e077f7',1,'bitcoinkernel.h']]]
 ];

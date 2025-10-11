@@ -199,7 +199,7 @@ Macros</h2></td></tr>
 <tr class="memitem:a2728f3cd7d072e2c28ec8e46da62e226" id="r_a2728f3cd7d072e2c28ec8e46da62e226"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a2728f3cd7d072e2c28ec8e46da62e226">btck_ScriptVerifyStatus_SCRIPT_VERIFY_OK</a>&#160;&#160;&#160;((<a class="el" href="bitcoinkernel_8h.html#aa8781d799756bee4a650b32c346abf40">btck_ScriptVerifyStatus</a>)(0))</td></tr>
 <tr class="separator:a2728f3cd7d072e2c28ec8e46da62e226"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a446a1d450d1b25497723e4f8d442ca62" id="r_a446a1d450d1b25497723e4f8d442ca62"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a446a1d450d1b25497723e4f8d442ca62">btck_ScriptVerifyStatus_ERROR_INVALID_FLAGS_COMBINATION</a>&#160;&#160;&#160;((<a class="el" href="bitcoinkernel_8h.html#aa8781d799756bee4a650b32c346abf40">btck_ScriptVerifyStatus</a>)(2))</td></tr>
-<tr class="memdesc:a446a1d450d1b25497723e4f8d442ca62"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flags very combined in an invalid way.  <br /></td></tr>
+<tr class="memdesc:a446a1d450d1b25497723e4f8d442ca62"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flags were combined in an invalid way.  <br /></td></tr>
 <tr class="separator:a446a1d450d1b25497723e4f8d442ca62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ad438ebf610507c76fa2e0af8e3294c" id="r_a6ad438ebf610507c76fa2e0af8e3294c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a6ad438ebf610507c76fa2e0af8e3294c">btck_ScriptVerifyStatus_ERROR_SPENT_OUTPUTS_REQUIRED</a>&#160;&#160;&#160;((<a class="el" href="bitcoinkernel_8h.html#aa8781d799756bee4a650b32c346abf40">btck_ScriptVerifyStatus</a>)(3))</td></tr>
 <tr class="memdesc:a6ad438ebf610507c76fa2e0af8e3294c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The taproot flag was set, so valid spent_outputs have to be provided.  <br /></td></tr>
@@ -473,14 +473,14 @@ Functions</h2></td></tr>
 <tr class="memdesc:a3674ebcc7329520b7151d61e4f0cdf0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of available worker threads used during validation.  <br /></td></tr>
 <tr class="separator:a3674ebcc7329520b7151d61e4f0cdf0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace21d51673235b387106a3742e494b01" id="r_ace21d51673235b387106a3742e494b01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#ace21d51673235b387106a3742e494b01">btck_chainstate_manager_options_set_wipe_dbs</a> (<a class="el" href="bitcoinkernel_8h.html#ac484575e106b35011663c6816be16caa">btck_ChainstateManagerOptions</a> *chainstate_manager_options, int wipe_block_tree_db, int wipe_chainstate_db)</td></tr>
-<tr class="memdesc:ace21d51673235b387106a3742e494b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets wipe db in the options. In combination with calling <a class="el" href="bitcoinkernel_8h.html#af2bc48e50a8ef444bf597c663c80ae8b">btck_chainstate_manager_import_blocks</a> this triggers either a full reindex, or a reindex of just the chainstate database.  <br /></td></tr>
+<tr class="memdesc:ace21d51673235b387106a3742e494b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets wipe db in the options. In combination with calling <a class="el" href="bitcoinkernel_8h.html#af5acc9260554b9d133b0899f4784d923">btck_chainstate_manager_import_blocks</a> this triggers either a full reindex, or a reindex of just the chainstate database.  <br /></td></tr>
 <tr class="separator:ace21d51673235b387106a3742e494b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5d21bf44650ab2f6dc42440af3f0dc2" id="r_ae5d21bf44650ab2f6dc42440af3f0dc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#ae5d21bf44650ab2f6dc42440af3f0dc2">btck_chainstate_manager_options_set_block_tree_db_in_memory</a> (<a class="el" href="bitcoinkernel_8h.html#ac484575e106b35011663c6816be16caa">btck_ChainstateManagerOptions</a> *chainstate_manager_options, int block_tree_db_in_memory)</td></tr>
-<tr class="memdesc:ae5d21bf44650ab2f6dc42440af3f0dc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets block tree db in memory in the options.  <br /></td></tr>
-<tr class="separator:ae5d21bf44650ab2f6dc42440af3f0dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa848a4e19bd95648fedf3ac4c9ad315e" id="r_aa848a4e19bd95648fedf3ac4c9ad315e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#aa848a4e19bd95648fedf3ac4c9ad315e">btck_chainstate_manager_options_set_chainstate_db_in_memory</a> (<a class="el" href="bitcoinkernel_8h.html#ac484575e106b35011663c6816be16caa">btck_ChainstateManagerOptions</a> *chainstate_manager_options, int chainstate_db_in_memory)</td></tr>
-<tr class="memdesc:aa848a4e19bd95648fedf3ac4c9ad315e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets chainstate db in memory in the options.  <br /></td></tr>
-<tr class="separator:aa848a4e19bd95648fedf3ac4c9ad315e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac775ed675cfc7f8a5504d54fa8b1212c" id="r_ac775ed675cfc7f8a5504d54fa8b1212c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#ac775ed675cfc7f8a5504d54fa8b1212c">btck_chainstate_manager_options_update_block_tree_db_in_memory</a> (<a class="el" href="bitcoinkernel_8h.html#ac484575e106b35011663c6816be16caa">btck_ChainstateManagerOptions</a> *chainstate_manager_options, int block_tree_db_in_memory)</td></tr>
+<tr class="memdesc:ac775ed675cfc7f8a5504d54fa8b1212c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets block tree db in memory in the options.  <br /></td></tr>
+<tr class="separator:ac775ed675cfc7f8a5504d54fa8b1212c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7150bbbe85212c4ce27f641cc201280f" id="r_a7150bbbe85212c4ce27f641cc201280f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a7150bbbe85212c4ce27f641cc201280f">btck_chainstate_manager_options_update_chainstate_db_in_memory</a> (<a class="el" href="bitcoinkernel_8h.html#ac484575e106b35011663c6816be16caa">btck_ChainstateManagerOptions</a> *chainstate_manager_options, int chainstate_db_in_memory)</td></tr>
+<tr class="memdesc:a7150bbbe85212c4ce27f641cc201280f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets chainstate db in memory in the options.  <br /></td></tr>
+<tr class="separator:a7150bbbe85212c4ce27f641cc201280f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69a60cf85164961f9dae599425345bda" id="r_a69a60cf85164961f9dae599425345bda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a69a60cf85164961f9dae599425345bda">btck_chainstate_manager_options_destroy</a> (<a class="el" href="bitcoinkernel_8h.html#ac484575e106b35011663c6816be16caa">btck_ChainstateManagerOptions</a> *chainstate_manager_options)</td></tr>
 <tr class="separator:a69a60cf85164961f9dae599425345bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">ChainstateManager</div></td></tr>
@@ -489,14 +489,14 @@ Functions</h2></td></tr>
 <tr class="memitem:abbe0e61130ade31331c14306b2fd7480" id="r_abbe0e61130ade31331c14306b2fd7480"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> <a class="el" href="bitcoinkernel_8h.html#ab928459172b8de15c461a67af14e867b">btck_ChainstateManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#abbe0e61130ade31331c14306b2fd7480">btck_chainstate_manager_create</a> (const <a class="el" href="bitcoinkernel_8h.html#ac484575e106b35011663c6816be16caa">btck_ChainstateManagerOptions</a> *chainstate_manager_options)</td></tr>
 <tr class="memdesc:abbe0e61130ade31331c14306b2fd7480"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a chainstate manager. This is the main object for many validation tasks as well as for retrieving data from the chain and interacting with its chainstate and indexes.  <br /></td></tr>
 <tr class="separator:abbe0e61130ade31331c14306b2fd7480"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2bc48e50a8ef444bf597c663c80ae8b" id="r_af2bc48e50a8ef444bf597c663c80ae8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#af2bc48e50a8ef444bf597c663c80ae8b">btck_chainstate_manager_import_blocks</a> (<a class="el" href="bitcoinkernel_8h.html#ab928459172b8de15c461a67af14e867b">btck_ChainstateManager</a> *chainstate_manager, const char **block_file_paths, size_t *block_file_paths_lens, size_t block_file_paths_len) 2)</td></tr>
-<tr class="memdesc:af2bc48e50a8ef444bf597c663c80ae8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggers the start of a reindex if the option was previously set for the chainstate and block manager. Can also import an array of existing block files selected by the user.  <br /></td></tr>
-<tr class="separator:af2bc48e50a8ef444bf597c663c80ae8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5acc9260554b9d133b0899f4784d923" id="r_af5acc9260554b9d133b0899f4784d923"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#af5acc9260554b9d133b0899f4784d923">btck_chainstate_manager_import_blocks</a> (<a class="el" href="bitcoinkernel_8h.html#ab928459172b8de15c461a67af14e867b">btck_ChainstateManager</a> *chainstate_manager, const char **block_file_paths_data, size_t *block_file_paths_lens, size_t block_file_paths_data_len) 2)</td></tr>
+<tr class="memdesc:af5acc9260554b9d133b0899f4784d923"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggers the start of a reindex if the option was previously set for the chainstate and block manager. Can also import an array of existing block files selected by the user.  <br /></td></tr>
+<tr class="separator:af5acc9260554b9d133b0899f4784d923"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abba5d67d0b802ed0ade7d471d026f0dd" id="r_abba5d67d0b802ed0ade7d471d026f0dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#abba5d67d0b802ed0ade7d471d026f0dd">btck_chainstate_manager_process_block</a> (<a class="el" href="bitcoinkernel_8h.html#ab928459172b8de15c461a67af14e867b">btck_ChainstateManager</a> *chainstate_manager, const <a class="el" href="bitcoinkernel_8h.html#ad51859829bc2bbfa8858de4736f38cc0">btck_Block</a> *block, int *new_block) 2</td></tr>
 <tr class="memdesc:abba5d67d0b802ed0ade7d471d026f0dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process and validate the passed in block with the chainstate manager. Processing first does checks on the block, and if these passed, saves it to disk. It then validates the block against the utxo set. If it is valid, the chain is extended with it. The return value is not indicative of the block's validity. Detailed information on the validity of the block can be retrieved by registering the <code>block_checked</code> callback in the validation interface.  <br /></td></tr>
 <tr class="separator:abba5d67d0b802ed0ade7d471d026f0dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdb5a84770be2cf4938e1385dff96adc" id="r_acdb5a84770be2cf4938e1385dff96adc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> int <a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> const <a class="el" href="bitcoinkernel_8h.html#a6f7b73d5448fbbd0954d86ff663b4ae5">btck_Chain</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#acdb5a84770be2cf4938e1385dff96adc">btck_chainstate_manager_get_active_chain</a> (const <a class="el" href="bitcoinkernel_8h.html#ab928459172b8de15c461a67af14e867b">btck_ChainstateManager</a> *chainstate_manager)</td></tr>
-<tr class="memdesc:acdb5a84770be2cf4938e1385dff96adc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the best known currently active chain. Its lifetime is dependent on the chainstate manager and state transitions within the chainstate manager, e.g. when processing blocks, will also change the chain. Data retrieved from this chain is only consistent up to the point when new data is processed in the chainstate manager. It is the user's responsibility to guard against these inconsistencies.  <br /></td></tr>
+<tr class="memdesc:acdb5a84770be2cf4938e1385dff96adc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the best known currently active chain. Its lifetime is dependent on the chainstate manager. It can be thought of as a view on a vector of block tree entries that form the best chain. This means state transitions within the chainstate manager, e.g. processing blocks, will change the chain. Data retrieved from this chain is only consistent up to the point when new data is processed in the chainstate manager. It is the user's responsibility to guard against these inconsistencies.  <br /></td></tr>
 <tr class="separator:acdb5a84770be2cf4938e1385dff96adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adac10ea754e1cb6e6f9c06c2ffe0780c" id="r_adac10ea754e1cb6e6f9c06c2ffe0780c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#adac10ea754e1cb6e6f9c06c2ffe0780c">btck_chainstate_manager_get_block_tree_entry_by_hash</a> (const <a class="el" href="bitcoinkernel_8h.html#ab928459172b8de15c461a67af14e867b">btck_ChainstateManager</a> *chainstate_manager, const <a class="el" href="bitcoinkernel_8h.html#a22d81144a2752a03ab05161af7bfd1f5">btck_BlockHash</a> *block_hash) 2)</td></tr>
 <tr class="memdesc:adac10ea754e1cb6e6f9c06c2ffe0780c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a block tree entry by its block hash.  <br /></td></tr>
@@ -1280,7 +1280,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The flags very combined in an invalid way. </p>
+<p>The flags were combined in an invalid way. </p>
 
 </div>
 </div>
@@ -3003,7 +3003,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the best known currently active chain. Its lifetime is dependent on the chainstate manager and state transitions within the chainstate manager, e.g. when processing blocks, will also change the chain. Data retrieved from this chain is only consistent up to the point when new data is processed in the chainstate manager. It is the user's responsibility to guard against these inconsistencies. </p>
+<p>Returns the best known currently active chain. Its lifetime is dependent on the chainstate manager. It can be thought of as a view on a vector of block tree entries that form the best chain. This means state transitions within the chainstate manager, e.g. processing blocks, will change the chain. Data retrieved from this chain is only consistent up to the point when new data is processed in the chainstate manager. It is the user's responsibility to guard against these inconsistencies. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager</td><td>Non-null. </td></tr>
@@ -3052,8 +3052,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af2bc48e50a8ef444bf597c663c80ae8b" name="af2bc48e50a8ef444bf597c663c80ae8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2bc48e50a8ef444bf597c663c80ae8b">&#9670;&#160;</a></span>btck_chainstate_manager_import_blocks()</h2>
+<a id="af5acc9260554b9d133b0899f4784d923" name="af5acc9260554b9d133b0899f4784d923"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5acc9260554b9d133b0899f4784d923">&#9670;&#160;</a></span>btck_chainstate_manager_import_blocks()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3068,7 +3068,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char **&#160;</td>
-          <td class="paramname"><em>block_file_paths</em>, </td>
+          <td class="paramname"><em>block_file_paths_data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -3080,7 +3080,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>block_file_paths_len</em>&#160;</td>
+          <td class="paramname"><em>block_file_paths_data_len</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -3094,8 +3094,9 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager</td><td>Non-null. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">block_file_paths</td><td>Nullable, array of block files described by their full filesystem paths. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">block_file_paths_len</td><td>Length of the block_file_paths array. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_file_paths_data</td><td>Nullable, array of block files described by their full filesystem paths. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_file_paths_lens</td><td>Nullable, array containing the lengths of each of the paths. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_file_paths_data_len</td><td>Length of the block_file_paths_data and block_file_paths_len arrays. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3179,80 +3180,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae5d21bf44650ab2f6dc42440af3f0dc2" name="ae5d21bf44650ab2f6dc42440af3f0dc2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5d21bf44650ab2f6dc42440af3f0dc2">&#9670;&#160;</a></span>btck_chainstate_manager_options_set_block_tree_db_in_memory()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void btck_chainstate_manager_options_set_block_tree_db_in_memory </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#ac484575e106b35011663c6816be16caa">btck_ChainstateManagerOptions</a> *&#160;</td>
-          <td class="paramname"><em>chainstate_manager_options</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>block_tree_db_in_memory</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets block tree db in memory in the options. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager_options</td><td>Non-null, created by <a class="el" href="bitcoinkernel_8h.html#a20cdf88d87dcf2547b81c2573ea02661">btck_chainstate_manager_options_create</a>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">block_tree_db_in_memory</td><td>Set block tree db in memory. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aa848a4e19bd95648fedf3ac4c9ad315e" name="aa848a4e19bd95648fedf3ac4c9ad315e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa848a4e19bd95648fedf3ac4c9ad315e">&#9670;&#160;</a></span>btck_chainstate_manager_options_set_chainstate_db_in_memory()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void btck_chainstate_manager_options_set_chainstate_db_in_memory </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#ac484575e106b35011663c6816be16caa">btck_ChainstateManagerOptions</a> *&#160;</td>
-          <td class="paramname"><em>chainstate_manager_options</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>chainstate_db_in_memory</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets chainstate db in memory in the options. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager_options</td><td>Non-null, created by <a class="el" href="bitcoinkernel_8h.html#a20cdf88d87dcf2547b81c2573ea02661">btck_chainstate_manager_options_create</a>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_db_in_memory</td><td>Set chainstate db in memory. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="ace21d51673235b387106a3742e494b01" name="ace21d51673235b387106a3742e494b01"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ace21d51673235b387106a3742e494b01">&#9670;&#160;</a></span>btck_chainstate_manager_options_set_wipe_dbs()</h2>
 
@@ -3285,7 +3212,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets wipe db in the options. In combination with calling <a class="el" href="bitcoinkernel_8h.html#af2bc48e50a8ef444bf597c663c80ae8b">btck_chainstate_manager_import_blocks</a> this triggers either a full reindex, or a reindex of just the chainstate database. </p>
+<p>Sets wipe db in the options. In combination with calling <a class="el" href="bitcoinkernel_8h.html#af5acc9260554b9d133b0899f4784d923">btck_chainstate_manager_import_blocks</a> this triggers either a full reindex, or a reindex of just the chainstate database. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager_options</td><td>Non-null, created by <a class="el" href="bitcoinkernel_8h.html#a20cdf88d87dcf2547b81c2573ea02661">btck_chainstate_manager_options_create</a>. </td></tr>
@@ -3335,6 +3262,80 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ac775ed675cfc7f8a5504d54fa8b1212c" name="ac775ed675cfc7f8a5504d54fa8b1212c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac775ed675cfc7f8a5504d54fa8b1212c">&#9670;&#160;</a></span>btck_chainstate_manager_options_update_block_tree_db_in_memory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void btck_chainstate_manager_options_update_block_tree_db_in_memory </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#ac484575e106b35011663c6816be16caa">btck_ChainstateManagerOptions</a> *&#160;</td>
+          <td class="paramname"><em>chainstate_manager_options</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>block_tree_db_in_memory</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets block tree db in memory in the options. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager_options</td><td>Non-null, created by <a class="el" href="bitcoinkernel_8h.html#a20cdf88d87dcf2547b81c2573ea02661">btck_chainstate_manager_options_create</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_tree_db_in_memory</td><td>Set block tree db in memory. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7150bbbe85212c4ce27f641cc201280f" name="a7150bbbe85212c4ce27f641cc201280f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7150bbbe85212c4ce27f641cc201280f">&#9670;&#160;</a></span>btck_chainstate_manager_options_update_chainstate_db_in_memory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> void btck_chainstate_manager_options_update_chainstate_db_in_memory </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bitcoinkernel_8h.html#ac484575e106b35011663c6816be16caa">btck_ChainstateManagerOptions</a> *&#160;</td>
+          <td class="paramname"><em>chainstate_manager_options</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>chainstate_db_in_memory</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets chainstate db in memory in the options. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager_options</td><td>Non-null, created by <a class="el" href="bitcoinkernel_8h.html#a20cdf88d87dcf2547b81c2573ea02661">btck_chainstate_manager_options_create</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_db_in_memory</td><td>Set chainstate db in memory. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="abba5d67d0b802ed0ade7d471d026f0dd" name="abba5d67d0b802ed0ade7d471d026f0dd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abba5d67d0b802ed0ade7d471d026f0dd">&#9670;&#160;</a></span>btck_chainstate_manager_process_block()</h2>
 
@@ -3371,8 +3372,8 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">chainstate_manager</td><td>Non-null. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">block</td><td>Non-null, block to be validated. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">new_block</td><td>Nullable, will be set to 1 if this block was not processed before. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block</td><td>Non-null, block to be validated.</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">new_block</td><td>Nullable, will be set to 1 if this block was not processed before. Note that this means it might also not be 1 if processing was attempted before, but the block was found invalid before its data was persisted. </td></tr>
   </table>
   </dd>
 </dl>

@@ -42,7 +42,7 @@ var searchData=
   ['btck_5fscriptverificationflags_5fwitness_39',['btck_ScriptVerificationFlags_WITNESS',['../bitcoinkernel_8h.html#a6bed3688801ebf4b2bf83b675dbb9e5b',1,'bitcoinkernel.h']]],
   ['btck_5fscriptverifystatus_5ferror_5finvalid_5fflags_5fcombination_40',['btck_ScriptVerifyStatus_ERROR_INVALID_FLAGS_COMBINATION',['../bitcoinkernel_8h.html#a446a1d450d1b25497723e4f8d442ca62',1,'bitcoinkernel.h']]],
   ['btck_5fscriptverifystatus_5ferror_5fspent_5foutputs_5frequired_41',['btck_ScriptVerifyStatus_ERROR_SPENT_OUTPUTS_REQUIRED',['../bitcoinkernel_8h.html#a6ad438ebf610507c76fa2e0af8e3294c',1,'bitcoinkernel.h']]],
-  ['btck_5fscriptverifystatus_5fscript_5fverify_5fok_42',['btck_ScriptVerifyStatus_SCRIPT_VERIFY_OK',['../bitcoinkernel_8h.html#a2728f3cd7d072e2c28ec8e46da62e226',1,'bitcoinkernel.h']]],
+  ['btck_5fscriptverifystatus_5fok_42',['btck_ScriptVerifyStatus_OK',['../bitcoinkernel_8h.html#a7dc54002f0bf42a659e3cf19558ce454',1,'bitcoinkernel.h']]],
   ['btck_5fsynchronizationstate_5finit_5fdownload_43',['btck_SynchronizationState_INIT_DOWNLOAD',['../bitcoinkernel_8h.html#aff22233e9d104e1e8d676f924d068ac1',1,'bitcoinkernel.h']]],
   ['btck_5fsynchronizationstate_5finit_5freindex_44',['btck_SynchronizationState_INIT_REINDEX',['../bitcoinkernel_8h.html#a42df291de3e18229ecff0aa9aee029d2',1,'bitcoinkernel.h']]],
   ['btck_5fsynchronizationstate_5fpost_5finit_45',['btck_SynchronizationState_POST_INIT',['../bitcoinkernel_8h.html#a982fd1681627bfd881af82019a75c679',1,'bitcoinkernel.h']]],

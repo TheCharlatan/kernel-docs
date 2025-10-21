@@ -125,7 +125,7 @@ $(function() {
 <div class="line">    <a class="code hl_typedef" href="bitcoinkernel_8h.html#ab9d30ec07aaf587636c86118390fd0ee">btck_TransactionOutput</a>* output = <a class="code hl_function" href="bitcoinkernel_8h.html#a0337aaa83fd9ba3a4d656fa4154bd823">btck_transaction_output_create</a>(script_pubkey, amount);</div>
 <div class="line">    <span class="keyword">const</span> <a class="code hl_typedef" href="bitcoinkernel_8h.html#ab9d30ec07aaf587636c86118390fd0ee">btck_TransactionOutput</a>* output_ = output;</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_typedef" href="bitcoinkernel_8h.html#aa8781d799756bee4a650b32c346abf40">btck_ScriptVerifyStatus</a> status = <a class="code hl_define" href="bitcoinkernel_8h.html#a2728f3cd7d072e2c28ec8e46da62e226">btck_ScriptVerifyStatus_SCRIPT_VERIFY_OK</a>;</div>
+<div class="line">    <a class="code hl_typedef" href="bitcoinkernel_8h.html#aa8781d799756bee4a650b32c346abf40">btck_ScriptVerifyStatus</a> status = btck_ScriptVerifyStatus_SCRIPT_VERIFY_OK;</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordtype">int</span> result = <a class="code hl_function" href="bitcoinkernel_8h.html#a9038a6461a21f8b429e05242498a5884">btck_script_pubkey_verify</a>(</div>
 <div class="line">            <span class="comment">/*script_pubkey=*/</span> script_pubkey,</div>
@@ -141,11 +141,10 @@ $(function() {
 <div class="line">    <a class="code hl_function" href="bitcoinkernel_8h.html#a998b33c952ffe106c2ce3f8cb70acc02">btck_script_pubkey_destroy</a>(script_pubkey);</div>
 <div class="line">    <a class="code hl_function" href="bitcoinkernel_8h.html#a2a858e4a38ec531e8c63d85d496e098b">btck_transaction_destroy</a>(transaction);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">return</span> !(result &amp;&amp; status == <a class="code hl_define" href="bitcoinkernel_8h.html#a2728f3cd7d072e2c28ec8e46da62e226">btck_ScriptVerifyStatus_SCRIPT_VERIFY_OK</a>);</div>
+<div class="line">    <span class="keywordflow">return</span> !(result &amp;&amp; status == btck_ScriptVerifyStatus_SCRIPT_VERIFY_OK);</div>
 <div class="line">}</div>
 <div class="ttc" id="abitcoinkernel_8h_html"><div class="ttname"><a href="bitcoinkernel_8h.html">bitcoinkernel.h</a></div></div>
 <div class="ttc" id="abitcoinkernel_8h_html_a0337aaa83fd9ba3a4d656fa4154bd823"><div class="ttname"><a href="bitcoinkernel_8h.html#a0337aaa83fd9ba3a4d656fa4154bd823">btck_transaction_output_create</a></div><div class="ttdeci">BITCOINKERNEL_API btck_TransactionOutput * btck_transaction_output_create(const btck_ScriptPubkey *script_pubkey, int64_t amount)</div><div class="ttdoc">Create a transaction output from a script pubkey and an amount.</div></div>
-<div class="ttc" id="abitcoinkernel_8h_html_a2728f3cd7d072e2c28ec8e46da62e226"><div class="ttname"><a href="bitcoinkernel_8h.html#a2728f3cd7d072e2c28ec8e46da62e226">btck_ScriptVerifyStatus_SCRIPT_VERIFY_OK</a></div><div class="ttdeci">#define btck_ScriptVerifyStatus_SCRIPT_VERIFY_OK</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:428</div></div>
 <div class="ttc" id="abitcoinkernel_8h_html_a2a858e4a38ec531e8c63d85d496e098b"><div class="ttname"><a href="bitcoinkernel_8h.html#a2a858e4a38ec531e8c63d85d496e098b">btck_transaction_destroy</a></div><div class="ttdeci">BITCOINKERNEL_API void btck_transaction_destroy(btck_Transaction *transaction)</div></div>
 <div class="ttc" id="abitcoinkernel_8h_html_a4dfe5400b63b673f6831dae8cda607b4"><div class="ttname"><a href="bitcoinkernel_8h.html#a4dfe5400b63b673f6831dae8cda607b4">btck_ScriptVerificationFlags_ALL</a></div><div class="ttdeci">#define btck_ScriptVerificationFlags_ALL</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:444</div></div>
 <div class="ttc" id="abitcoinkernel_8h_html_a80ff27cbe8cc9cce16c723a36377c677"><div class="ttname"><a href="bitcoinkernel_8h.html#a80ff27cbe8cc9cce16c723a36377c677">btck_ScriptPubkey</a></div><div class="ttdeci">struct btck_ScriptPubkey btck_ScriptPubkey</div><div class="ttdef"><b>Definition</b> bitcoinkernel.h:114</div></div>

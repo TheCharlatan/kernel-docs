@@ -19,7 +19,7 @@ var searchData=
   ['btck_5fblock_5fspent_5foutputs_5fget_5ftransaction_5fspent_5foutputs_5fat_16',['btck_block_spent_outputs_get_transaction_spent_outputs_at',['../bitcoinkernel_8h.html#a69a6dee9737952d87a95ae13bf63720d',1,'bitcoinkernel.h']]],
   ['btck_5fblock_5fspent_5foutputs_5fread_17',['btck_block_spent_outputs_read',['../bitcoinkernel_8h.html#a20fd0d7c1de849d70cd27f72e7b7e22c',1,'bitcoinkernel.h']]],
   ['btck_5fblock_5fto_5fbytes_18',['btck_block_to_bytes',['../bitcoinkernel_8h.html#a37ed3bcca0a987c6e62fab64889a8571',1,'bitcoinkernel.h']]],
-  ['btck_5fblock_5ftree_5fentry_5fget_5fblock_5fhash_19',['btck_block_tree_entry_get_block_hash',['../bitcoinkernel_8h.html#a7089afb0fa25172a5a072cf63731dcec',1,'bitcoinkernel.h']]],
+  ['btck_5fblock_5ftree_5fentry_5fget_5fblock_5fhash_19',['btck_block_tree_entry_get_block_hash',['../bitcoinkernel_8h.html#aa56d6cd03ccd557efeb48f341e4348dd',1,'bitcoinkernel.h']]],
   ['btck_5fblock_5ftree_5fentry_5fget_5fheight_20',['btck_block_tree_entry_get_height',['../bitcoinkernel_8h.html#aad5c3a6e525a22e858a0c01c83bf35d9',1,'bitcoinkernel.h']]],
   ['btck_5fblock_5ftree_5fentry_5fget_5fprevious_21',['btck_block_tree_entry_get_previous',['../bitcoinkernel_8h.html#ac04e75ca2b1cb41ed235a67f75e8b0ea',1,'bitcoinkernel.h']]],
   ['btck_5fblock_5fvalidation_5fstate_5fget_5fblock_5fvalidation_5fresult_22',['btck_block_validation_state_get_block_validation_result',['../bitcoinkernel_8h.html#a6f3e6cae82eb041135effd2f8c0f7813',1,'bitcoinkernel.h']]],

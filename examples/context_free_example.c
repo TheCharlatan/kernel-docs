@@ -37,7 +37,7 @@ int main() {
     btck_TransactionOutput* output = btck_transaction_output_create(script_pubkey, amount);
     const btck_TransactionOutput* output_ = output;
 
-    btck_ScriptVerifyStatus status = btck_ScriptVerifyStatus_SCRIPT_VERIFY_OK;
+    btck_ScriptVerifyStatus status = btck_ScriptVerifyStatus_OK;
 
     int result = btck_script_pubkey_verify(
             /*script_pubkey=*/ script_pubkey,
@@ -53,5 +53,5 @@ int main() {
     btck_script_pubkey_destroy(script_pubkey);
     btck_transaction_destroy(transaction);
 
-    return !(result && status == btck_ScriptVerifyStatus_SCRIPT_VERIFY_OK);
+    return !(result && status == btck_ScriptVerifyStatus_OK);
 }

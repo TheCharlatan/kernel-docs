@@ -108,7 +108,8 @@ Data Fields</h2></td></tr>
 <tr class="separator:aa73c9186d0f6edd6b44e75194ab0004e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A struct for holding the kernel notification callbacks. The user data pointer may be used to point to user-defined structures to make processing the notifications easier. Note that this makes it the user's responsibility to ensure that the user_data outlives the kernel objects. Notifications can occur even as kernel objects are deleted, so care has to be taken to ensure safe unwinding. </p>
+<div class="textblock"><p>A struct for holding the kernel notification callbacks. The user data pointer may be used to point to user-defined structures to make processing the notifications easier.</p>
+<p>If user_data_destroy is provided, the kernel will automatically call this callback to clean up user_data when the notification interface object is destroyed. If user_data_destroy is NULL, it is the user's responsibility to ensure that the user_data outlives the kernel objects. Notifications can occur even as kernel objects are deleted, so care has to be taken to ensure safe unwinding. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a id="a575e8c85397e637b3a35efc6a9e49e86" name="a575e8c85397e637b3a35efc6a9e49e86"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a575e8c85397e637b3a35efc6a9e49e86">&#9670;&#160;</a></span>block_tip</h2>

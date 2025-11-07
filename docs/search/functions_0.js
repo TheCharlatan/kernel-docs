@@ -69,7 +69,7 @@ var searchData=
   ['btck_5fscript_5fpubkey_5fcreate_66',['btck_script_pubkey_create',['../bitcoinkernel_8h.html#aa6b8f566264c2a107b68eaf8cd2b0e71',1,'bitcoinkernel.h']]],
   ['btck_5fscript_5fpubkey_5fdestroy_67',['btck_script_pubkey_destroy',['../bitcoinkernel_8h.html#a998b33c952ffe106c2ce3f8cb70acc02',1,'bitcoinkernel.h']]],
   ['btck_5fscript_5fpubkey_5fto_5fbytes_68',['btck_script_pubkey_to_bytes',['../bitcoinkernel_8h.html#aaab03135978a64fc21096408d6843cc6',1,'bitcoinkernel.h']]],
-  ['btck_5fscript_5fpubkey_5fverify_69',['btck_script_pubkey_verify',['../bitcoinkernel_8h.html#a9038a6461a21f8b429e05242498a5884',1,'bitcoinkernel.h']]],
+  ['btck_5fscript_5fpubkey_5fverify_69',['btck_script_pubkey_verify',['../bitcoinkernel_8h.html#ab8f400284e8286b0058bf24ccab5324b',1,'bitcoinkernel.h']]],
   ['btck_5ftransaction_5fcopy_70',['btck_transaction_copy',['../bitcoinkernel_8h.html#aa14e2c8d3a3aa6abcf0bd483d55a9485',1,'bitcoinkernel.h']]],
   ['btck_5ftransaction_5fcount_5finputs_71',['btck_transaction_count_inputs',['../bitcoinkernel_8h.html#ad7ca6d2bef91b4a90aaddaf24bd2eea6',1,'bitcoinkernel.h']]],
   ['btck_5ftransaction_5fcount_5foutputs_72',['btck_transaction_count_outputs',['../bitcoinkernel_8h.html#af8d3f5cf5f9abba181a58f864c4dc052',1,'bitcoinkernel.h']]],

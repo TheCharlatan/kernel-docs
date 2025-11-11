@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <assert.h>
 
 void handle_error(void* _, const char* msg, size_t msg_size)
 {
@@ -38,7 +39,7 @@ int main() {
     btck_chainstate_manager_options_destroy(chainman_options);
 
     const btck_Chain* chain = btck_chainstate_manager_get_active_chain(chainman);
-    const btck_BlockTreeEntry* entry = btck_chain_get_genesis(chain);
+    const btck_BlockTreeEntry* entry = btck_chain_get_by_height(chain, 1);
     btck_Block* genesis = btck_block_read(chainman, entry);
     // Now do something with this genesis block.
 

@@ -544,15 +544,9 @@ Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Chain</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Functions for working with the chain </p>
 </div></td></tr>
-<tr class="memitem:a4200e0077c2f74d810a89b623f3c0f7a" id="r_a4200e0077c2f74d810a89b623f3c0f7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a4200e0077c2f74d810a89b623f3c0f7a">btck_chain_get_tip</a> (const <a class="el" href="bitcoinkernel_8h.html#a6f7b73d5448fbbd0954d86ff663b4ae5">btck_Chain</a> *chain)</td></tr>
-<tr class="memdesc:a4200e0077c2f74d810a89b623f3c0f7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the block tree entry of the current chain tip. Once returned, there is no guarantee that it remains in the active chain.  <br /></td></tr>
-<tr class="separator:a4200e0077c2f74d810a89b623f3c0f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a116e55d31aca6b61755ed5afb8c652" id="r_a4a116e55d31aca6b61755ed5afb8c652"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a4a116e55d31aca6b61755ed5afb8c652">btck_chain_get_height</a> (const <a class="el" href="bitcoinkernel_8h.html#a6f7b73d5448fbbd0954d86ff663b4ae5">btck_Chain</a> *chain)</td></tr>
 <tr class="memdesc:a4a116e55d31aca6b61755ed5afb8c652"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the height of the tip of the chain.  <br /></td></tr>
 <tr class="separator:a4a116e55d31aca6b61755ed5afb8c652"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a654a1ae5f54cf251f50c8dca5b26bd8e" id="r_a654a1ae5f54cf251f50c8dca5b26bd8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a654a1ae5f54cf251f50c8dca5b26bd8e">btck_chain_get_genesis</a> (const <a class="el" href="bitcoinkernel_8h.html#a6f7b73d5448fbbd0954d86ff663b4ae5">btck_Chain</a> *chain)</td></tr>
-<tr class="memdesc:a654a1ae5f54cf251f50c8dca5b26bd8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the block tree entry of the genesis block.  <br /></td></tr>
-<tr class="separator:a654a1ae5f54cf251f50c8dca5b26bd8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b18e727b517b67c5c52a041ec53883f" id="r_a7b18e727b517b67c5c52a041ec53883f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitcoinkernel_8h.html#a7b18e727b517b67c5c52a041ec53883f">btck_chain_get_by_height</a> (const <a class="el" href="bitcoinkernel_8h.html#a6f7b73d5448fbbd0954d86ff663b4ae5">btck_Chain</a> *chain, int block_height)</td></tr>
 <tr class="memdesc:a7b18e727b517b67c5c52a041ec53883f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a block tree entry by its height in the currently active chain. Once retrieved there is no guarantee that it remains in the active chain.  <br /></td></tr>
 <tr class="separator:a7b18e727b517b67c5c52a041ec53883f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2832,33 +2826,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a654a1ae5f54cf251f50c8dca5b26bd8e" name="a654a1ae5f54cf251f50c8dca5b26bd8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a654a1ae5f54cf251f50c8dca5b26bd8e">&#9670;&#160;</a></span>btck_chain_get_genesis()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> * btck_chain_get_genesis </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#a6f7b73d5448fbbd0954d86ff663b4ae5">btck_Chain</a> *&#160;</td>
-          <td class="paramname"><em>chain</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the block tree entry of the genesis block. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">chain</td><td>Non-null. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The block tree entry of the genesis block, or null if the chain is empty. </dd></dl>
-
-</div>
-</div>
 <a id="a4a116e55d31aca6b61755ed5afb8c652" name="a4a116e55d31aca6b61755ed5afb8c652"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4a116e55d31aca6b61755ed5afb8c652">&#9670;&#160;</a></span>btck_chain_get_height()</h2>
 
@@ -2883,33 +2850,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The current height. </dd></dl>
-
-</div>
-</div>
-<a id="a4200e0077c2f74d810a89b623f3c0f7a" name="a4200e0077c2f74d810a89b623f3c0f7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4200e0077c2f74d810a89b623f3c0f7a">&#9670;&#160;</a></span>btck_chain_get_tip()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="bitcoinkernel_8h.html#a012147c9e39e35558753fca94f091e26">BITCOINKERNEL_API</a> const <a class="el" href="bitcoinkernel_8h.html#a5cf545db9309224dd5d89266e94eab85">btck_BlockTreeEntry</a> * btck_chain_get_tip </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="bitcoinkernel_8h.html#a6f7b73d5448fbbd0954d86ff663b4ae5">btck_Chain</a> *&#160;</td>
-          <td class="paramname"><em>chain</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the block tree entry of the current chain tip. Once returned, there is no guarantee that it remains in the active chain. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">chain</td><td>Non-null. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The block tree entry of the current tip, or null if the chain is empty. </dd></dl>
 
 </div>
 </div>

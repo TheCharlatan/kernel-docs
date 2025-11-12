@@ -40,7 +40,7 @@ int main() {
     btck_chainstate_manager_options_destroy(chainman_options);
 
     const btck_Chain* chain = btck_chainstate_manager_get_active_chain(chainman);
-    const btck_BlockTreeEntry* entry = btck_chain_get_by_height(chain, 1);
+    const btck_BlockTreeEntry* entry = btck_chain_get_by_height(chain, 0);
     btck_Block* genesis = btck_block_read(chainman, entry);
 
     btck_BlockHash* hash = btck_block_get_hash(genesis);
